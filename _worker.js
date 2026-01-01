@@ -1,1 +1,1622 @@
-const _0x309bbe=_0x2d70;(function(_0x4d2a69,_0x517bbd){const _0x2a9c6e=_0x2d70,_0xe2c491=_0x4d2a69();while(!![]){try{const _0x11117d=parseInt(_0x2a9c6e(0x277))/0x1+parseInt(_0x2a9c6e(0x327))/0x2*(parseInt(_0x2a9c6e(0x2ae))/0x3)+parseInt(_0x2a9c6e(0x15e))/0x4*(-parseInt(_0x2a9c6e(0x2f3))/0x5)+-parseInt(_0x2a9c6e(0x23a))/0x6*(parseInt(_0x2a9c6e(0x324))/0x7)+parseInt(_0x2a9c6e(0x206))/0x8*(-parseInt(_0x2a9c6e(0x136))/0x9)+parseInt(_0x2a9c6e(0x2f7))/0xa+-parseInt(_0x2a9c6e(0x150))/0xb*(-parseInt(_0x2a9c6e(0x301))/0xc);if(_0x11117d===_0x517bbd)break;else _0xe2c491['push'](_0xe2c491['shift']());}catch(_0x7a6353){_0xe2c491['push'](_0xe2c491['shift']());}}}(_0x49ba,0x4ee09));import{connect}from'cloudflare:sockets';let config_JSON,反代IP='',启用SOCKS5反代=null,启用SOCKS5全局反代=![],我的SOCKS5账号='',parsedSocks5Address={},缓存反代IP,缓存反代解析数组,缓存反代数组索引=0x0,启用反代兜底=!![],SOCKS5白名单=[_0x309bbe(0x126),'*cloudatacdn.com',_0x309bbe(0x2ba),_0x309bbe(0x183),_0x309bbe(0x179)];const Pages静态页面=_0x309bbe(0x279);export default{async 'fetch'(_0x6a38df,_0x1d9019,_0x2b25c8){const _0x38d6a7=_0x309bbe,_0x482c56=new URL(_0x6a38df[_0x38d6a7(0x235)]),_0x3e435b=_0x6a38df['headers'][_0x38d6a7(0x170)]('User-Agent')||_0x38d6a7(0x2fe),_0x36da61=_0x6a38df['headers']['get'](_0x38d6a7(0x152)),_0x21256d=_0x1d9019[_0x38d6a7(0x34d)]||_0x1d9019[_0x38d6a7(0x2bf)]||_0x1d9019['PASSWORD']||_0x1d9019['password']||_0x1d9019[_0x38d6a7(0x1cb)]||_0x1d9019[_0x38d6a7(0x1ac)]||_0x1d9019[_0x38d6a7(0x12a)]||_0x1d9019[_0x38d6a7(0x2b5)]||_0x1d9019['uuid'],_0x1abb99=_0x1d9019['KEY']||_0x38d6a7(0x161),_0x2b82c5=await MD5MD5(_0x21256d+_0x1abb99),_0x550d30=/^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-4[0-9a-fA-F]{3}-[89abAB][0-9a-fA-F]{3}-[0-9a-fA-F]{12}$/,_0x40a6f8=_0x1d9019[_0x38d6a7(0x2b5)]||_0x1d9019['uuid'],_0x2957d1=_0x40a6f8&&_0x550d30[_0x38d6a7(0x270)](_0x40a6f8)?_0x40a6f8['toLowerCase']():[_0x2b82c5[_0x38d6a7(0x1e8)](0x0,0x8),_0x2b82c5[_0x38d6a7(0x1e8)](0x8,0xc),'4'+_0x2b82c5[_0x38d6a7(0x1e8)](0xd,0x10),'8'+_0x2b82c5[_0x38d6a7(0x1e8)](0x11,0x14),_0x2b82c5['slice'](0x14)]['join']('-'),_0x2aaaed=_0x1d9019['HOST']?(await 整理成数组(_0x1d9019[_0x38d6a7(0x244)]))[_0x38d6a7(0x1a3)](_0x3db014=>_0x3db014[_0x38d6a7(0x19b)]()[_0x38d6a7(0x101)](/^https?:\/\//,'')[_0x38d6a7(0x356)]('/')[0x0][_0x38d6a7(0x356)](':')[0x0]):[_0x482c56['hostname']],_0x3bb97f=_0x2aaaed[0x0];if(_0x1d9019[_0x38d6a7(0xf9)]){const _0x4c01a6=await 整理成数组(_0x1d9019[_0x38d6a7(0xf9)]);反代IP=_0x4c01a6[Math['floor'](Math[_0x38d6a7(0x32a)]()*_0x4c01a6[_0x38d6a7(0x34a)])],启用反代兜底=![];}else 反代IP=(_0x6a38df['cf'][_0x38d6a7(0x2c6)]+_0x38d6a7(0x18e))['toLowerCase']();const _0x11f082=_0x6a38df[_0x38d6a7(0x32c)][_0x38d6a7(0x170)](_0x38d6a7(0x294))||_0x6a38df[_0x38d6a7(0x32c)][_0x38d6a7(0x170)]('CF-Connecting-IP')||_0x6a38df['headers'][_0x38d6a7(0x170)](_0x38d6a7(0x30d))||_0x6a38df['headers']['get'](_0x38d6a7(0x25e))||_0x6a38df[_0x38d6a7(0x32c)]['get'](_0x38d6a7(0x2fb))||_0x6a38df[_0x38d6a7(0x32c)]['get'](_0x38d6a7(0x31c))||_0x6a38df[_0x38d6a7(0x32c)][_0x38d6a7(0x170)](_0x38d6a7(0x30d))||_0x6a38df[_0x38d6a7(0x32c)]['get']('X-Real-IP')||_0x6a38df[_0x38d6a7(0x32c)]['get'](_0x38d6a7(0x207))||_0x6a38df['cf']?.[_0x38d6a7(0x1ba)]||_0x38d6a7(0x1fc);if(_0x1d9019['GO2SOCKS5'])SOCKS5白名单=await 整理成数组(_0x1d9019['GO2SOCKS5']);if(!_0x36da61||_0x36da61!==_0x38d6a7(0x355)){if(_0x482c56[_0x38d6a7(0x16b)]==='http:')return Response[_0x38d6a7(0x2f8)](_0x482c56[_0x38d6a7(0x26e)][_0x38d6a7(0x101)](_0x38d6a7(0x286)+_0x482c56[_0x38d6a7(0x237)],_0x38d6a7(0x2b6)+_0x482c56[_0x38d6a7(0x237)]),0x12d);if(!_0x21256d)return fetch(Pages静态页面+_0x38d6a7(0x296))[_0x38d6a7(0x2e9)](_0x24a6b2=>{const _0xa03eaa=_0x38d6a7,_0x2f5eb4=new Headers(_0x24a6b2[_0xa03eaa(0x32c)]);return _0x2f5eb4[_0xa03eaa(0x194)](_0xa03eaa(0x344),_0xa03eaa(0x1f8)),_0x2f5eb4[_0xa03eaa(0x194)]('Pragma',_0xa03eaa(0x1bf)),_0x2f5eb4[_0xa03eaa(0x194)](_0xa03eaa(0x21c),'0'),new Response(_0x24a6b2['body'],{'status':0x194,'statusText':_0x24a6b2[_0xa03eaa(0x153)],'headers':_0x2f5eb4});});if(!_0x1d9019['KV'])return fetch(Pages静态页面+'/noKV')[_0x38d6a7(0x2e9)](_0x294648=>{const _0x2f72d3=_0x38d6a7,_0x5b62d9=new Headers(_0x294648[_0x2f72d3(0x32c)]);return _0x5b62d9[_0x2f72d3(0x194)](_0x2f72d3(0x344),_0x2f72d3(0x1f8)),_0x5b62d9['set'](_0x2f72d3(0x191),'no-cache'),_0x5b62d9[_0x2f72d3(0x194)](_0x2f72d3(0x21c),'0'),new Response(_0x294648['body'],{'status':0x194,'statusText':_0x294648[_0x2f72d3(0x153)],'headers':_0x5b62d9});});const _0x22210e=_0x482c56['pathname'][_0x38d6a7(0x1e8)](0x1)['toLowerCase'](),_0x57bef7=_0x482c56[_0x38d6a7(0x22a)][_0x38d6a7(0x1e8)](0x1);if(_0x22210e===_0x1abb99&&_0x1abb99!==_0x38d6a7(0x161)){const _0x56f4cf=new URLSearchParams(_0x482c56[_0x38d6a7(0x1b7)]);return _0x56f4cf[_0x38d6a7(0x194)](_0x38d6a7(0x16c),await MD5MD5(_0x3bb97f+_0x2957d1)),new Response(_0x38d6a7(0x111),{'status':0x12e,'headers':{'Location':_0x38d6a7(0x1b2)+_0x56f4cf['toString']()}});}else{if(_0x22210e===_0x38d6a7(0x29c)){const _0x1d947d=_0x6a38df[_0x38d6a7(0x32c)][_0x38d6a7(0x170)](_0x38d6a7(0x1e9))||'',_0x50bd8d=_0x1d947d['split'](';')['find'](_0xbef408=>_0xbef408[_0x38d6a7(0x26c)]()[_0x38d6a7(0x255)]('auth='))?.['split']('=')[0x1];if(_0x50bd8d==await MD5MD5(_0x3e435b+_0x1abb99+_0x21256d))return new Response(_0x38d6a7(0x111),{'status':0x12e,'headers':{'Location':_0x38d6a7(0x35e)}});if(_0x6a38df[_0x38d6a7(0x112)]==='POST'){const _0x1cb27e=await _0x6a38df[_0x38d6a7(0x1fa)](),_0x5e75df=new URLSearchParams(_0x1cb27e),_0x4d235f=_0x5e75df['get'](_0x38d6a7(0x227));if(_0x4d235f===_0x21256d){const _0x4d8899=new Response(JSON[_0x38d6a7(0x15d)]({'success':!![]}),{'status':0xc8,'headers':{'Content-Type':_0x38d6a7(0x176)}});return _0x4d8899[_0x38d6a7(0x32c)]['set']('Set-Cookie',_0x38d6a7(0x12b)+await MD5MD5(_0x3e435b+_0x1abb99+_0x21256d)+_0x38d6a7(0x19d)),_0x4d8899;}}return fetch(Pages静态页面+_0x38d6a7(0x201));}else{if(_0x22210e===_0x38d6a7(0x2bf)||_0x22210e[_0x38d6a7(0x255)](_0x38d6a7(0x28d))){const _0x3c7d84=_0x6a38df['headers'][_0x38d6a7(0x170)]('Cookie')||'',_0x27fa8d=_0x3c7d84['split'](';')['find'](_0x217df6=>_0x217df6[_0x38d6a7(0x26c)]()['startsWith'](_0x38d6a7(0x12b)))?.['split']('=')[0x1];if(!_0x27fa8d||_0x27fa8d!==await MD5MD5(_0x3e435b+_0x1abb99+_0x21256d))return new Response('重定向中...',{'status':0x12e,'headers':{'Location':_0x38d6a7(0x201)}});if(_0x22210e===_0x38d6a7(0x27c)){const _0x4c23d4=await _0x1d9019['KV'][_0x38d6a7(0x170)](_0x38d6a7(0x338))||'[]';return new Response(_0x4c23d4,{'status':0xc8,'headers':{'Content-Type':_0x38d6a7(0x176)}});}else{if(_0x57bef7==='admin/getCloudflareUsage')try{const _0xd0b8b0=await getCloudflareUsage(_0x482c56[_0x38d6a7(0x18d)][_0x38d6a7(0x170)](_0x38d6a7(0x19a)),_0x482c56[_0x38d6a7(0x18d)]['get'](_0x38d6a7(0x138)),_0x482c56[_0x38d6a7(0x18d)][_0x38d6a7(0x170)](_0x38d6a7(0x217)),_0x482c56[_0x38d6a7(0x18d)][_0x38d6a7(0x170)]('APIToken'));return new Response(JSON['stringify'](_0xd0b8b0,null,0x2),{'status':0xc8,'headers':{'Content-Type':_0x38d6a7(0x143)}});}catch(_0x25c56a){const _0x57989b={'msg':_0x38d6a7(0x2a0)+_0x25c56a['message'],'error':_0x25c56a[_0x38d6a7(0x102)]};return new Response(JSON['stringify'](_0x57989b,null,0x2),{'status':0x1f4,'headers':{'Content-Type':_0x38d6a7(0x176)}});}else{if(_0x57bef7===_0x38d6a7(0x1f2)){if(_0x482c56[_0x38d6a7(0x18d)]['get'](_0x38d6a7(0x235))){const _0x1bc640=_0x482c56['searchParams'][_0x38d6a7(0x170)](_0x38d6a7(0x235));try{new URL(_0x1bc640);const _0x4cc09b=await 请求优选API([_0x1bc640],_0x482c56[_0x38d6a7(0x18d)][_0x38d6a7(0x170)](_0x38d6a7(0x311))||'443'),_0x49708b=_0x4cc09b[0x0][_0x38d6a7(0x34a)]>0x0?_0x4cc09b[0x0]:_0x4cc09b[0x1];return new Response(JSON[_0x38d6a7(0x15d)]({'success':!![],'data':_0x49708b},null,0x2),{'status':0xc8,'headers':{'Content-Type':_0x38d6a7(0x176)}});}catch(_0x385d5e){const _0x2beb2c={'msg':_0x38d6a7(0x2bc)+_0x385d5e['message'],'error':_0x385d5e[_0x38d6a7(0x102)]};return new Response(JSON[_0x38d6a7(0x15d)](_0x2beb2c,null,0x2),{'status':0x1f4,'headers':{'Content-Type':_0x38d6a7(0x176)}});}}return new Response(JSON[_0x38d6a7(0x15d)]({'success':![],'data':[]},null,0x2),{'status':0x193,'headers':{'Content-Type':_0x38d6a7(0x176)}});}else{if(_0x22210e===_0x38d6a7(0x115)){let _0x5eabdf;if(_0x482c56[_0x38d6a7(0x18d)][_0x38d6a7(0x25f)]('socks5'))_0x5eabdf=await SOCKS5可用性验证(_0x38d6a7(0x160),_0x482c56[_0x38d6a7(0x18d)][_0x38d6a7(0x170)](_0x38d6a7(0x160)));else{if(_0x482c56[_0x38d6a7(0x18d)][_0x38d6a7(0x25f)](_0x38d6a7(0x10b)))_0x5eabdf=await SOCKS5可用性验证(_0x38d6a7(0x10b),_0x482c56[_0x38d6a7(0x18d)][_0x38d6a7(0x170)]('http'));else return new Response(JSON[_0x38d6a7(0x15d)]({'error':_0x38d6a7(0x1fd)}),{'status':0x190,'headers':{'Content-Type':_0x38d6a7(0x176)}});}return new Response(JSON[_0x38d6a7(0x15d)](_0x5eabdf,null,0x2),{'status':0xc8,'headers':{'Content-Type':_0x38d6a7(0x176)}});}}}}config_JSON=await 读取config_JSON(_0x1d9019,_0x3bb97f,_0x2957d1,_0x1d9019['PATH']);if(_0x22210e===_0x38d6a7(0x1f9))try{return config_JSON=await 读取config_JSON(_0x1d9019,_0x3bb97f,_0x2957d1,_0x1d9019['PATH'],!![]),_0x2b25c8[_0x38d6a7(0x2d4)](请求日志记录(_0x1d9019,_0x6a38df,_0x11f082,_0x38d6a7(0x186),config_JSON)),config_JSON[_0x38d6a7(0x341)]=_0x38d6a7(0x149),new Response(JSON[_0x38d6a7(0x15d)](config_JSON,null,0x2),{'status':0xc8,'headers':{'Content-Type':'application/json;charset=utf-8'}});}catch(_0x40301a){const _0x3da35a={'msg':'配置重置失败，失败原因：'+_0x40301a[_0x38d6a7(0x102)],'error':_0x40301a[_0x38d6a7(0x102)]};return new Response(JSON['stringify'](_0x3da35a,null,0x2),{'status':0x1f4,'headers':{'Content-Type':_0x38d6a7(0x176)}});}else{if(_0x6a38df[_0x38d6a7(0x112)]===_0x38d6a7(0x2ce)){if(_0x22210e===_0x38d6a7(0x16e))try{const _0x178fe3=await _0x6a38df[_0x38d6a7(0x25b)]();if(!_0x178fe3[_0x38d6a7(0x2b5)]||!_0x178fe3[_0x38d6a7(0x244)])return new Response(JSON[_0x38d6a7(0x15d)]({'error':_0x38d6a7(0x2c9)}),{'status':0x190,'headers':{'Content-Type':_0x38d6a7(0x176)}});return await _0x1d9019['KV'][_0x38d6a7(0x2cb)](_0x38d6a7(0x27f),JSON['stringify'](_0x178fe3,null,0x2)),_0x2b25c8['waitUntil'](请求日志记录(_0x1d9019,_0x6a38df,_0x11f082,_0x38d6a7(0x333),config_JSON)),new Response(JSON[_0x38d6a7(0x15d)]({'success':!![],'message':'配置已保存'}),{'status':0xc8,'headers':{'Content-Type':'application/json;charset=utf-8'}});}catch(_0x1d0451){return console['error'](_0x38d6a7(0x343),_0x1d0451),new Response(JSON[_0x38d6a7(0x15d)]({'error':_0x38d6a7(0x27b)+_0x1d0451[_0x38d6a7(0x102)]}),{'status':0x1f4,'headers':{'Content-Type':'application/json;charset=utf-8'}});}else{if(_0x22210e===_0x38d6a7(0x175))try{const _0x1ad540=await _0x6a38df[_0x38d6a7(0x25b)](),_0x33e4c7={'Email':null,'GlobalAPIKey':null,'AccountID':null,'APIToken':null};if(!_0x1ad540[_0x38d6a7(0x341)]||_0x1ad540[_0x38d6a7(0x341)]!==!![]){if(_0x1ad540[_0x38d6a7(0x19a)]&&_0x1ad540[_0x38d6a7(0x138)])_0x33e4c7['Email']=_0x1ad540[_0x38d6a7(0x19a)],_0x33e4c7['GlobalAPIKey']=_0x1ad540[_0x38d6a7(0x138)],_0x33e4c7[_0x38d6a7(0x217)]=null,_0x33e4c7['APIToken']=null;else{if(_0x1ad540['AccountID']&&_0x1ad540[_0x38d6a7(0x1e5)])_0x33e4c7[_0x38d6a7(0x19a)]=null,_0x33e4c7[_0x38d6a7(0x138)]=null,_0x33e4c7[_0x38d6a7(0x217)]=_0x1ad540['AccountID'],_0x33e4c7[_0x38d6a7(0x1e5)]=_0x1ad540[_0x38d6a7(0x1e5)];else return new Response(JSON[_0x38d6a7(0x15d)]({'error':_0x38d6a7(0x2c9)}),{'status':0x190,'headers':{'Content-Type':_0x38d6a7(0x176)}});}}return await _0x1d9019['KV']['put']('cf.json',JSON[_0x38d6a7(0x15d)](_0x33e4c7,null,0x2)),_0x2b25c8[_0x38d6a7(0x2d4)](请求日志记录(_0x1d9019,_0x6a38df,_0x11f082,_0x38d6a7(0x333),config_JSON)),new Response(JSON[_0x38d6a7(0x15d)]({'success':!![],'message':_0x38d6a7(0x24a)}),{'status':0xc8,'headers':{'Content-Type':_0x38d6a7(0x176)}});}catch(_0x3da56d){return console[_0x38d6a7(0x146)]('保存配置失败:',_0x3da56d),new Response(JSON[_0x38d6a7(0x15d)]({'error':_0x38d6a7(0x27b)+_0x3da56d[_0x38d6a7(0x102)]}),{'status':0x1f4,'headers':{'Content-Type':'application/json;charset=utf-8'}});}else{if(_0x22210e===_0x38d6a7(0x35b))try{const _0x2e4584=await _0x6a38df[_0x38d6a7(0x25b)]();if(_0x2e4584[_0x38d6a7(0x341)]&&_0x2e4584['init']===!![]){const _0x35b287={'BotToken':null,'ChatID':null};await _0x1d9019['KV'][_0x38d6a7(0x2cb)]('tg.json',JSON['stringify'](_0x35b287,null,0x2));}else{if(!_0x2e4584[_0x38d6a7(0x22d)]||!_0x2e4584[_0x38d6a7(0x34f)])return new Response(JSON[_0x38d6a7(0x15d)]({'error':_0x38d6a7(0x2c9)}),{'status':0x190,'headers':{'Content-Type':'application/json;charset=utf-8'}});await _0x1d9019['KV'][_0x38d6a7(0x2cb)]('tg.json',JSON['stringify'](_0x2e4584,null,0x2));}return _0x2b25c8[_0x38d6a7(0x2d4)](请求日志记录(_0x1d9019,_0x6a38df,_0x11f082,'Save_Config',config_JSON)),new Response(JSON[_0x38d6a7(0x15d)]({'success':!![],'message':'配置已保存'}),{'status':0xc8,'headers':{'Content-Type':_0x38d6a7(0x176)}});}catch(_0x2993ac){return console[_0x38d6a7(0x146)](_0x38d6a7(0x343),_0x2993ac),new Response(JSON[_0x38d6a7(0x15d)]({'error':_0x38d6a7(0x27b)+_0x2993ac[_0x38d6a7(0x102)]}),{'status':0x1f4,'headers':{'Content-Type':_0x38d6a7(0x176)}});}else{if(_0x57bef7===_0x38d6a7(0x2bd))try{const _0x192113=await _0x6a38df[_0x38d6a7(0x1fa)]();return await _0x1d9019['KV']['put'](_0x38d6a7(0x113),_0x192113),_0x2b25c8['waitUntil'](请求日志记录(_0x1d9019,_0x6a38df,_0x11f082,_0x38d6a7(0x10e),config_JSON)),new Response(JSON['stringify']({'success':!![],'message':_0x38d6a7(0x334)}),{'status':0xc8,'headers':{'Content-Type':_0x38d6a7(0x176)}});}catch(_0x1cfc50){return console[_0x38d6a7(0x146)]('保存自定义IP失败:',_0x1cfc50),new Response(JSON[_0x38d6a7(0x15d)]({'error':_0x38d6a7(0x1a5)+_0x1cfc50[_0x38d6a7(0x102)]}),{'status':0x1f4,'headers':{'Content-Type':_0x38d6a7(0x176)}});}else return new Response(JSON[_0x38d6a7(0x15d)]({'error':_0x38d6a7(0x182)}),{'status':0x194,'headers':{'Content-Type':_0x38d6a7(0x176)}});}}}}else{if(_0x22210e==='admin/config.json')return new Response(JSON[_0x38d6a7(0x15d)](config_JSON,null,0x2),{'status':0xc8,'headers':{'Content-Type':_0x38d6a7(0x143)}});else{if(_0x57bef7===_0x38d6a7(0x2bd)){let _0x505865=await _0x1d9019['KV'][_0x38d6a7(0x170)](_0x38d6a7(0x113))||_0x38d6a7(0x2fe);if(_0x505865=='null')_0x505865=(await 生成随机IP(_0x6a38df,config_JSON['优选订阅生成'][_0x38d6a7(0x1c4)][_0x38d6a7(0x1d9)],config_JSON['优选订阅生成'][_0x38d6a7(0x1c4)][_0x38d6a7(0x22c)]))[0x1];return new Response(_0x505865,{'status':0xc8,'headers':{'Content-Type':_0x38d6a7(0x304),'asn':_0x6a38df['cf']['asn']}});}else{if(_0x22210e==='admin/cf.json')return new Response(JSON[_0x38d6a7(0x15d)](_0x6a38df['cf'],null,0x2),{'status':0xc8,'headers':{'Content-Type':_0x38d6a7(0x176)}});}}}}return _0x2b25c8[_0x38d6a7(0x2d4)](请求日志记录(_0x1d9019,_0x6a38df,_0x11f082,_0x38d6a7(0x2c1),config_JSON)),fetch(Pages静态页面+_0x38d6a7(0x35e));}else{if(_0x22210e==='logout'){const _0x19fa20=new Response(_0x38d6a7(0x111),{'status':0x12e,'headers':{'Location':_0x38d6a7(0x201)}});return _0x19fa20[_0x38d6a7(0x32c)][_0x38d6a7(0x194)](_0x38d6a7(0x308),_0x38d6a7(0x24b)),_0x19fa20;}else{if(_0x22210e===_0x38d6a7(0x1d0)){const _0x21a7b4=await MD5MD5(_0x3bb97f+_0x2957d1);if(_0x482c56[_0x38d6a7(0x18d)][_0x38d6a7(0x170)](_0x38d6a7(0x16c))===_0x21a7b4){config_JSON=await 读取config_JSON(_0x1d9019,_0x3bb97f,_0x2957d1,_0x1d9019[_0x38d6a7(0x35a)]),_0x2b25c8[_0x38d6a7(0x2d4)](请求日志记录(_0x1d9019,_0x6a38df,_0x11f082,_0x38d6a7(0x322),config_JSON));const _0xcd9bfd=_0x3e435b[_0x38d6a7(0x19b)](),_0x3bf7cb=0xf4849500,_0x39e25b=Date['now'](),_0x5846cf=new Date(_0x39e25b);_0x5846cf[_0x38d6a7(0x19c)](0x0,0x0,0x0,0x0);const _0x14c050=Math[_0x38d6a7(0x125)]((_0x39e25b-_0x5846cf['getTime']())/0x5265c00*0x18*0x10000000000/0x2);let _0x31d1dd=_0x14c050,_0x406ccb=_0x14c050,_0x50c84c=0x18*0x10000000000;config_JSON['CF'][_0x38d6a7(0x331)][_0x38d6a7(0x2f4)]&&(_0x31d1dd=config_JSON['CF']['Usage'][_0x38d6a7(0x1be)],_0x406ccb=config_JSON['CF'][_0x38d6a7(0x331)]['workers'],_0x50c84c=0x400*0x64);const _0xc408d2={'content-type':_0x38d6a7(0x20d),'Profile-Update-Interval':config_JSON[_0x38d6a7(0x162)]['SUBUpdateTime'],'Profile-web-page-url':_0x482c56[_0x38d6a7(0x16b)]+'//'+_0x482c56['host']+_0x38d6a7(0x35e),'Subscription-Userinfo':_0x38d6a7(0x1c5)+_0x31d1dd+_0x38d6a7(0x147)+_0x406ccb+_0x38d6a7(0x351)+_0x50c84c+_0x38d6a7(0x140)+_0x3bf7cb,'Cache-Control':_0x38d6a7(0x177)},_0x511e1b=_0x6a38df[_0x38d6a7(0x32c)]['has'](_0x38d6a7(0x21f))||_0x6a38df['headers'][_0x38d6a7(0x25f)](_0x38d6a7(0x1cc))||_0x6a38df[_0x38d6a7(0x32c)]['get'](_0x38d6a7(0x135))||_0x6a38df['headers'][_0x38d6a7(0x170)](_0x38d6a7(0x2ca))||_0xcd9bfd[_0x38d6a7(0x328)]('subconverter')||_0xcd9bfd[_0x38d6a7(0x328)](_0x38d6a7(0x208)['toLowerCase']()),_0x4a7d9c=_0x511e1b?_0x38d6a7(0x13d):_0x482c56['searchParams'][_0x38d6a7(0x25f)]('target')?_0x482c56[_0x38d6a7(0x18d)][_0x38d6a7(0x170)]('target'):_0x482c56[_0x38d6a7(0x18d)][_0x38d6a7(0x25f)](_0x38d6a7(0x1c1))||_0xcd9bfd[_0x38d6a7(0x328)](_0x38d6a7(0x1c1))||_0xcd9bfd[_0x38d6a7(0x328)]('meta')||_0xcd9bfd[_0x38d6a7(0x328)](_0x38d6a7(0x13b))?_0x38d6a7(0x1c1):_0x482c56[_0x38d6a7(0x18d)][_0x38d6a7(0x25f)]('sb')||_0x482c56[_0x38d6a7(0x18d)]['has'](_0x38d6a7(0x1f0))||_0xcd9bfd['includes'](_0x38d6a7(0x1f0))||_0xcd9bfd[_0x38d6a7(0x328)](_0x38d6a7(0x1d7))?'singbox':_0x482c56[_0x38d6a7(0x18d)][_0x38d6a7(0x25f)](_0x38d6a7(0x17f))||_0xcd9bfd['includes']('surge')?_0x38d6a7(0x30c):_0x38d6a7(0x13d);if(!_0xcd9bfd[_0x38d6a7(0x328)](_0x38d6a7(0x248)))_0xc408d2['Content-Disposition']='attachment;\x20filename*=utf-8\x27\x27'+encodeURIComponent(config_JSON[_0x38d6a7(0x162)][_0x38d6a7(0x1db)]);const _0x503911=_0x482c56[_0x38d6a7(0x18d)][_0x38d6a7(0x25f)](_0x38d6a7(0x17f))||_0xcd9bfd['includes']('surge')?_0x38d6a7(0x269)+_0x38d6a7(0x292):config_JSON['协议类型'];let _0x2addca='';if(_0x4a7d9c===_0x38d6a7(0x13d)){const _0x251e47=config_JSON[_0x38d6a7(0x2e0)]?config_JSON[_0x38d6a7(0x35a)]+'?ed=2560':config_JSON[_0x38d6a7(0x35a)],_0x3983a3=config_JSON[_0x38d6a7(0x2d1)]==_0x38d6a7(0x107)?_0x38d6a7(0x105)+encodeURIComponent('1,40-60,30-50,tlshello'):config_JSON[_0x38d6a7(0x2d1)]==_0x38d6a7(0x347)?_0x38d6a7(0x105)+encodeURIComponent(_0x38d6a7(0x229)):'';let _0x89f02b=[],_0x55e39d='';if(!_0x482c56[_0x38d6a7(0x18d)][_0x38d6a7(0x25f)](_0x38d6a7(0x1d0))&&config_JSON[_0x38d6a7(0x162)][_0x38d6a7(0x1ad)]){const _0x5612bc=config_JSON[_0x38d6a7(0x162)][_0x38d6a7(0x1c4)]['随机IP']?(await 生成随机IP(_0x6a38df,config_JSON[_0x38d6a7(0x162)][_0x38d6a7(0x1c4)]['随机数量'],config_JSON[_0x38d6a7(0x162)][_0x38d6a7(0x1c4)][_0x38d6a7(0x22c)]))[0x0]:await _0x1d9019['KV'][_0x38d6a7(0x170)](_0x38d6a7(0x113))?await 整理成数组(await _0x1d9019['KV']['get'](_0x38d6a7(0x113))):(await 生成随机IP(_0x6a38df,config_JSON[_0x38d6a7(0x162)][_0x38d6a7(0x1c4)][_0x38d6a7(0x1d9)],config_JSON['优选订阅生成'][_0x38d6a7(0x1c4)][_0x38d6a7(0x22c)]))[0x0],_0x2afb45=[],_0x9a64c8=[],_0x155ae4=[];for(const _0x445827 of _0x5612bc){if(_0x445827['toLowerCase']()[_0x38d6a7(0x255)]('https://'))_0x2afb45[_0x38d6a7(0x1e2)](_0x445827);else{if(_0x445827[_0x38d6a7(0x19b)]()[_0x38d6a7(0x328)]('://')){if(_0x445827[_0x38d6a7(0x328)]('#')){const _0x1d498c=_0x445827[_0x38d6a7(0x356)]('#');_0x155ae4[_0x38d6a7(0x1e2)](_0x1d498c[0x0]+'#'+encodeURIComponent(decodeURIComponent(_0x1d498c[0x1])));}else _0x155ae4['push'](_0x445827);}else _0x9a64c8[_0x38d6a7(0x1e2)](_0x445827);}}const _0x381dcc=await 请求优选API(_0x2afb45),_0x4fe10f=[...new Set(_0x155ae4[_0x38d6a7(0x2b7)](_0x381dcc[0x1]))];_0x55e39d=_0x4fe10f[_0x38d6a7(0x34a)]>0x0?_0x4fe10f[_0x38d6a7(0x148)]('\x0a')+'\x0a':'';const _0x523d4f=_0x381dcc[0x0];_0x89f02b=[...new Set(_0x9a64c8['concat'](_0x523d4f))];}else{let _0x8abe2a=_0x482c56[_0x38d6a7(0x18d)]['get']('sub')||config_JSON[_0x38d6a7(0x162)]['SUB'];_0x8abe2a=_0x8abe2a&&!/^https?:\/\//i['test'](_0x8abe2a)?_0x38d6a7(0x2b6)+_0x8abe2a:_0x8abe2a;const _0x2c0556=_0x8abe2a+_0x38d6a7(0x359);try{const _0x35c900=await fetch(_0x2c0556,{'headers':{'User-Agent':_0x38d6a7(0x12e)+_0x38d6a7(0x145)+_0x38d6a7(0x200)}});if(!_0x35c900['ok'])return new Response('优选订阅生成器异常：'+_0x35c900[_0x38d6a7(0x153)],{'status':_0x35c900[_0x38d6a7(0x2f1)]});const _0x4e5489=atob(await _0x35c900[_0x38d6a7(0x1fa)]()),_0x13d370=_0x4e5489[_0x38d6a7(0x328)]('\x0d\x0a')?_0x4e5489[_0x38d6a7(0x356)]('\x0d\x0a'):_0x4e5489[_0x38d6a7(0x356)]('\x0a');for(const _0x338e50 of _0x13d370){if(!_0x338e50[_0x38d6a7(0x26c)]())continue;if(_0x338e50[_0x38d6a7(0x328)]('00000000-0000-4000-8000-000000000000')&&_0x338e50['includes']('example.com')){const _0x99d0b8=_0x338e50[_0x38d6a7(0x272)](/:\/\/[^@]+@([^?]+)/);if(_0x99d0b8){let _0x4c6e59=_0x99d0b8[0x1],_0x2d1342='';const _0x497a23=_0x338e50[_0x38d6a7(0x272)](/#(.+)$/);if(_0x497a23)_0x2d1342='#'+decodeURIComponent(_0x497a23[0x1]);_0x89f02b[_0x38d6a7(0x1e2)](_0x4c6e59+_0x2d1342);}}else _0x55e39d+=_0x338e50+'\x0a';}}catch(_0x41dbec){return new Response(_0x38d6a7(0x2a4)+_0x41dbec['message'],{'status':0x193});}}_0x2addca=_0x55e39d+_0x89f02b[_0x38d6a7(0x1a3)](_0x251f85=>{const _0x1b9260=_0x38d6a7,_0x272fb1=/^(\[[\da-fA-F:]+\]|[\d.]+|[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?)*)(?::(\d+))?(?:#(.+))?$/,_0x392377=_0x251f85[_0x1b9260(0x272)](_0x272fb1);let _0x228ad4,_0x28da4e=_0x1b9260(0x159),_0x272fd2;if(_0x392377)_0x228ad4=_0x392377[0x1],_0x28da4e=_0x392377[0x2]||'443',_0x272fd2=_0x392377[0x3]||_0x228ad4;else return console[_0x1b9260(0x1c7)]('[订阅内容]\x20不规范的IP格式已忽略:\x20'+_0x251f85),null;return _0x503911+_0x1b9260(0x195)+_0x228ad4+':'+_0x28da4e+'?security=tls&type='+config_JSON['传输协议']+_0x1b9260(0x196)+(encodeURIComponent(config_JSON[_0x1b9260(0x216)]?随机路径()+_0x251e47:_0x251e47)+_0x3983a3)+_0x1b9260(0x274)+(config_JSON[_0x1b9260(0x171)]?_0x1b9260(0x1ca):'')+'#'+encodeURIComponent(_0x272fd2);})[_0x38d6a7(0x12c)](_0x2c8291=>_0x2c8291!==null)[_0x38d6a7(0x148)]('\x0a');}else{const _0x63a084=config_JSON[_0x38d6a7(0x249)][_0x38d6a7(0x280)]+_0x38d6a7(0x1af)+_0x4a7d9c+_0x38d6a7(0x164)+encodeURIComponent(_0x482c56[_0x38d6a7(0x16b)]+'//'+_0x482c56['host']+'/sub?target=mixed&token='+_0x21a7b4+(_0x482c56[_0x38d6a7(0x18d)][_0x38d6a7(0x25f)](_0x38d6a7(0x1d0))&&_0x482c56[_0x38d6a7(0x18d)][_0x38d6a7(0x170)](_0x38d6a7(0x1d0))!=''?'&sub='+_0x482c56['searchParams']['get']('sub'):''))+_0x38d6a7(0x220)+encodeURIComponent(config_JSON[_0x38d6a7(0x249)][_0x38d6a7(0x2de)])+_0x38d6a7(0x1e4)+config_JSON[_0x38d6a7(0x249)]['SUBEMOJI']+_0x38d6a7(0x144)+config_JSON[_0x38d6a7(0x171)];try{const _0x48d738=await fetch(_0x63a084,{'headers':{'User-Agent':_0x38d6a7(0x31e)+_0x4a7d9c+_0x38d6a7(0x15a)+_0x38d6a7(0x1b5)+'tunnel)'}});if(_0x48d738['ok']){_0x2addca=await _0x48d738[_0x38d6a7(0x1fa)]();if(_0x482c56['searchParams'][_0x38d6a7(0x25f)](_0x38d6a7(0x17f))||_0xcd9bfd[_0x38d6a7(0x328)](_0x38d6a7(0x17f)))_0x2addca=surge(_0x2addca,_0x482c56['protocol']+'//'+_0x482c56[_0x38d6a7(0x23e)]+_0x38d6a7(0x1d8)+_0x21a7b4+_0x38d6a7(0x28a),config_JSON);}else return new Response(_0x38d6a7(0x247)+_0x48d738[_0x38d6a7(0x153)],{'status':_0x48d738['status']});}catch(_0x3185be){return new Response(_0x38d6a7(0x247)+_0x3185be['message'],{'status':0x193});}}if(!_0xcd9bfd['includes'](_0x38d6a7(0x154)))_0x2addca=批量替换域名(_0x2addca[_0x38d6a7(0x101)](/00000000-0000-4000-8000-000000000000/g,config_JSON[_0x38d6a7(0x2b5)]),config_JSON[_0x38d6a7(0x11b)]);if(!_0xcd9bfd[_0x38d6a7(0x328)](_0x38d6a7(0x248))&&_0x4a7d9c===_0x38d6a7(0x13d))_0x2addca=btoa(_0x2addca);if(_0x4a7d9c==='singbox')_0x2addca=JSON[_0x38d6a7(0x15d)](JSON['parse'](_0x2addca),null,0x2),_0xc408d2[_0x38d6a7(0x310)]='application/json;\x20charset=utf-8';else _0x4a7d9c===_0x38d6a7(0x1c1)&&(_0xc408d2['content-type']='application/x-yaml;\x20charset=utf-8');return new Response(_0x2addca,{'status':0xc8,'headers':_0xc408d2});}return new Response(_0x38d6a7(0x11c),{'status':0x193});}else{if(_0x22210e==='locations'){const _0x157ef7=_0x6a38df[_0x38d6a7(0x32c)][_0x38d6a7(0x170)](_0x38d6a7(0x1e9))||'',_0x1213a4=_0x157ef7[_0x38d6a7(0x356)](';')['find'](_0x6a696c=>_0x6a696c[_0x38d6a7(0x26c)]()[_0x38d6a7(0x255)](_0x38d6a7(0x12b)))?.[_0x38d6a7(0x356)]('=')[0x1];if(_0x1213a4&&_0x1213a4==await MD5MD5(_0x3e435b+_0x1abb99+_0x21256d))return fetch(new Request(_0x38d6a7(0x1ae),{'headers':{'Referer':'https://speed.cloudflare.com/'}}));}}}}}}}else{if(_0x21256d)return await 反代参数获取(_0x6a38df),await 处理WS请求(_0x6a38df,_0x2957d1);}let _0x4f3163=_0x1d9019[_0x38d6a7(0x314)]||_0x38d6a7(0x284);if(_0x4f3163&&_0x4f3163!==_0x38d6a7(0x284)&&_0x4f3163!==_0x38d6a7(0x340)){_0x4f3163=_0x4f3163['trim']()[_0x38d6a7(0x101)](/\/$/,'');if(!_0x4f3163[_0x38d6a7(0x272)](/^https?:\/\//i))_0x4f3163='https://'+_0x4f3163;if(_0x4f3163['toLowerCase']()['startsWith'](_0x38d6a7(0x286)))_0x4f3163=_0x38d6a7(0x2b6)+_0x4f3163[_0x38d6a7(0x33f)](0x7);try{const _0x4cf5ee=new URL(_0x4f3163);_0x4f3163=_0x4cf5ee['protocol']+'//'+_0x4cf5ee[_0x38d6a7(0x23e)];}catch(_0x4664bf){_0x4f3163=_0x38d6a7(0x284);}}if(_0x4f3163===_0x38d6a7(0x340))return new Response(await html1101(_0x482c56['host'],_0x11f082),{'status':0xc8,'headers':{'Content-Type':'text/html;\x20charset=UTF-8'}});try{const _0xeee02f=new URL(_0x4f3163),_0x363a93=new Headers(_0x6a38df[_0x38d6a7(0x32c)]);_0x363a93['set'](_0x38d6a7(0x1ed),_0xeee02f['host']);if(_0x363a93[_0x38d6a7(0x25f)](_0x38d6a7(0x27a))){const _0x216b65=new URL(_0x363a93[_0x38d6a7(0x170)]('Referer'));_0x363a93[_0x38d6a7(0x194)](_0x38d6a7(0x27a),_0xeee02f[_0x38d6a7(0x16b)]+'//'+_0xeee02f['host']+_0x216b65[_0x38d6a7(0x22a)]+_0x216b65[_0x38d6a7(0x1b7)]);}if(_0x363a93[_0x38d6a7(0x25f)]('Origin'))_0x363a93['set'](_0x38d6a7(0x1f3),_0xeee02f[_0x38d6a7(0x16b)]+'//'+_0xeee02f['host']);if(!_0x363a93[_0x38d6a7(0x25f)](_0x38d6a7(0x2a5))&&_0x3e435b&&_0x3e435b!==_0x38d6a7(0x2fe))_0x363a93['set']('User-Agent',_0x3e435b);return fetch(new Request(_0xeee02f[_0x38d6a7(0x16b)]+_0xeee02f[_0x38d6a7(0x23e)]+_0x482c56[_0x38d6a7(0x22a)]+_0x482c56[_0x38d6a7(0x1b7)],{'method':_0x6a38df['method'],'headers':_0x363a93,'body':_0x6a38df['body'],'cf':_0x6a38df['cf']}));}catch(_0x114545){}return new Response(await nginx(),{'status':0xc8,'headers':{'Content-Type':_0x38d6a7(0x2a1)}});}};async function 处理WS请求(_0x5db84c,_0x4da122){const _0x54ee39=_0x309bbe,_0x2e6de1=new WebSocketPair(),[_0x34ef44,_0x3363bd]=Object[_0x54ee39(0x110)](_0x2e6de1);_0x3363bd['accept']();let _0x54223c={'socket':null},_0xb2c0b9=![];const _0x1ee15b=_0x5db84c['headers'][_0x54ee39(0x170)](_0x54ee39(0x2fa))||'',_0x45040e=makeReadableStr(_0x3363bd,_0x1ee15b);let _0x4ba4c2=null;return _0x45040e[_0x54ee39(0x276)](new WritableStream({async 'write'(_0x43517a){const _0x589cb9=_0x54ee39;if(_0xb2c0b9)return await forwardataudp(_0x43517a,_0x3363bd,null);if(_0x54223c[_0x589cb9(0x11f)]){const _0x639553=_0x54223c[_0x589cb9(0x11f)][_0x589cb9(0x14d)][_0x589cb9(0x1ea)]();await _0x639553[_0x589cb9(0x1e3)](_0x43517a),_0x639553['releaseLock']();return;}if(_0x4ba4c2===null){const _0x2abc5a=new Uint8Array(_0x43517a);_0x4ba4c2=_0x2abc5a[_0x589cb9(0x1d5)]>=0x3a&&_0x2abc5a[0x38]===0xd&&_0x2abc5a[0x39]===0xa;}if(_0x54223c['socket']){const _0x407bb5=_0x54223c['socket']['writable']['getWriter']();await _0x407bb5['write'](_0x43517a),_0x407bb5[_0x589cb9(0x214)]();return;}if(_0x4ba4c2){const {port:_0x50b617,hostname:_0x1b81cf,rawClientData:_0x3bb701}=解析木马请求(_0x43517a,_0x4da122);if(isSpeedTestSite(_0x1b81cf))throw new Error(_0x589cb9(0x1e0));await forwardataTCP(_0x1b81cf,_0x50b617,_0x3bb701,_0x3363bd,null,_0x54223c,_0x4da122);}else{const {port:_0x214595,hostname:_0xb48b22,rawIndex:_0xccee5a,version:_0x593c2e,isUDP:_0x57667f}=解析魏烈思请求(_0x43517a,_0x4da122);if(isSpeedTestSite(_0xb48b22))throw new Error(_0x589cb9(0x1e0));if(_0x57667f){if(_0x214595===0x35)_0xb2c0b9=!![];else throw new Error(_0x589cb9(0x326));}const _0xbbe7ae=new Uint8Array([_0x593c2e[0x0],0x0]),_0x4b2df5=_0x43517a[_0x589cb9(0x1e8)](_0xccee5a);if(_0xb2c0b9)return forwardataudp(_0x4b2df5,_0x3363bd,_0xbbe7ae);await forwardataTCP(_0xb48b22,_0x214595,_0x4b2df5,_0x3363bd,_0xbbe7ae,_0x54223c,_0x4da122);}}}))['catch'](_0x5bf87b=>{}),new Response(null,{'status':0x65,'webSocket':_0x34ef44});}function _0x2d70(_0x352fec,_0x5c9e13){const _0x49ba6d=_0x49ba();return _0x2d70=function(_0x2d70f8,_0x2836e4){_0x2d70f8=_0x2d70f8-0xf8;let _0x1443b4=_0x49ba6d[_0x2d70f8];return _0x1443b4;},_0x2d70(_0x352fec,_0x5c9e13);}function 解析木马请求(_0xe55d37,_0x537b8f){const _0x4d3fba=_0x309bbe,_0x47dd7a=sha224(_0x537b8f);if(_0xe55d37[_0x4d3fba(0x1d5)]<0x38)return{'hasError':!![],'message':_0x4d3fba(0x33c)};let _0x2b4c9d=0x38;if(new Uint8Array(_0xe55d37[_0x4d3fba(0x1e8)](0x38,0x39))[0x0]!==0xd||new Uint8Array(_0xe55d37[_0x4d3fba(0x1e8)](0x39,0x3a))[0x0]!==0xa)return{'hasError':!![],'message':_0x4d3fba(0x360)};const _0x510b70=new TextDecoder()[_0x4d3fba(0x188)](_0xe55d37[_0x4d3fba(0x1e8)](0x0,_0x2b4c9d));if(_0x510b70!==_0x47dd7a)return{'hasError':!![],'message':_0x4d3fba(0x1eb)};const _0x4809db=_0xe55d37[_0x4d3fba(0x1e8)](_0x2b4c9d+0x2);if(_0x4809db['byteLength']<0x6)return{'hasError':!![],'message':_0x4d3fba(0x221)};const _0xed8ee4=new DataView(_0x4809db),_0x5d16ee=_0xed8ee4[_0x4d3fba(0x2f6)](0x0);if(_0x5d16ee!==0x1)return{'hasError':!![],'message':_0x4d3fba(0x1e7)};const _0x5a2368=_0xed8ee4[_0x4d3fba(0x2f6)](0x1);let _0x2ebbc9=0x0,_0x5bc943=0x2,_0x209e14='';switch(_0x5a2368){case 0x1:_0x2ebbc9=0x4,_0x209e14=new Uint8Array(_0x4809db[_0x4d3fba(0x1e8)](_0x5bc943,_0x5bc943+_0x2ebbc9))['join']('.');break;case 0x3:_0x2ebbc9=new Uint8Array(_0x4809db[_0x4d3fba(0x1e8)](_0x5bc943,_0x5bc943+0x1))[0x0],_0x5bc943+=0x1,_0x209e14=new TextDecoder()[_0x4d3fba(0x188)](_0x4809db[_0x4d3fba(0x1e8)](_0x5bc943,_0x5bc943+_0x2ebbc9));break;case 0x4:_0x2ebbc9=0x10;const _0x3bb36f=new DataView(_0x4809db[_0x4d3fba(0x1e8)](_0x5bc943,_0x5bc943+_0x2ebbc9)),_0x7f4870=[];for(let _0x38495f=0x0;_0x38495f<0x8;_0x38495f++){_0x7f4870[_0x4d3fba(0x1e2)](_0x3bb36f[_0x4d3fba(0x2dd)](_0x38495f*0x2)[_0x4d3fba(0x100)](0x10));}_0x209e14=_0x7f4870[_0x4d3fba(0x148)](':');break;default:return{'hasError':!![],'message':'invalid\x20addressType\x20is\x20'+_0x5a2368};}if(!_0x209e14)return{'hasError':!![],'message':_0x4d3fba(0x287)+_0x5a2368};const _0x45f508=_0x5bc943+_0x2ebbc9,_0x4e2f98=_0x4809db[_0x4d3fba(0x1e8)](_0x45f508,_0x45f508+0x2),_0x56391f=new DataView(_0x4e2f98)[_0x4d3fba(0x2dd)](0x0);return{'hasError':![],'addressType':_0x5a2368,'port':_0x56391f,'hostname':_0x209e14,'rawClientData':_0x4809db[_0x4d3fba(0x1e8)](_0x45f508+0x4)};}function 解析魏烈思请求(_0x4fd6e3,_0x38ee19){const _0x506b5a=_0x309bbe;if(_0x4fd6e3[_0x506b5a(0x1d5)]<0x18)return{'hasError':!![],'message':'Invalid\x20data'};const _0x6d5124=new Uint8Array(_0x4fd6e3[_0x506b5a(0x1e8)](0x0,0x1));if(formatIdentifier(new Uint8Array(_0x4fd6e3['slice'](0x1,0x11)))!==_0x38ee19)return{'hasError':!![],'message':_0x506b5a(0x2cf)};const _0x26e58d=new Uint8Array(_0x4fd6e3['slice'](0x11,0x12))[0x0],_0x23ccb4=new Uint8Array(_0x4fd6e3['slice'](0x12+_0x26e58d,0x13+_0x26e58d))[0x0];let _0x132c67=![];if(_0x23ccb4===0x1){}else{if(_0x23ccb4===0x2)_0x132c67=!![];else return{'hasError':!![],'message':_0x506b5a(0x242)};}const _0xb930e4=0x13+_0x26e58d,_0x1b919c=new DataView(_0x4fd6e3[_0x506b5a(0x1e8)](_0xb930e4,_0xb930e4+0x2))[_0x506b5a(0x2dd)](0x0);let _0x202638=_0xb930e4+0x2,_0x518795=0x0,_0x50000e=_0x202638+0x1,_0x51ab0c='';const _0x5f3cd5=new Uint8Array(_0x4fd6e3[_0x506b5a(0x1e8)](_0x202638,_0x50000e))[0x0];switch(_0x5f3cd5){case 0x1:_0x518795=0x4,_0x51ab0c=new Uint8Array(_0x4fd6e3[_0x506b5a(0x1e8)](_0x50000e,_0x50000e+_0x518795))[_0x506b5a(0x148)]('.');break;case 0x2:_0x518795=new Uint8Array(_0x4fd6e3['slice'](_0x50000e,_0x50000e+0x1))[0x0],_0x50000e+=0x1,_0x51ab0c=new TextDecoder()[_0x506b5a(0x188)](_0x4fd6e3['slice'](_0x50000e,_0x50000e+_0x518795));break;case 0x3:_0x518795=0x10;const _0xa3b592=[],_0x3484c7=new DataView(_0x4fd6e3[_0x506b5a(0x1e8)](_0x50000e,_0x50000e+_0x518795));for(let _0x1b5b4a=0x0;_0x1b5b4a<0x8;_0x1b5b4a++)_0xa3b592[_0x506b5a(0x1e2)](_0x3484c7[_0x506b5a(0x2dd)](_0x1b5b4a*0x2)[_0x506b5a(0x100)](0x10));_0x51ab0c=_0xa3b592[_0x506b5a(0x148)](':');break;default:return{'hasError':!![],'message':_0x506b5a(0x2d8)+_0x5f3cd5};}if(!_0x51ab0c)return{'hasError':!![],'message':_0x506b5a(0x21b)+_0x5f3cd5};return{'hasError':![],'addressType':_0x5f3cd5,'port':_0x1b919c,'hostname':_0x51ab0c,'isUDP':_0x132c67,'rawIndex':_0x50000e+_0x518795,'version':_0x6d5124};}async function forwardataTCP(_0x21f46c,_0x258429,_0x38d504,_0x445aff,_0x46a500,_0x1c963f,_0x383a80){const _0x1a9e37=_0x309bbe;console[_0x1a9e37(0x230)](_0x1a9e37(0xf8)+_0x21f46c+':'+_0x258429+_0x1a9e37(0x1a7)+反代IP+'\x20|\x20反代兜底:\x20'+(启用反代兜底?'是':'否')+'\x20|\x20反代类型:\x20'+(启用SOCKS5反代||_0x1a9e37(0x2e2))+_0x1a9e37(0x163)+(启用SOCKS5全局反代?'是':'否'));async function _0x43b427(_0x576c8a,_0x44bc5a,_0x382b20,_0xd3be74=null,_0x5cf4fc=!![]){const _0xb8a485=_0x1a9e37;let _0x2c5bf3;if(_0xd3be74&&_0xd3be74['length']>0x0)for(let _0x11e2bb=0x0;_0x11e2bb<_0xd3be74[_0xb8a485(0x34a)];_0x11e2bb++){const _0x48e60c=(缓存反代数组索引+_0x11e2bb)%_0xd3be74[_0xb8a485(0x34a)],[_0x1c349b,_0x5771ce]=_0xd3be74[_0x48e60c];try{console['log'](_0xb8a485(0x155)+_0x1c349b+':'+_0x5771ce+'\x20(索引:\x20'+_0x48e60c+')'),_0x2c5bf3=connect({'hostname':_0x1c349b,'port':_0x5771ce}),await Promise[_0xb8a485(0x29d)]([_0x2c5bf3[_0xb8a485(0x283)],new Promise((_0x57b388,_0x178b09)=>setTimeout(()=>_0x178b09(new Error(_0xb8a485(0x23c))),0x3e8))]);const _0x487383=_0x2c5bf3[_0xb8a485(0x14d)][_0xb8a485(0x1ea)]();return await _0x487383[_0xb8a485(0x1e3)](_0x382b20),_0x487383[_0xb8a485(0x214)](),console[_0xb8a485(0x230)](_0xb8a485(0x14c)+_0x1c349b+':'+_0x5771ce),缓存反代数组索引=_0x48e60c,_0x2c5bf3;}catch(_0x5b68d9){console['log'](_0xb8a485(0x2aa)+_0x1c349b+':'+_0x5771ce+',\x20错误:\x20'+_0x5b68d9['message']);try{_0x2c5bf3?.[_0xb8a485(0x1b1)]?.();}catch(_0x4242cf){}continue;}}if(_0x5cf4fc){_0x2c5bf3=connect({'hostname':_0x576c8a,'port':_0x44bc5a});const _0x1d438f=_0x2c5bf3[_0xb8a485(0x14d)][_0xb8a485(0x1ea)]();return await _0x1d438f['write'](_0x382b20),_0x1d438f[_0xb8a485(0x214)](),_0x2c5bf3;}else{closeSocketQuietly(_0x445aff);throw new Error(_0xb8a485(0x236));}}async function _0x1d70f1(){const _0xa96823=_0x1a9e37;let _0x500c03;if(启用SOCKS5反代==='socks5')console[_0xa96823(0x230)]('[SOCKS5代理]\x20代理到:\x20'+_0x21f46c+':'+_0x258429),_0x500c03=await socks5Connect(_0x21f46c,_0x258429,_0x38d504);else{if(启用SOCKS5反代==='http'||启用SOCKS5反代===_0xa96823(0x323))console[_0xa96823(0x230)]('[HTTP代理]\x20代理到:\x20'+_0x21f46c+':'+_0x258429),_0x500c03=await httpConnect(_0x21f46c,_0x258429,_0x38d504);else{console[_0xa96823(0x230)](_0xa96823(0x278)+_0x21f46c+':'+_0x258429);const _0x44c4f5=await 解析地址端口(反代IP,_0x21f46c,_0x383a80);_0x500c03=await _0x43b427(atob(_0xa96823(0x132)),0x1,_0x38d504,_0x44c4f5,启用反代兜底);}}_0x1c963f[_0xa96823(0x11f)]=_0x500c03,_0x500c03[_0xa96823(0x2b8)][_0xa96823(0x2e7)](()=>{})['finally'](()=>closeSocketQuietly(_0x445aff)),connectStreams(_0x500c03,_0x445aff,_0x46a500,null);}const _0x5f1446=_0x18b3d6=>SOCKS5白名单[_0x1a9e37(0x353)](_0x736311=>new RegExp('^'+_0x736311['replace'](/\*/g,'.*')+'$','i')[_0x1a9e37(0x270)](_0x18b3d6));if(启用SOCKS5反代&&(启用SOCKS5全局反代||_0x5f1446(_0x21f46c))){console[_0x1a9e37(0x230)](_0x1a9e37(0x2b4));try{await _0x1d70f1();}catch(_0x556f40){throw _0x556f40;}}else try{console[_0x1a9e37(0x230)](_0x1a9e37(0x285)+_0x21f46c+':'+_0x258429);const _0x461327=await _0x43b427(_0x21f46c,_0x258429,_0x38d504);_0x1c963f['socket']=_0x461327,connectStreams(_0x461327,_0x445aff,_0x46a500,_0x1d70f1);}catch(_0x4e0db1){await _0x1d70f1();}}function _0x49ba(){const _0xd519df=['SOCKS5','保存自定义IP失败:\x20','articles','\x20|\x20反代IP:\x20','doc','shop','shows','TYPE','TOKEN','local','https://speed.cloudflare.com/locations','/sub?target=','\x20|\x20Cloudflare</title>\x0a<meta\x20charset=\x22UTF-8\x22\x20/>\x0a<meta\x20http-equiv=\x22Content-Type\x22\x20content=\x22text/html;\x20charset=UTF-8\x22\x20/>\x0a<meta\x20http-equiv=\x22X-UA-Compatible\x22\x20content=\x22IE=Edge\x22\x20/>\x0a<meta\x20name=\x22robots\x22\x20content=\x22noindex,\x20nofollow\x22\x20/>\x0a<meta\x20name=\x22viewport\x22\x20content=\x22width=device-width,initial-scale=1\x22\x20/>\x0a<link\x20rel=\x22stylesheet\x22\x20id=\x22cf_styles-css\x22\x20href=\x22/cdn-cgi/styles/cf.errors.css\x22\x20/>\x0a<!--[if\x20lt\x20IE\x209]><link\x20rel=\x22stylesheet\x22\x20id=\x27cf_styles-ie-css\x27\x20href=\x22/cdn-cgi/styles/cf.errors.ie.css\x22\x20/><![endif]-->\x0a<style>body{margin:0;padding:0}</style>\x0a\x0a\x0a<!--[if\x20gte\x20IE\x2010]><!-->\x0a<script>\x0a\x20\x20if\x20(!navigator.cookieEnabled)\x20{\x0a\x20\x20\x20\x20window.addEventListener(\x27DOMContentLoaded\x27,\x20function\x20()\x20{\x0a\x20\x20\x20\x20\x20\x20var\x20cookieEl\x20=\x20document.getElementById(\x27cookie-alert\x27);\x0a\x20\x20\x20\x20\x20\x20cookieEl.style.display\x20=\x20\x27block\x27;\x0a\x20\x20\x20\x20})\x0a\x20\x20}\x0a</script>\x0a<!--<![endif]-->\x0a\x0a</head>\x0a<body>\x0a\x20\x20\x20\x20<div\x20id=\x22cf-wrapper\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22cf-alert\x20cf-alert-error\x20cf-cookie-error\x22\x20id=\x22cookie-alert\x22\x20data-translate=\x22enable_cookies\x22>Please\x20enable\x20cookies.</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20<div\x20id=\x22cf-error-details\x22\x20class=\x22cf-error-details-wrapper\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22cf-wrapper\x20cf-header\x20cf-error-overview\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<h1>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<span\x20class=\x22cf-error-type\x22\x20data-translate=\x22error\x22>Error</span>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<span\x20class=\x22cf-error-code\x22>1101</span>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<small\x20class=\x22heading-ray-id\x22>Ray\x20ID:\x20','close','/sub?','star','special','tunnel(https://github.com/cmliu/edge','novels','search','thread','value','clientTcpRtt','comics','://','tg.json','pages','no-cache','forums','clash','redirect.html','未找到账户','本地IP库','upload=','无效的\x20SOCKS\x20地址格式：端口号必须是数字','warn','asn','8.8.4.4','&allowInsecure=1','pswd','base64','</code>\x0a','🏢\x20<b>ASN：</b>','application/dns-json','sub','abcdefghijklmnopqrstuvwxyz0123456789','TLS','pic','repeat','byteLength','store','sing-box','/sub?token=','随机数量','jumping','SUBNAME','replaceAll','auth','1,40-60,30-50,tlshello','/sendMessage?chat_id=','Speedtest\x20site\x20is\x20blocked','resource','push','write','&emoji=','APIToken','project','unsupported\x20command,\x20only\x20TCP\x20is\x20allowed','slice','Cookie','getWriter','invalid\x20password','\x20&bull;\x20','Host','sale','account','singbox','group','admin/getADDAPI','Origin','.</p>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div><!--\x20/.section\x20-->\x0a\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22cf-error-footer\x20cf-wrapper\x20w-240\x20lg:w-full\x20py-10\x20sm:py-4\x20sm:px-8\x20mx-auto\x20text-center\x20sm:text-left\x20border-solid\x20border-0\x20border-t\x20border-gray-300\x22>\x0a\x20\x20\x20\x20<p\x20class=\x22text-13\x22>\x0a\x20\x20\x20\x20\x20\x20<span\x20class=\x22cf-footer-item\x20sm:block\x20sm:mb-1\x22>Cloudflare\x20Ray\x20ID:\x20<strong\x20class=\x22font-semibold\x22>\x20','addEventListener','https://raw.githubusercontent.com/cmliu/cmliu/main/CF-CIDR.txt','stars','no-store,\x20no-cache,\x20must-revalidate,\x20proxy-revalidate','admin/init','text','classify','未知IP','缺少代理参数','seasons','service','tunnel)','/login','apps','out.html','add','htm','24RBFQXr','X-Cluster-Client-IP','CF-Workers-SUB','chat','📊\x20<b>请求用量：</b>','getSeconds','forEach','text/plain;\x20charset=utf-8','gzip,\x20deflate,\x20br','Answer','discuss','🔍\x20<b>路径：</b><code>','live','fill','releaseLock','comic','随机路径','AccountID','getRandomValues','https://1.1.1.1/dns-query?name=','https://raw.githubusercontent.com/cmliu/cmliu/main/CF-CIDR/','Invalid\x20address:\x20','Expires','N/A','getReader','b64','&config=','invalid\x20S5\x20request\x20data','#!MANAGED-CONFIG\x20','about','toISOString','dload','pagesFunctionsInvocationsAdaptiveGroups','password','blog','3,1,tlshello','pathname','mobile','指定端口','BotToken','toLocaleString','urls','log','gif',',\x20skip-cert-verify=','now','task','url','[反代连接]\x20所有反代连接失败，且未启用反代兜底，连接终止。','hostname','online','contact','3366Bnczfp','zh-tw','连接超时','SUBUpdateTime','host','retrieve','result','edge','Invalid\x20command','[反代解析]\x20随机种子:\x20','HOST','anime','novel','订阅转换后端异常：','mozilla','订阅转换配置','配置已保存','auth=;\x20Path=/;\x20Max-Age=0;\x20HttpOnly','archives','avatar','accounts','products','shift','books','html','cf.json','&path=','startsWith','DoH查询失败\x20(','from','home','music','auto','json','film','wenku','True-Client-IP','has','Connection\x20failed:\x20HTTP\x20','getDate','errors','📌\x20<b>类型：</b>#','topic','sort','collect','city','&parse_mode=HTML&text=','tro','zh-CN','%3D','trim','padStart','href','arrayBuffer','test','album','match','favs','&encryption=none','clips','pipeTo','318034svGtcp','[反代连接]\x20代理到:\x20','https://edt-pages.github.io','Referer','保存配置失败:\x20','admin/log.json','file','IP地址','config.json','SUBAPI','program','utf-8','opened','nginx','[TCP转发]\x20尝试直连到:\x20','http://','address\x20is\x20empty,\x20addressType\x20is\x20','work','🤖\x20<b>UA：</b><code>','&surge','TXT','payment','admin/','lib','Bearer\x20','=\x20tro','读取tg.json出错:\x20','jan','?ed=2560','X-Real-IP','student','/noADMIN','site','details','files','list','services','login','race','library','collection','查询请求量失败，失败原因：','text/html;\x20charset=UTF-8','tools','.txt','优选订阅生成器异常：','User-Agent','gbk','CF官方优选','日志记录失败:\x20','jump','[反代连接]\x20连接失败:\x20','programs','账户获取失败:\x20','lessons','2355edJjVg','messages','dash.cloudflare.com','images','charAt','digest','[TCP转发]\x20启用\x20SOCKS5/HTTP\x20全局代理','UUID','https://','concat','closed','content','*loadshare.org','pow','验证优选API失败，失败原因：','admin/ADD.txt','setting','admin','#CF优选\x20','Admin_Login','wiki','<b>#','read','https://SUBAPI.cmliussss.net','colo','links','pdf','配置不完整','subconverter-version','put','episode','channels','POST','Invalid\x20uuid','endsWith','TLS分片','OPEN','soft','waitUntil','解析SOCKS5地址失败:','00000000-0000-4000-8000-000000000000','tech','Invalid\x20address\x20type:\x20','member','acg','CF联通优选','getTime','getUint16','SUBCONFIG','stream','启用0RTT','Unknown','proxyip','faq','/accounts','txt','order','catch','lesson','then','redirect.php','rank','Proxy-Authorization:\x20Basic\x20','web','discount','ms\x20','Connection\x20closed\x20before\x20receiving\x20HTTP\x20response','status','getHours','2997455EpaPPB','success','查询失败:\x20','getUint8','4095190tWWBpV','redirect','readable','sec-websocket-protocol','Fly-Client-IP','数据中心','findIndex','null','lastIndexOf','playlist','5076XMCBMP','photos','archive','text/plain;charset=utf-8','S5\x20connection\x20failed','movie','country','Set-Cookie',',\x20ws=true,\x20ws-path=','GET','jan,','surge&ver=4','X-Forwarded-For','manhua','asOrganization','content-type','port','AAAA','</span>\x0a\x20\x20\x20\x20\x20\x20\x20\x20<span\x20class=\x22cf-footer-separator\x20sm:hidden\x22>&bull;</span>\x0a\x20\x20\x20\x20\x20\x20</span>\x0a\x20\x20\x20\x20\x20\x20<span\x20class=\x22cf-footer-item\x20sm:block\x20sm:mb-1\x22><span>Performance\x20&amp;\x20security\x20by</span>\x20<a\x20rel=\x22noopener\x20noreferrer\x22\x20href=\x22https://www.cloudflare.com/5xx-error-landing\x22\x20id=\x22brand_link\x22\x20target=\x22_blank\x22>Cloudflare</a></span>\x0a\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20</p>\x0a\x20\x20\x20\x20<script>(function(){function\x20d(){var\x20b=a.getElementById(\x22cf-footer-item-ip\x22),c=a.getElementById(\x22cf-footer-ip-reveal\x22);b&&\x22classList\x22in\x20b&&(b.classList.remove(\x22hidden\x22),c.addEventListener(\x22click\x22,function(){c.classList.add(\x22hidden\x22);a.getElementById(\x22cf-footer-ip\x22).classList.remove(\x22hidden\x22)}))}var\x20a=document;document.addEventListener&&a.addEventListener(\x22DOMContentLoaded\x22,d)})();</script>\x0a\x20\x20</div><!--\x20/.error-footer\x20-->\x0a\x0a\x20\x20\x20\x20\x20\x20\x20\x20</div><!--\x20/#cf-error-details\x20-->\x0a\x20\x20\x20\x20</div><!--\x20/#cf-wrapper\x20-->\x0a\x0a\x20\x20\x20\x20\x20<script>\x0a\x20\x20\x20\x20window._cf_translation\x20=\x20{};\x0a\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x0a\x20\x20</script>\x20\x0a</body>\x0a</html>','URL','topics','company','https://api.telegram.org/bot','MD5','/graphql','cmcc','act','X-Appengine-Remote-Addr','send','Subconverter\x20for\x20','res','[反代解析]\x20读取缓存\x20总数:\x20','getMinutes','Get_SUB','https','4795zzAwJp','传输协议','UDP\x20is\x20not\x20supported','1330tnnOqY','includes','.tp','random','view','headers','course','setUTCHours','toFixed','stock','Usage','check.socks5.090227.xyz','Save_Config','自定义IP已保存','downloads','CF移动优选','indexOf','log.json','sum','documents','🔗\x20<b>域名：</b><code>','invalid\x20data','📅\x20<b>时间：</b>','isArray','substring','1101','init','关闭连接时出错:','保存配置失败:','Cache-Control','article','encode','Happ','docs','index','length','pics','go.php','ADMIN','104.16.0.0/13','ChatID','ajax',';\x20total=','charCodeAt','some','films','websocket','split','lang','pictures','/sub?host=example.com&uuid=00000000-0000-4000-8000-000000000000','PATH','admin/tg.json','www','&type=','/admin','CF电信优选','invalid\x20header\x20format','&host=','<!DOCTYPE\x20html>\x0a<!--[if\x20lt\x20IE\x207]>\x20<html\x20class=\x22no-js\x20ie6\x20oldie\x22\x20lang=\x22en-US\x22>\x20<![endif]-->\x0a<!--[if\x20IE\x207]>\x20\x20\x20\x20<html\x20class=\x22no-js\x20ie7\x20oldie\x22\x20lang=\x22en-US\x22>\x20<![endif]-->\x0a<!--[if\x20IE\x208]>\x20\x20\x20\x20<html\x20class=\x22no-js\x20ie8\x20oldie\x22\x20lang=\x22en-US\x22>\x20<![endif]-->\x0a<!--[if\x20gt\x20IE\x208]><!-->\x20<html\x20class=\x22no-js\x22\x20lang=\x22en-US\x22>\x20<!--<![endif]-->\x0a<head>\x0a<title>Worker\x20threw\x20exception\x20|\x20','[TCP转发]\x20目标:\x20','PROXYIP','S5\x20unsupported\x20auth\x20method:\x20','streams',',\x20Workers:\x20','text/html,application/xhtml+xml,application/xml;','code','config','toString','replace','message','jump.html','https://api.cloudflare.com/client/v4','&fragment=','events','Shadowrocket','magnet','zip','team','http','albums','community','Save_Custom_IPs','下载速度','values','重定向中...','method','ADD.txt','ranking','admin/check','groups','ask','query\x20getBillingMetrics($AccountID:\x20String!,\x20$filter:\x20AccountWorkersInvocationsAdaptiveFilter_InputObject)\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20viewer\x20{\x20accounts(filter:\x20{accountTag:\x20$AccountID})\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20pagesFunctionsInvocationsAdaptiveGroups(limit:\x201000,\x20filter:\x20$filter)\x20{\x20sum\x20{\x20requests\x20}\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20workersInvocationsAdaptive(limit:\x2010000,\x20filter:\x20$filter)\x20{\x20sum\x20{\x20requests\x20}\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20}\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20}','club','event','HOSTS','无效的订阅TOKEN','episodes','\x20strict=false','socket','categories','img','watch','enqueue','tag','floor','*tapecontent.net','jump.php','items','info','KEY','auth=','filter',':443?security=tls&type=','v2rayN/edge','data','parse','forum','UFJPWFlJUC50cDEuMDkwMjI3Lnh5eg==','user','season','subconverter-request','443628dahTCg','无效的\x20SOCKS\x20地址格式：认证部分必须是\x20\x22username:password\x22\x20的形式','GlobalAPIKey','section','getMonth','mihomo','streaming','mixed','ads','static',';\x20expire=','knowledge','download','application/json','&scv=','tunnel\x20(https://github.com/cmliu/edge','error',';\x20download=','join','配置已重置为默认值','note','class','[反代连接]\x20成功连接到:\x20','writable','S5\x20method\x20selection\x20failed','\x20日志通知</b>\x0a\x0a','5335fJIpar','无效的\x20SOCKS\x20地址格式：IPv6\x20地址必须用方括号括起来，如\x20[2001:db8::1]','Upgrade','statusText','subconverter','[反代连接]\x20尝试连接到:\x20','zh-cn','mall','fromCharCode','443','\x20edge','readyState','clip','stringify','4GSBjRR','show','socks5','勿动此默认密钥，有需求请自行通过添加变量KEY进行修改','优选订阅生成','\x20|\x20全局:\x20','&url=','games','gb2312','tool',',\x20总计:\x20','sni=','ws.readyState\x20is\x20not\x20open','protocol','token','reduce','admin/config.json','app','get','跳过证书验证','travel','register','CLOSING','admin/cf.json','application/json;charset=utf-8','no-store','pay','scholar.google.com','image','china','doujin','temp','读取cf.json出错:\x20','surge','proxyip.','GET\x20/cdn-cgi/trace\x20HTTP/1.1\x0d\x0aHost:\x20check.socks5.090227.xyz\x0d\x0aConnection:\x20close\x0d\x0a\x0d\x0a','不支持的POST请求路径','*cdn-centaurus.com','reg','uploads','Init_Config','intro','decode','lives','edu','game','allSettled','searchParams','.PrOxYIp.CmLiUsSsS.nEt','hot','\x20HTTP/1.1\x0d\x0aHost:\x20','Pragma','type','drama','set','://00000000-0000-4000-8000-000000000000@','&host=example.com&sni=example.com&path=','abort','CONNECT\x20','total','Email','toLowerCase','setHours',';\x20Path=/;\x20Max-Age=86400;\x20HttpOnly','string','\x20UTC</small>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</h1>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<h2\x20class=\x22cf-subheadline\x22\x20data-translate=\x22error_desc\x22>Worker\x20threw\x20exception</h2>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div><!--\x20/.header\x20-->\x0a\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<section></section><!--\x20spacer\x20-->\x0a\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22cf-section\x20cf-wrapper\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22cf-columns\x20two\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22cf-column\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<h2\x20data-translate=\x22what_happened\x22>What\x20happened?</h2>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<p>You\x27ve\x20requested\x20a\x20page\x20on\x20a\x20website\x20(','share','book','buffer','map'];_0x49ba=function(){return _0xd519df;};return _0x49ba();}async function forwardataudp(_0x2586fd,_0x3df7a3,_0x474e9d){const _0x247618=_0x309bbe;try{const _0x3a117d=connect({'hostname':_0x247618(0x1c9),'port':0x35});let _0x4cf48f=_0x474e9d;const _0xfb3390=_0x3a117d[_0x247618(0x14d)][_0x247618(0x1ea)]();await _0xfb3390[_0x247618(0x1e3)](_0x2586fd),_0xfb3390['releaseLock'](),await _0x3a117d[_0x247618(0x2f9)][_0x247618(0x276)](new WritableStream({async 'write'(_0x119e3a){const _0x2960d8=_0x247618;if(_0x3df7a3[_0x2960d8(0x15b)]===WebSocket[_0x2960d8(0x2d2)]){if(_0x4cf48f){const _0x190258=new Uint8Array(_0x4cf48f[_0x2960d8(0x34a)]+_0x119e3a['byteLength']);_0x190258[_0x2960d8(0x194)](_0x4cf48f,0x0),_0x190258['set'](_0x119e3a,_0x4cf48f['length']),_0x3df7a3[_0x2960d8(0x31d)](_0x190258[_0x2960d8(0x1a2)]),_0x4cf48f=null;}else _0x3df7a3[_0x2960d8(0x31d)](_0x119e3a);}}}));}catch(_0x79a76a){}}function closeSocketQuietly(_0x5c69d1){const _0x258c0f=_0x309bbe;try{(_0x5c69d1['readyState']===WebSocket[_0x258c0f(0x2d2)]||_0x5c69d1[_0x258c0f(0x15b)]===WebSocket[_0x258c0f(0x174)])&&_0x5c69d1[_0x258c0f(0x1b1)]();}catch(_0x5d98ae){}}function formatIdentifier(_0x13ef86,_0x4aee76=0x0){const _0x783be0=_0x309bbe,_0x3e3f60=[..._0x13ef86[_0x783be0(0x1e8)](_0x4aee76,_0x4aee76+0x10)][_0x783be0(0x1a3)](_0x41a794=>_0x41a794[_0x783be0(0x100)](0x10)['padStart'](0x2,'0'))[_0x783be0(0x148)]('');return _0x3e3f60[_0x783be0(0x33f)](0x0,0x8)+'-'+_0x3e3f60[_0x783be0(0x33f)](0x8,0xc)+'-'+_0x3e3f60[_0x783be0(0x33f)](0xc,0x10)+'-'+_0x3e3f60[_0x783be0(0x33f)](0x10,0x14)+'-'+_0x3e3f60[_0x783be0(0x33f)](0x14);}async function connectStreams(_0x5a2d86,_0x2daed7,_0x4425bb,_0x583aa6){const _0x406b73=_0x309bbe;let _0x3d9186=_0x4425bb,_0x4223e7=![];await _0x5a2d86[_0x406b73(0x2f9)][_0x406b73(0x276)](new WritableStream({async 'write'(_0x1b7ba5,_0x5ccccd){const _0x99f82c=_0x406b73;_0x4223e7=!![];if(_0x2daed7[_0x99f82c(0x15b)]!==WebSocket[_0x99f82c(0x2d2)])_0x5ccccd[_0x99f82c(0x146)](_0x99f82c(0x16a));if(_0x3d9186){const _0x2df37f=new Uint8Array(_0x3d9186[_0x99f82c(0x34a)]+_0x1b7ba5[_0x99f82c(0x1d5)]);_0x2df37f[_0x99f82c(0x194)](_0x3d9186,0x0),_0x2df37f[_0x99f82c(0x194)](_0x1b7ba5,_0x3d9186[_0x99f82c(0x34a)]),_0x2daed7[_0x99f82c(0x31d)](_0x2df37f[_0x99f82c(0x1a2)]),_0x3d9186=null;}else _0x2daed7[_0x99f82c(0x31d)](_0x1b7ba5);},'abort'(){}}))[_0x406b73(0x2e7)](_0x275408=>{closeSocketQuietly(_0x2daed7);}),!_0x4223e7&&_0x583aa6&&await _0x583aa6();}function makeReadableStr(_0x26cb6d,_0x3e88cc){let _0x4f1e1d=![];return new ReadableStream({'start'(_0x3f9f78){const _0x53a37b=_0x2d70;_0x26cb6d['addEventListener']('message',_0x17f66b=>{const _0x3d2803=_0x2d70;if(!_0x4f1e1d)_0x3f9f78[_0x3d2803(0x123)](_0x17f66b['data']);}),_0x26cb6d[_0x53a37b(0x1f5)](_0x53a37b(0x1b1),()=>{const _0x32c8db=_0x53a37b;!_0x4f1e1d&&(closeSocketQuietly(_0x26cb6d),_0x3f9f78[_0x32c8db(0x1b1)]());}),_0x26cb6d[_0x53a37b(0x1f5)](_0x53a37b(0x146),_0x1bfcc7=>_0x3f9f78['error'](_0x1bfcc7));const {earlyData:_0x2097c1,error:_0xbaf9f1}=base64ToArray(_0x3e88cc);if(_0xbaf9f1)_0x3f9f78['error'](_0xbaf9f1);else{if(_0x2097c1)_0x3f9f78[_0x53a37b(0x123)](_0x2097c1);}},'cancel'(){_0x4f1e1d=!![],closeSocketQuietly(_0x26cb6d);}});}function isSpeedTestSite(_0x1ab58f){const _0x57fc8b=_0x309bbe,_0x572556=[atob('c3BlZWQuY2xvdWRmbGFyZS5jb20=')];if(_0x572556[_0x57fc8b(0x328)](_0x1ab58f))return!![];for(const _0x550d18 of _0x572556){if(_0x1ab58f[_0x57fc8b(0x2d0)]('.'+_0x550d18)||_0x1ab58f===_0x550d18)return!![];}return![];}function base64ToArray(_0x33f2f0){const _0x4dc25e=_0x309bbe;if(!_0x33f2f0)return{'error':null};try{const _0x57cee6=atob(_0x33f2f0[_0x4dc25e(0x101)](/-/g,'+')['replace'](/_/g,'/')),_0x4bfd66=new Uint8Array(_0x57cee6[_0x4dc25e(0x34a)]);for(let _0xaaa5f0=0x0;_0xaaa5f0<_0x57cee6['length'];_0xaaa5f0++){_0x4bfd66[_0xaaa5f0]=_0x57cee6[_0x4dc25e(0x352)](_0xaaa5f0);}return{'earlyData':_0x4bfd66['buffer'],'error':null};}catch(_0x413f09){return{'error':_0x413f09};}}async function socks5Connect(_0x387267,_0x2444c9,_0x178fd0){const _0x447878=_0x309bbe,{username:_0x19a96d,password:_0xc48e9f,hostname:_0x246eeb,port:_0x39c7f6}=parsedSocks5Address,_0x5ba4fd=connect({'hostname':_0x246eeb,'port':_0x39c7f6}),_0x305af1=_0x5ba4fd[_0x447878(0x14d)][_0x447878(0x1ea)](),_0x2cbcfa=_0x5ba4fd[_0x447878(0x2f9)][_0x447878(0x21e)]();try{const _0x576622=_0x19a96d&&_0xc48e9f?new Uint8Array([0x5,0x2,0x0,0x2]):new Uint8Array([0x5,0x1,0x0]);await _0x305af1[_0x447878(0x1e3)](_0x576622);let _0x52a867=await _0x2cbcfa[_0x447878(0x2c4)]();if(_0x52a867['done']||_0x52a867[_0x447878(0x1b9)][_0x447878(0x1d5)]<0x2)throw new Error(_0x447878(0x14e));const _0x4aa47c=new Uint8Array(_0x52a867[_0x447878(0x1b9)])[0x1];if(_0x4aa47c===0x2){if(!_0x19a96d||!_0xc48e9f)throw new Error('S5\x20requires\x20authentication');const _0x3e0ba5=new TextEncoder()[_0x447878(0x346)](_0x19a96d),_0xaf177f=new TextEncoder()['encode'](_0xc48e9f),_0x4f34df=new Uint8Array([0x1,_0x3e0ba5[_0x447878(0x34a)],..._0x3e0ba5,_0xaf177f[_0x447878(0x34a)],..._0xaf177f]);await _0x305af1['write'](_0x4f34df),_0x52a867=await _0x2cbcfa[_0x447878(0x2c4)]();if(_0x52a867['done']||new Uint8Array(_0x52a867[_0x447878(0x1b9)])[0x1]!==0x0)throw new Error('S5\x20authentication\x20failed');}else{if(_0x4aa47c!==0x0)throw new Error(_0x447878(0xfa)+_0x4aa47c);}const _0x213f9f=new TextEncoder()[_0x447878(0x346)](_0x387267),_0x43ed80=new Uint8Array([0x5,0x1,0x0,0x3,_0x213f9f[_0x447878(0x34a)],..._0x213f9f,_0x2444c9>>0x8,_0x2444c9&0xff]);await _0x305af1['write'](_0x43ed80),_0x52a867=await _0x2cbcfa[_0x447878(0x2c4)]();if(_0x52a867['done']||new Uint8Array(_0x52a867[_0x447878(0x1b9)])[0x1]!==0x0)throw new Error(_0x447878(0x305));return await _0x305af1[_0x447878(0x1e3)](_0x178fd0),_0x305af1[_0x447878(0x214)](),_0x2cbcfa[_0x447878(0x214)](),_0x5ba4fd;}catch(_0x5b8513){try{_0x305af1['releaseLock']();}catch(_0x2640d1){}try{_0x2cbcfa[_0x447878(0x214)]();}catch(_0x3fa495){}try{_0x5ba4fd[_0x447878(0x1b1)]();}catch(_0x36b20b){}throw _0x5b8513;}}async function httpConnect(_0x374b65,_0x38d953,_0x42bccf){const _0x1e6061=_0x309bbe,{username:_0x1b269f,password:_0x3209ce,hostname:_0x457431,port:_0x328d16}=parsedSocks5Address,_0x5675fa=connect({'hostname':_0x457431,'port':_0x328d16}),_0x44caee=_0x5675fa[_0x1e6061(0x14d)]['getWriter'](),_0x1ebd8e=_0x5675fa[_0x1e6061(0x2f9)]['getReader']();try{const _0x27e39c=_0x1b269f&&_0x3209ce?_0x1e6061(0x2ec)+btoa(_0x1b269f+':'+_0x3209ce)+'\x0d\x0a':'',_0x4f12bd=_0x1e6061(0x198)+_0x374b65+':'+_0x38d953+_0x1e6061(0x190)+_0x374b65+':'+_0x38d953+'\x0d\x0a'+_0x27e39c+'User-Agent:\x20Mozilla/5.0\x0d\x0aConnection:\x20keep-alive\x0d\x0a\x0d\x0a';await _0x44caee[_0x1e6061(0x1e3)](new TextEncoder()[_0x1e6061(0x346)](_0x4f12bd));let _0x5b0787=new Uint8Array(0x0),_0x539b71=-0x1,_0x3a8a06=0x0;while(_0x539b71===-0x1&&_0x3a8a06<0x2000){const {done:_0x5ac2cf,value:_0x36a47d}=await _0x1ebd8e[_0x1e6061(0x2c4)]();if(_0x5ac2cf)throw new Error(_0x1e6061(0x2f0));_0x5b0787=new Uint8Array([..._0x5b0787,..._0x36a47d]),_0x3a8a06=_0x5b0787[_0x1e6061(0x34a)];const _0xa0ab8b=_0x5b0787['findIndex']((_0x3eff1d,_0x15abd7)=>_0x15abd7<_0x5b0787['length']-0x3&&_0x5b0787[_0x15abd7]===0xd&&_0x5b0787[_0x15abd7+0x1]===0xa&&_0x5b0787[_0x15abd7+0x2]===0xd&&_0x5b0787[_0x15abd7+0x3]===0xa);if(_0xa0ab8b!==-0x1)_0x539b71=_0xa0ab8b+0x4;}if(_0x539b71===-0x1)throw new Error('Invalid\x20HTTP\x20response');const _0x346ca3=parseInt(new TextDecoder()[_0x1e6061(0x188)](_0x5b0787[_0x1e6061(0x1e8)](0x0,_0x539b71))['split']('\x0d\x0a')[0x0]['match'](/HTTP\/\d\.\d\s+(\d+)/)[0x1]);if(_0x346ca3<0xc8||_0x346ca3>=0x12c)throw new Error(_0x1e6061(0x260)+_0x346ca3);return await _0x44caee['write'](_0x42bccf),_0x44caee[_0x1e6061(0x214)](),_0x1ebd8e[_0x1e6061(0x214)](),_0x5675fa;}catch(_0x1f2401){try{_0x44caee[_0x1e6061(0x214)]();}catch(_0x44eff1){}try{_0x1ebd8e['releaseLock']();}catch(_0xb7a955){}try{_0x5675fa['close']();}catch(_0x1b8099){}throw _0x1f2401;}}function surge(_0x5955e8,_0x306f5e,_0x34079e){const _0x1df28d=_0x309bbe,_0x1d102a=_0x5955e8['includes']('\x0d\x0a')?_0x5955e8[_0x1df28d(0x356)]('\x0d\x0a'):_0x5955e8[_0x1df28d(0x356)]('\x0a');let _0x3abe75='',_0x34994f=_0x34079e[_0x1df28d(0x2e0)]?_0x34079e[_0x1df28d(0x35a)]+_0x1df28d(0x293):_0x34079e[_0x1df28d(0x35a)];for(let _0x21a462 of _0x1d102a){if(_0x21a462[_0x1df28d(0x328)](_0x1df28d(0x290)+_0x1df28d(0x30b))){const _0x5cc0f0=_0x21a462['split']('sni=')[0x1]['split'](',')[0x0],_0xb83864=_0x1df28d(0x169)+_0x5cc0f0+_0x1df28d(0x232)+_0x34079e[_0x1df28d(0x171)],_0x2bf53e=_0x1df28d(0x169)+_0x5cc0f0+_0x1df28d(0x232)+_0x34079e[_0x1df28d(0x171)]+_0x1df28d(0x309)+_0x34994f+',\x20ws-headers=Host:\x22'+_0x5cc0f0+'\x22';_0x3abe75+=_0x21a462[_0x1df28d(0x101)](new RegExp(_0xb83864,'g'),_0x2bf53e)[_0x1df28d(0x101)]('[','')['replace'](']','')+'\x0a';}else _0x3abe75+=_0x21a462+'\x0a';}return _0x3abe75=_0x1df28d(0x222)+_0x306f5e+'\x20interval='+_0x34079e[_0x1df28d(0x162)][_0x1df28d(0x23d)]*0x3c*0x3c+_0x1df28d(0x11e)+_0x3abe75[_0x1df28d(0x33f)](_0x3abe75[_0x1df28d(0x337)]('\x0a')),_0x3abe75;}async function 请求日志记录(_0x45a29a,_0x232fc1,_0x3d7c7b,_0x5ba776=_0x309bbe(0x322),_0xf3648){const _0x325f59=_0x309bbe,_0xe241e9=0x4;try{const _0x5b465c=new Date(),_0x1682f3={'TYPE':_0x5ba776,'IP':_0x3d7c7b,'ASN':'AS'+(_0x232fc1['cf']['asn']||'0')+'\x20'+(_0x232fc1['cf'][_0x325f59(0x30f)]||_0x325f59(0x2e1)),'CC':(_0x232fc1['cf'][_0x325f59(0x307)]||_0x325f59(0x21d))+'\x20'+(_0x232fc1['cf'][_0x325f59(0x267)]||_0x325f59(0x21d)),'URL':_0x232fc1[_0x325f59(0x235)],'UA':_0x232fc1['headers'][_0x325f59(0x170)]('User-Agent')||_0x325f59(0x2e1),'TIME':_0x5b465c['getTime']()};let _0x56d704=[];const _0x1b4659=await _0x45a29a['KV'][_0x325f59(0x170)]('log.json');if(_0x1b4659)try{_0x56d704=JSON[_0x325f59(0x130)](_0x1b4659);if(!Array[_0x325f59(0x33e)](_0x56d704))_0x56d704=[_0x1682f3];else{if(_0x5ba776!=='Get_SUB'){const _0x174ce2=_0x5b465c[_0x325f59(0x2dc)]()-0x1e*0x3c*0x3e8;if(_0x56d704[_0x325f59(0x353)](_0x268aba=>_0x268aba[_0x325f59(0x1ab)]!==_0x325f59(0x322)&&_0x268aba['IP']===_0x3d7c7b&&_0x268aba[_0x325f59(0x314)]===_0x232fc1[_0x325f59(0x235)]&&_0x268aba['UA']===(_0x232fc1[_0x325f59(0x32c)]['get'](_0x325f59(0x2a5))||'Unknown')&&_0x268aba['TIME']>=_0x174ce2))return;_0x56d704[_0x325f59(0x1e2)](_0x1682f3);while(JSON['stringify'](_0x56d704,null,0x2)[_0x325f59(0x34a)]>_0xe241e9*0x400*0x400&&_0x56d704['length']>0x0)_0x56d704['shift']();}else{_0x56d704[_0x325f59(0x1e2)](_0x1682f3);while(JSON['stringify'](_0x56d704,null,0x2)[_0x325f59(0x34a)]>_0xe241e9*0x400*0x400&&_0x56d704['length']>0x0)_0x56d704[_0x325f59(0x250)]();}}if(_0xf3648['TG']['启用'])try{const _0x239bd5=await _0x45a29a['KV'][_0x325f59(0x170)](_0x325f59(0x1bd)),_0x44304c=JSON[_0x325f59(0x130)](_0x239bd5);await sendMessage(_0x44304c[_0x325f59(0x22d)],_0x44304c['ChatID'],_0x1682f3,_0xf3648);}catch(_0x10cffb){console[_0x325f59(0x146)](_0x325f59(0x291)+_0x10cffb[_0x325f59(0x102)]);}}catch(_0x238acd){_0x56d704=[_0x1682f3];}else _0x56d704=[_0x1682f3];await _0x45a29a['KV'][_0x325f59(0x2cb)]('log.json',JSON[_0x325f59(0x15d)](_0x56d704,null,0x2));}catch(_0x45585d){console[_0x325f59(0x146)](_0x325f59(0x2a8)+_0x45585d[_0x325f59(0x102)]);}}async function sendMessage(_0x16d83e,_0x5bacd9,_0x2ea137,_0x2a442a){const _0x57f747=_0x309bbe;if(!_0x16d83e||!_0x5bacd9)return;try{const _0x589213=new Date(_0x2ea137['TIME'])[_0x57f747(0x22e)](_0x57f747(0x26a),{'timeZone':'Asia/Shanghai'}),_0x1f4d07=new URL(_0x2ea137[_0x57f747(0x314)]),_0x4c9a71=_0x57f747(0x2c3)+_0x2a442a[_0x57f747(0x162)][_0x57f747(0x1db)]+_0x57f747(0x14f)+(_0x57f747(0x263)+_0x2ea137[_0x57f747(0x1ab)]+'\x0a')+('🌐\x20<b>IP：</b><code>'+_0x2ea137['IP']+_0x57f747(0x1cd))+('📍\x20<b>位置：</b>'+_0x2ea137['CC']+'\x0a')+(_0x57f747(0x1ce)+_0x2ea137['ASN']+'\x0a')+(_0x57f747(0x33b)+_0x1f4d07['host']+'</code>\x0a')+(_0x57f747(0x211)+(_0x1f4d07[_0x57f747(0x22a)]+_0x1f4d07[_0x57f747(0x1b7)])+'</code>\x0a')+(_0x57f747(0x289)+_0x2ea137['UA']+'</code>\x0a')+(_0x57f747(0x33d)+_0x589213+'\x0a')+(''+(_0x2a442a['CF'][_0x57f747(0x331)][_0x57f747(0x2f4)]?_0x57f747(0x20a)+_0x2a442a['CF'][_0x57f747(0x331)][_0x57f747(0x199)]+'/100000\x20<b>'+(_0x2a442a['CF'][_0x57f747(0x331)][_0x57f747(0x199)]/0x186a0*0x64)[_0x57f747(0x32f)](0x2)+'%</b>\x0a':'')),_0x32a1af=_0x57f747(0x317)+_0x16d83e+_0x57f747(0x1df)+_0x5bacd9+_0x57f747(0x268)+encodeURIComponent(_0x4c9a71);return fetch(_0x32a1af,{'method':_0x57f747(0x30a),'headers':{'Accept':_0x57f747(0xfd),'Accept-Encoding':_0x57f747(0x20e),'User-Agent':_0x2ea137['UA']||_0x57f747(0x2e1)}});}catch(_0x154353){console['error']('Error\x20sending\x20message:',_0x154353);}}function 掩码敏感信息(_0x47222b,_0x4f5f33=0x3,_0x4f9559=0x2){const _0x7e04db=_0x309bbe;if(!_0x47222b||typeof _0x47222b!==_0x7e04db(0x19e))return _0x47222b;if(_0x47222b[_0x7e04db(0x34a)]<=_0x4f5f33+_0x4f9559)return _0x47222b;const _0x58ed2d=_0x47222b['slice'](0x0,_0x4f5f33),_0x96d6af=_0x47222b['slice'](-_0x4f9559),_0x58a885=_0x47222b[_0x7e04db(0x34a)]-_0x4f5f33-_0x4f9559;return''+_0x58ed2d+'*'[_0x7e04db(0x1d4)](_0x58a885)+_0x96d6af;}async function MD5MD5(_0x321a8c){const _0x400383=_0x309bbe,_0x2aa177=new TextEncoder(),_0x335e6b=await crypto['subtle'][_0x400383(0x2b3)](_0x400383(0x318),_0x2aa177[_0x400383(0x346)](_0x321a8c)),_0x575425=Array[_0x400383(0x257)](new Uint8Array(_0x335e6b)),_0x2d1971=_0x575425[_0x400383(0x1a3)](_0x53ea52=>_0x53ea52[_0x400383(0x100)](0x10)[_0x400383(0x26d)](0x2,'0'))[_0x400383(0x148)](''),_0x248a9c=await crypto['subtle'][_0x400383(0x2b3)](_0x400383(0x318),_0x2aa177[_0x400383(0x346)](_0x2d1971['slice'](0x7,0x1b))),_0x309069=Array['from'](new Uint8Array(_0x248a9c)),_0xb07a5d=_0x309069[_0x400383(0x1a3)](_0x5248b9=>_0x5248b9[_0x400383(0x100)](0x10)[_0x400383(0x26d)](0x2,'0'))['join']('');return _0xb07a5d[_0x400383(0x19b)]();}function 随机路径(){const _0x51346f=_0x309bbe,_0x89bd86=[_0x51346f(0x223),_0x51346f(0x1ef),_0x51346f(0x2da),_0x51346f(0x31b),'activity','ad',_0x51346f(0x13e),_0x51346f(0x350),_0x51346f(0x271),_0x51346f(0x10c),_0x51346f(0x245),'api',_0x51346f(0x16f),_0x51346f(0x202),_0x51346f(0x303),_0x51346f(0x24c),_0x51346f(0x345),_0x51346f(0x1a6),_0x51346f(0x117),_0x51346f(0x1dd),_0x51346f(0x24d),'bbs','bd',_0x51346f(0x228),'blogs',_0x51346f(0x1a1),_0x51346f(0x251),'bt','buy','cart','category',_0x51346f(0x120),'cb','channel',_0x51346f(0x2cd),_0x51346f(0x209),_0x51346f(0x17b),'city',_0x51346f(0x14b),_0x51346f(0x1fb),_0x51346f(0x15c),_0x51346f(0x275),_0x51346f(0x119),'cn',_0x51346f(0xfe),_0x51346f(0x266),_0x51346f(0x29f),_0x51346f(0x215),_0x51346f(0x1bb),_0x51346f(0x10d),_0x51346f(0x316),_0x51346f(0xff),_0x51346f(0x239),_0x51346f(0x2b9),_0x51346f(0x32d),'courses','cp','data','detail',_0x51346f(0x298),'dh','directory',_0x51346f(0x2ee),_0x51346f(0x210),'dl',_0x51346f(0x225),_0x51346f(0x1a8),_0x51346f(0x348),'document',_0x51346f(0x33a),_0x51346f(0x17c),_0x51346f(0x142),_0x51346f(0x335),_0x51346f(0x193),_0x51346f(0x18a),'en','ep',_0x51346f(0x2cc),_0x51346f(0x11d),_0x51346f(0x11a),_0x51346f(0x106),'f',_0x51346f(0x2e3),'favorite','favourites',_0x51346f(0x273),'feedback',_0x51346f(0x27d),_0x51346f(0x299),_0x51346f(0x25c),_0x51346f(0x354),_0x51346f(0x131),_0x51346f(0x1c0),'friend','friends',_0x51346f(0x18b),_0x51346f(0x165),_0x51346f(0x231),'go','go.html',_0x51346f(0x34c),_0x51346f(0x1f1),_0x51346f(0x116),'help',_0x51346f(0x258),_0x51346f(0x18f),_0x51346f(0x205),_0x51346f(0x252),_0x51346f(0x17a),_0x51346f(0x2b1),_0x51346f(0x121),_0x51346f(0x349),_0x51346f(0x129),_0x51346f(0x187),'item',_0x51346f(0x128),'ja','jp',_0x51346f(0x2a9),_0x51346f(0x103),_0x51346f(0x127),_0x51346f(0x1da),_0x51346f(0x141),_0x51346f(0x357),_0x51346f(0x2e8),_0x51346f(0x2ad),_0x51346f(0x28e),_0x51346f(0x29e),'link',_0x51346f(0x2c7),_0x51346f(0x29a),_0x51346f(0x212),_0x51346f(0x189),'m','mag',_0x51346f(0x108),_0x51346f(0x157),_0x51346f(0x30e),_0x51346f(0x1a3),_0x51346f(0x2d9),'members','message',_0x51346f(0x2af),_0x51346f(0x22b),_0x51346f(0x306),'movies',_0x51346f(0x259),'my','new','news',_0x51346f(0x14a),_0x51346f(0x246),_0x51346f(0x1b6),_0x51346f(0x238),_0x51346f(0x2e6),'out',_0x51346f(0x203),'out.php','outbound','p','page',_0x51346f(0x1be),_0x51346f(0x178),_0x51346f(0x28c),_0x51346f(0x2c8),'photo',_0x51346f(0x302),_0x51346f(0x1d3),_0x51346f(0x34b),'picture',_0x51346f(0x358),'play','player',_0x51346f(0x300),'post','posts','product',_0x51346f(0x24f),_0x51346f(0x281),_0x51346f(0x2ab),_0x51346f(0x1e6),'qa','question',_0x51346f(0x2eb),_0x51346f(0x114),'read','readme',_0x51346f(0x2f8),_0x51346f(0x1c2),_0x51346f(0x2ea),_0x51346f(0x184),_0x51346f(0x173),_0x51346f(0x31f),_0x51346f(0x1e1),_0x51346f(0x23f),_0x51346f(0x1ee),_0x51346f(0x1b7),_0x51346f(0x134),_0x51346f(0x1fe),_0x51346f(0x139),'seller','series',_0x51346f(0x1ff),_0x51346f(0x29b),_0x51346f(0x2be),'settings',_0x51346f(0x1a0),_0x51346f(0x1a9),_0x51346f(0x15f),_0x51346f(0x1aa),_0x51346f(0x297),_0x51346f(0x2d3),_0x51346f(0x265),'source',_0x51346f(0x1b4),_0x51346f(0x1b3),_0x51346f(0x1f7),_0x51346f(0x13f),_0x51346f(0x330),_0x51346f(0x1d6),_0x51346f(0x2df),_0x51346f(0x13c),_0x51346f(0xfb),_0x51346f(0x295),'study',_0x51346f(0x124),'tags',_0x51346f(0x234),'teacher',_0x51346f(0x10a),_0x51346f(0x2d7),_0x51346f(0x17d),_0x51346f(0x270),_0x51346f(0x1b8),_0x51346f(0x167),_0x51346f(0x2a2),_0x51346f(0x264),_0x51346f(0x315),'torrent','trade',_0x51346f(0x172),'tv',_0x51346f(0x2e5),'type','u','upload',_0x51346f(0x185),_0x51346f(0x235),_0x51346f(0x22f),_0x51346f(0x133),'users','v','version','video','videos',_0x51346f(0x32b),'vip','vod',_0x51346f(0x122),_0x51346f(0x2ed),_0x51346f(0x25d),_0x51346f(0x2c2),_0x51346f(0x288),_0x51346f(0x35c),'zh',_0x51346f(0x156),_0x51346f(0x23b),_0x51346f(0x109)],_0xd75560=Math['floor'](Math[_0x51346f(0x32a)]()*0x3+0x1),_0x5f2012=_0x89bd86[_0x51346f(0x265)](()=>0.5-Math[_0x51346f(0x32a)]())[_0x51346f(0x1e8)](0x0,_0xd75560)[_0x51346f(0x148)]('/');return'/'+_0x5f2012;}function 随机替换通配符(_0x3c135f){const _0x54d16b=_0x309bbe;if(!_0x3c135f?.['includes']('*'))return _0x3c135f;const _0x3a1c60=_0x54d16b(0x1d1);return _0x3c135f[_0x54d16b(0x101)](/\*/g,()=>{const _0x1c2bd8=_0x54d16b;let _0x153cf8='';for(let _0x319557=0x0;_0x319557<Math[_0x1c2bd8(0x125)](Math[_0x1c2bd8(0x32a)]()*0xe)+0x3;_0x319557++)_0x153cf8+=_0x3a1c60[Math[_0x1c2bd8(0x125)](Math['random']()*0x24)];return _0x153cf8;});}function 批量替换域名(_0x14ef21,_0x211291,_0x2e2c4d=0x2){const _0x2e35a5=_0x309bbe,_0x3e36b2=[..._0x211291][_0x2e35a5(0x265)](()=>Math['random']()-0.5);let _0x1be967=0x0,_0x4b0d5a=null;return _0x14ef21[_0x2e35a5(0x101)](/example\.com/g,()=>{const _0xe4a604=_0x2e35a5;if(_0x1be967%_0x2e2c4d===0x0)_0x4b0d5a=随机替换通配符(_0x3e36b2[Math[_0xe4a604(0x125)](_0x1be967/_0x2e2c4d)%_0x3e36b2[_0xe4a604(0x34a)]]);return _0x1be967++,_0x4b0d5a;});}async function 读取config_JSON(_0x235eb0,_0x2e1054,_0x21bb1f,_0x1209ac,_0x6934d=![]){const _0x40c6e0=_0x309bbe,_0x7fb1fd=_0x2e1054,_0xa852e9=performance['now'](),_0x47106c={'TIME':new Date()[_0x40c6e0(0x224)](),'HOST':_0x7fb1fd,'HOSTS':[_0x2e1054],'UUID':_0x21bb1f,'协议类型':'v'+'le'+'ss','传输协议':'ws','跳过证书验证':!![],'启用0RTT':![],'TLS分片':null,'随机路径':![],'优选订阅生成':{'local':!![],'本地IP库':{'随机IP':!![],'随机数量':0x10,'指定端口':-0x1},'SUB':null,'SUBNAME':_0x40c6e0(0x241)+'tunnel','SUBUpdateTime':0x6,'TOKEN':await MD5MD5(_0x2e1054+_0x21bb1f)},'订阅转换配置':{'SUBAPI':_0x40c6e0(0x2c5),'SUBCONFIG':'https://raw.githubusercontent.com/cmliu/ACL4SSR/refs/heads/main/Clash/config/ACL4SSR_Online_Mini_MultiMode_CF.ini','SUBEMOJI':![]},'反代':{'PROXYIP':_0x40c6e0(0x25a),'SOCKS5':{'启用':启用SOCKS5反代,'全局':启用SOCKS5全局反代,'账号':我的SOCKS5账号,'白名单':SOCKS5白名单}},'TG':{'启用':![],'BotToken':null,'ChatID':null},'CF':{'Email':null,'GlobalAPIKey':null,'AccountID':null,'APIToken':null,'Usage':{'success':![],'pages':0x0,'workers':0x0,'total':0x0}}};try{let _0x304108=await _0x235eb0['KV'][_0x40c6e0(0x170)](_0x40c6e0(0x27f));!_0x304108||_0x6934d==!![]?(await _0x235eb0['KV']['put'](_0x40c6e0(0x27f),JSON[_0x40c6e0(0x15d)](_0x47106c,null,0x2)),config_JSON=_0x47106c):config_JSON=JSON[_0x40c6e0(0x130)](_0x304108);}catch(_0x5273b8){console[_0x40c6e0(0x146)]('读取config_JSON出错:\x20'+_0x5273b8['message']),config_JSON=_0x47106c;}config_JSON[_0x40c6e0(0x244)]=_0x7fb1fd;if(!config_JSON[_0x40c6e0(0x11b)])config_JSON[_0x40c6e0(0x11b)]=[_0x2e1054];if(_0x235eb0[_0x40c6e0(0x244)])config_JSON[_0x40c6e0(0x11b)]=(await 整理成数组(_0x235eb0[_0x40c6e0(0x244)]))['map'](_0x47c69f=>_0x47c69f[_0x40c6e0(0x19b)]()['replace'](/^https?:\/\//,'')[_0x40c6e0(0x356)]('/')[0x0][_0x40c6e0(0x356)](':')[0x0]);config_JSON['UUID']=_0x21bb1f,config_JSON[_0x40c6e0(0x35a)]=_0x1209ac?_0x1209ac[_0x40c6e0(0x255)]('/')?_0x1209ac:'/'+_0x1209ac:config_JSON['反代'][_0x40c6e0(0x1a4)]['启用']?'/'+config_JSON['反代'][_0x40c6e0(0x1a4)]['启用']+(config_JSON['反代']['SOCKS5']['全局']?_0x40c6e0(0x1bc):'=')+config_JSON['反代'][_0x40c6e0(0x1a4)]['账号']:config_JSON['反代']['PROXYIP']==='auto'?'/':'/proxyip='+config_JSON['反代']['PROXYIP'];const _0x300a27=config_JSON[_0x40c6e0(0x2d1)]==_0x40c6e0(0x107)?_0x40c6e0(0x105)+encodeURIComponent(_0x40c6e0(0x1de)):config_JSON[_0x40c6e0(0x2d1)]=='Happ'?_0x40c6e0(0x105)+encodeURIComponent('3,1,tlshello'):'';config_JSON['LINK']=config_JSON['协议类型']+_0x40c6e0(0x1bc)+_0x21bb1f+'@'+_0x7fb1fd+_0x40c6e0(0x12d)+config_JSON[_0x40c6e0(0x325)]+_0x40c6e0(0x361)+_0x7fb1fd+'&sni='+_0x7fb1fd+_0x40c6e0(0x254)+(encodeURIComponent(config_JSON[_0x40c6e0(0x2e0)]?config_JSON[_0x40c6e0(0x35a)]+'?ed=2560':config_JSON[_0x40c6e0(0x35a)])+_0x300a27)+_0x40c6e0(0x274)+(config_JSON[_0x40c6e0(0x171)]?'&allowInsecure=1':'')+'#'+encodeURIComponent(config_JSON[_0x40c6e0(0x162)][_0x40c6e0(0x1db)]),config_JSON[_0x40c6e0(0x162)]['TOKEN']=await MD5MD5(_0x2e1054+_0x21bb1f);const _0x1a9ad2={'BotToken':null,'ChatID':null};config_JSON['TG']={'启用':config_JSON['TG']['启用']?config_JSON['TG']['启用']:![],..._0x1a9ad2};try{const _0x13fb00=await _0x235eb0['KV'][_0x40c6e0(0x170)]('tg.json');if(!_0x13fb00)await _0x235eb0['KV'][_0x40c6e0(0x2cb)](_0x40c6e0(0x1bd),JSON[_0x40c6e0(0x15d)](_0x1a9ad2,null,0x2));else{const _0x3ff82b=JSON['parse'](_0x13fb00);config_JSON['TG'][_0x40c6e0(0x34f)]=_0x3ff82b[_0x40c6e0(0x34f)]?_0x3ff82b[_0x40c6e0(0x34f)]:null,config_JSON['TG'][_0x40c6e0(0x22d)]=_0x3ff82b[_0x40c6e0(0x22d)]?掩码敏感信息(_0x3ff82b[_0x40c6e0(0x22d)]):null;}}catch(_0x45d1e8){console[_0x40c6e0(0x146)]('读取tg.json出错:\x20'+_0x45d1e8[_0x40c6e0(0x102)]);}const _0x5e62ee={'Email':null,'GlobalAPIKey':null,'AccountID':null,'APIToken':null};config_JSON['CF']={..._0x5e62ee,'Usage':{'success':![],'pages':0x0,'workers':0x0,'total':0x0}};try{const _0x4af611=await _0x235eb0['KV'][_0x40c6e0(0x170)](_0x40c6e0(0x253));if(!_0x4af611)await _0x235eb0['KV']['put'](_0x40c6e0(0x253),JSON[_0x40c6e0(0x15d)](_0x5e62ee,null,0x2));else{const _0x2686d8=JSON[_0x40c6e0(0x130)](_0x4af611);config_JSON['CF'][_0x40c6e0(0x19a)]=_0x2686d8[_0x40c6e0(0x19a)]?_0x2686d8[_0x40c6e0(0x19a)]:null,config_JSON['CF'][_0x40c6e0(0x138)]=_0x2686d8[_0x40c6e0(0x138)]?掩码敏感信息(_0x2686d8['GlobalAPIKey']):null,config_JSON['CF'][_0x40c6e0(0x217)]=_0x2686d8[_0x40c6e0(0x217)]?掩码敏感信息(_0x2686d8[_0x40c6e0(0x217)]):null,config_JSON['CF']['APIToken']=_0x2686d8[_0x40c6e0(0x1e5)]?掩码敏感信息(_0x2686d8[_0x40c6e0(0x1e5)]):null;const _0x349e67=await getCloudflareUsage(_0x2686d8[_0x40c6e0(0x19a)],_0x2686d8[_0x40c6e0(0x138)],_0x2686d8['AccountID'],_0x2686d8['APIToken']);config_JSON['CF']['Usage']=_0x349e67;}}catch(_0x193ca1){console[_0x40c6e0(0x146)](_0x40c6e0(0x17e)+_0x193ca1[_0x40c6e0(0x102)]);}return config_JSON['加载时间']=(performance[_0x40c6e0(0x233)]()-_0xa852e9)['toFixed'](0x2)+'ms',config_JSON;}async function 生成随机IP(_0x1f6da5,_0xe2899c=0x10,_0x8b4655=-0x1){const _0x3c07e6=_0x309bbe,_0x1793e6={'9808':_0x3c07e6(0x31a),'4837':'cu','4134':'ct'},_0x5d2ca1=_0x1f6da5['cf'][_0x3c07e6(0x1c8)],_0xd7ea8a=_0x1793e6[_0x5d2ca1]?_0x3c07e6(0x21a)+_0x1793e6[_0x5d2ca1]+_0x3c07e6(0x2a3):_0x3c07e6(0x1f6),_0x1ecf13={'9808':_0x3c07e6(0x336),'4837':_0x3c07e6(0x2db),'4134':_0x3c07e6(0x35f)}[_0x5d2ca1]||_0x3c07e6(0x2a7),_0x3096b7=[0x1bb,0x805,0x823,0x827,0x830,0x20fb];let _0x47d40f=[];try{const _0x61a86b=await fetch(_0xd7ea8a);_0x47d40f=_0x61a86b['ok']?await 整理成数组(await _0x61a86b['text']()):['104.16.0.0/13'];}catch{_0x47d40f=[_0x3c07e6(0x34e)];}const _0x32029d=_0x27044b=>{const _0x310f34=_0x3c07e6,[_0x536269,_0x1cdb24]=_0x27044b['split']('/'),_0x3a5196=parseInt(_0x1cdb24),_0x42be5d=0x20-_0x3a5196,_0x40b489=_0x536269['split']('.')['reduce']((_0xf10450,_0x3fc25e,_0x445cad)=>_0xf10450|parseInt(_0x3fc25e)<<0x18-_0x445cad*0x8,0x0),_0xde754b=Math[_0x310f34(0x125)](Math['random']()*Math[_0x310f34(0x2bb)](0x2,_0x42be5d)),_0x4e557b=0xffffffff<<_0x42be5d>>>0x0,_0x29bc58=((_0x40b489&_0x4e557b)>>>0x0)+_0xde754b>>>0x0;return[_0x29bc58>>>0x18&0xff,_0x29bc58>>>0x10&0xff,_0x29bc58>>>0x8&0xff,_0x29bc58&0xff][_0x310f34(0x148)]('.');},_0x13216f=Array['from']({'length':_0xe2899c},()=>{const _0x473538=_0x3c07e6,_0x932463=_0x32029d(_0x47d40f[Math[_0x473538(0x125)](Math[_0x473538(0x32a)]()*_0x47d40f[_0x473538(0x34a)])]);return _0x932463+':'+(_0x8b4655===-0x1?_0x3096b7[Math['floor'](Math['random']()*_0x3096b7[_0x473538(0x34a)])]:_0x8b4655)+'#'+_0x1ecf13;});return[_0x13216f,_0x13216f['join']('\x0a')];}async function 整理成数组(_0x52d276){const _0x2d2277=_0x309bbe;var _0x2ce9c7=_0x52d276[_0x2d2277(0x101)](/[	"'\r\n]+/g,',')[_0x2d2277(0x101)](/,+/g,',');if(_0x2ce9c7[_0x2d2277(0x2b2)](0x0)==',')_0x2ce9c7=_0x2ce9c7['slice'](0x1);if(_0x2ce9c7[_0x2d2277(0x2b2)](_0x2ce9c7[_0x2d2277(0x34a)]-0x1)==',')_0x2ce9c7=_0x2ce9c7['slice'](0x0,_0x2ce9c7[_0x2d2277(0x34a)]-0x1);const _0x4cca58=_0x2ce9c7[_0x2d2277(0x356)](',');return _0x4cca58;}function isValidBase64(_0x4c7531){const _0x5ef089=_0x309bbe;if(typeof _0x4c7531!==_0x5ef089(0x19e))return![];const _0x1fd06b=_0x4c7531[_0x5ef089(0x101)](/\s/g,'');if(_0x1fd06b['length']===0x0||_0x1fd06b[_0x5ef089(0x34a)]%0x4!==0x0)return![];const _0x10747b=/^[A-Za-z0-9+/]+={0,2}$/;if(!_0x10747b[_0x5ef089(0x270)](_0x1fd06b))return![];try{return atob(_0x1fd06b),!![];}catch{return![];}}function base64Decode(_0x4105e6){const _0xbc1d98=_0x309bbe,_0x3e54a4=new Uint8Array(atob(_0x4105e6)[_0xbc1d98(0x356)]('')[_0xbc1d98(0x1a3)](_0x2a70ba=>_0x2a70ba[_0xbc1d98(0x352)](0x0))),_0x195e6e=new TextDecoder(_0xbc1d98(0x282));return _0x195e6e[_0xbc1d98(0x188)](_0x3e54a4);}async function 请求优选API(_0x7008c,_0x485386=_0x309bbe(0x159),_0x104ae4=0xbb8){const _0x2c50aa=_0x309bbe;if(!_0x7008c?.[_0x2c50aa(0x34a)])return[[],[],[]];const _0x3cc750=new Set();let _0x104fd2='',_0x41d5e5=[];await Promise[_0x2c50aa(0x18c)](_0x7008c[_0x2c50aa(0x1a3)](async _0x53a131=>{const _0x4019cd=_0x2c50aa;try{const _0x6cd944=new AbortController(),_0x4886ad=setTimeout(()=>_0x6cd944[_0x4019cd(0x197)](),_0x104ae4),_0x1fb2fb=await fetch(_0x53a131,{'signal':_0x6cd944['signal']});clearTimeout(_0x4886ad);let _0x5bd5ef='';try{const _0x313a40=await _0x1fb2fb[_0x4019cd(0x26f)](),_0x30a8de=(_0x1fb2fb['headers'][_0x4019cd(0x170)](_0x4019cd(0x310))||'')[_0x4019cd(0x19b)](),_0x39994a=_0x30a8de[_0x4019cd(0x272)](/charset=([^\s;]+)/i)?.[0x1]?.['toLowerCase']()||'';let _0x213bc1=[_0x4019cd(0x282),_0x4019cd(0x166)];(_0x39994a[_0x4019cd(0x328)]('gb')||_0x39994a[_0x4019cd(0x328)](_0x4019cd(0x2a6))||_0x39994a[_0x4019cd(0x328)](_0x4019cd(0x166)))&&(_0x213bc1=['gb2312',_0x4019cd(0x282)]);let _0x2be07=![];for(const _0x27d7bb of _0x213bc1){try{const _0x15a667=new TextDecoder(_0x27d7bb)[_0x4019cd(0x188)](_0x313a40);if(_0x15a667&&_0x15a667[_0x4019cd(0x34a)]>0x0&&!_0x15a667[_0x4019cd(0x328)]('�')){_0x5bd5ef=_0x15a667,_0x2be07=!![];break;}else{if(_0x15a667&&_0x15a667[_0x4019cd(0x34a)]>0x0)continue;}}catch(_0x3c2389){continue;}}!_0x2be07&&(_0x5bd5ef=await _0x1fb2fb['text']());if(!_0x5bd5ef||_0x5bd5ef[_0x4019cd(0x26c)]()[_0x4019cd(0x34a)]===0x0)return;}catch(_0x39a3b3){console[_0x4019cd(0x146)]('Failed\x20to\x20decode\x20response:',_0x39a3b3);return;}const _0x207002=isValidBase64(_0x5bd5ef)?base64Decode(_0x5bd5ef):_0x5bd5ef;if(_0x207002['split']('#')[0x0]['includes'](_0x4019cd(0x1bc))){_0x104fd2+=_0x207002+'\x0a';return;}const _0x4e0e7e=_0x5bd5ef[_0x4019cd(0x26c)]()['split']('\x0a')[_0x4019cd(0x1a3)](_0x5bb5ac=>_0x5bb5ac[_0x4019cd(0x26c)]())[_0x4019cd(0x12c)](_0x1d80d6=>_0x1d80d6),_0x251488=_0x4e0e7e['length']>0x1&&_0x4e0e7e[0x0][_0x4019cd(0x328)](','),_0x593c8e=/^[^\[\]]*:[^\[\]]*:[^\[\]]/;if(!_0x251488)_0x4e0e7e[_0x4019cd(0x20c)](_0x4ebeba=>{const _0x251cca=_0x4019cd,_0x59f7e2=_0x4ebeba[_0x251cca(0x337)]('#'),[_0x277950,_0x5467cf]=_0x59f7e2>-0x1?[_0x4ebeba[_0x251cca(0x33f)](0x0,_0x59f7e2),_0x4ebeba[_0x251cca(0x33f)](_0x59f7e2)]:[_0x4ebeba,''];let _0x564136=![];if(_0x277950[_0x251cca(0x255)]('['))_0x564136=/\]:(\d+)$/[_0x251cca(0x270)](_0x277950);else{const _0x7feee6=_0x277950[_0x251cca(0x2ff)](':');_0x564136=_0x7feee6>-0x1&&/^\d+$/[_0x251cca(0x270)](_0x277950[_0x251cca(0x33f)](_0x7feee6+0x1));}const _0x17ae24=new URL(_0x53a131)[_0x251cca(0x18d)][_0x251cca(0x170)]('port')||_0x485386;_0x3cc750[_0x251cca(0x204)](_0x564136?_0x4ebeba:_0x277950+':'+_0x17ae24+_0x5467cf);});else{const _0x20926d=_0x4e0e7e[0x0][_0x4019cd(0x356)](',')[_0x4019cd(0x1a3)](_0x5d759f=>_0x5d759f['trim']()),_0x16f5c8=_0x4e0e7e[_0x4019cd(0x1e8)](0x1);if(_0x20926d[_0x4019cd(0x328)](_0x4019cd(0x27e))&&_0x20926d['includes']('端口')&&_0x20926d[_0x4019cd(0x328)](_0x4019cd(0x2fc))){const _0x4cf721=_0x20926d[_0x4019cd(0x337)](_0x4019cd(0x27e)),_0x8b73df=_0x20926d['indexOf']('端口'),_0x2e400a=_0x20926d[_0x4019cd(0x337)]('国家')>-0x1?_0x20926d[_0x4019cd(0x337)]('国家'):_0x20926d['indexOf']('城市')>-0x1?_0x20926d[_0x4019cd(0x337)]('城市'):_0x20926d[_0x4019cd(0x337)](_0x4019cd(0x2fc)),_0x47f940=_0x20926d['indexOf'](_0x4019cd(0x1d2));_0x16f5c8[_0x4019cd(0x20c)](_0x40084e=>{const _0x5b3e5b=_0x4019cd,_0x376ab1=_0x40084e[_0x5b3e5b(0x356)](',')[_0x5b3e5b(0x1a3)](_0x266877=>_0x266877['trim']());if(_0x47f940!==-0x1&&_0x376ab1[_0x47f940]?.[_0x5b3e5b(0x19b)]()!=='true')return;const _0x499235=_0x593c8e[_0x5b3e5b(0x270)](_0x376ab1[_0x4cf721])?'['+_0x376ab1[_0x4cf721]+']':_0x376ab1[_0x4cf721];_0x3cc750[_0x5b3e5b(0x204)](_0x499235+':'+_0x376ab1[_0x8b73df]+'#'+_0x376ab1[_0x2e400a]);});}else{if(_0x20926d[_0x4019cd(0x353)](_0xc1daa3=>_0xc1daa3[_0x4019cd(0x328)]('IP'))&&_0x20926d[_0x4019cd(0x353)](_0x83a960=>_0x83a960['includes']('延迟'))&&_0x20926d[_0x4019cd(0x353)](_0x4cd70f=>_0x4cd70f[_0x4019cd(0x328)](_0x4019cd(0x10f)))){const _0x3643b5=_0x20926d[_0x4019cd(0x2fd)](_0x141f63=>_0x141f63[_0x4019cd(0x328)]('IP')),_0x7812f6=_0x20926d[_0x4019cd(0x2fd)](_0x404f09=>_0x404f09[_0x4019cd(0x328)]('延迟')),_0x19fb95=_0x20926d['findIndex'](_0x368b69=>_0x368b69['includes'](_0x4019cd(0x10f))),_0x2a38fb=new URL(_0x53a131)[_0x4019cd(0x18d)][_0x4019cd(0x170)](_0x4019cd(0x311))||_0x485386;_0x16f5c8['forEach'](_0x4da22b=>{const _0x19421b=_0x4019cd,_0x1b9721=_0x4da22b[_0x19421b(0x356)](',')['map'](_0x545916=>_0x545916[_0x19421b(0x26c)]()),_0x49daf2=_0x593c8e[_0x19421b(0x270)](_0x1b9721[_0x3643b5])?'['+_0x1b9721[_0x3643b5]+']':_0x1b9721[_0x3643b5];_0x3cc750[_0x19421b(0x204)](_0x49daf2+':'+_0x2a38fb+_0x19421b(0x2c0)+_0x1b9721[_0x7812f6]+_0x19421b(0x2ef)+_0x1b9721[_0x19fb95]+'MB/s');});}}}}catch(_0x3349a1){}}));const _0x247943=_0x104fd2['trim']()?[...new Set(_0x104fd2[_0x2c50aa(0x356)](/\r?\n/)[_0x2c50aa(0x12c)](_0x3bac65=>_0x3bac65[_0x2c50aa(0x26c)]()!==''))]:[];return[Array[_0x2c50aa(0x257)](_0x3cc750),_0x247943,_0x41d5e5];}async function 反代参数获取(_0x53b810){const _0x5442b1=_0x309bbe,_0x54deb4=new URL(_0x53b810[_0x5442b1(0x235)]),{pathname:_0xe1950,searchParams:_0x1a8dec}=_0x54deb4,_0x2db8cd=_0xe1950[_0x5442b1(0x19b)]();我的SOCKS5账号=_0x1a8dec[_0x5442b1(0x170)]('socks5')||_0x1a8dec[_0x5442b1(0x170)]('http')||null,启用SOCKS5全局反代=_0x1a8dec[_0x5442b1(0x25f)]('globalproxy')||![];const _0x42a8be=_0x2db8cd['match'](/\/(proxyip[.=]|pyip=|ip=)(.+)/);if(_0x1a8dec[_0x5442b1(0x25f)]('proxyip')){const _0x2dbf85=_0x1a8dec['get'](_0x5442b1(0x2e2));反代IP=_0x2dbf85[_0x5442b1(0x328)](',')?_0x2dbf85[_0x5442b1(0x356)](',')[Math[_0x5442b1(0x125)](Math[_0x5442b1(0x32a)]()*_0x2dbf85['split'](',')['length'])]:_0x2dbf85,启用反代兜底=![];return;}else{if(_0x42a8be){const _0x443334=_0x42a8be[0x1]==='proxyip.'?_0x5442b1(0x180)+_0x42a8be[0x2]:_0x42a8be[0x2];反代IP=_0x443334[_0x5442b1(0x328)](',')?_0x443334[_0x5442b1(0x356)](',')[Math['floor'](Math[_0x5442b1(0x32a)]()*_0x443334[_0x5442b1(0x356)](',')[_0x5442b1(0x34a)])]:_0x443334,启用反代兜底=![];return;}}let _0x115503;if(_0x115503=_0xe1950[_0x5442b1(0x272)](/\/(socks5?|http):\/?\/?(.+)/i)){启用SOCKS5反代=_0x115503[0x1][_0x5442b1(0x19b)]()===_0x5442b1(0x10b)?_0x5442b1(0x10b):_0x5442b1(0x160),我的SOCKS5账号=_0x115503[0x2][_0x5442b1(0x356)]('#')[0x0],启用SOCKS5全局反代=!![];if(我的SOCKS5账号['includes']('@')){const _0x156aed=我的SOCKS5账号[_0x5442b1(0x2ff)]('@');let _0x190b1a=我的SOCKS5账号['substring'](0x0,_0x156aed)[_0x5442b1(0x1dc)](_0x5442b1(0x26b),'=');/^(?:[A-Z0-9+/]{4})*(?:[A-Z0-9+/]{2}==|[A-Z0-9+/]{3}=)?$/i[_0x5442b1(0x270)](_0x190b1a)&&!_0x190b1a[_0x5442b1(0x328)](':')&&(_0x190b1a=atob(_0x190b1a)),我的SOCKS5账号=_0x190b1a+'@'+我的SOCKS5账号['substring'](_0x156aed+0x1);}}else{if(_0x115503=_0xe1950[_0x5442b1(0x272)](/\/(g?s5|socks5|g?http)=(.+)/i)){const _0xb01fc9=_0x115503[0x1]['toLowerCase']();我的SOCKS5账号=_0x115503[0x2],启用SOCKS5反代=_0xb01fc9[_0x5442b1(0x328)]('http')?_0x5442b1(0x10b):_0x5442b1(0x160),启用SOCKS5全局反代=_0xb01fc9[_0x5442b1(0x255)]('g')||启用SOCKS5全局反代;}}if(我的SOCKS5账号)try{parsedSocks5Address=await 获取SOCKS5账号(我的SOCKS5账号),启用SOCKS5反代=_0x1a8dec[_0x5442b1(0x170)](_0x5442b1(0x10b))?_0x5442b1(0x10b):启用SOCKS5反代;}catch(_0x201423){console[_0x5442b1(0x146)](_0x5442b1(0x2d5),_0x201423[_0x5442b1(0x102)]),启用SOCKS5反代=null;}else 启用SOCKS5反代=null;}async function 获取SOCKS5账号(_0x515348){const _0xb4b67=_0x309bbe;if(_0x515348[_0xb4b67(0x328)]('@')){const _0x3952a7=_0x515348[_0xb4b67(0x2ff)]('@');let _0xd7c52=_0x515348[_0xb4b67(0x33f)](0x0,_0x3952a7)[_0xb4b67(0x1dc)](_0xb4b67(0x26b),'=');const _0x26d8e7=/^(?:[A-Z0-9+/]{4})*(?:[A-Z0-9+/]{2}==|[A-Z0-9+/]{3}=)?$/i;if(_0x26d8e7[_0xb4b67(0x270)](_0xd7c52)&&!_0xd7c52[_0xb4b67(0x328)](':'))_0xd7c52=atob(_0xd7c52);_0x515348=_0xd7c52+'@'+_0x515348['substring'](_0x3952a7+0x1);}const _0x17db79=_0x515348[_0xb4b67(0x2ff)]('@'),[_0x310e02,_0x17bc60]=_0x17db79===-0x1?[_0x515348,undefined]:[_0x515348[_0xb4b67(0x33f)](_0x17db79+0x1),_0x515348['substring'](0x0,_0x17db79)];let _0x44647e,_0x2e57ee;if(_0x17bc60){[_0x44647e,_0x2e57ee]=_0x17bc60[_0xb4b67(0x356)](':');if(!_0x2e57ee)throw new Error(_0xb4b67(0x137));}let _0x36c7e5,_0xedfe92;if(_0x310e02[_0xb4b67(0x328)](']:'))[_0x36c7e5,_0xedfe92]=[_0x310e02[_0xb4b67(0x356)](']:')[0x0]+']',Number(_0x310e02[_0xb4b67(0x356)](']:')[0x1][_0xb4b67(0x101)](/[^\d]/g,''))];else{if(_0x310e02[_0xb4b67(0x255)]('['))[_0x36c7e5,_0xedfe92]=[_0x310e02,0x50];else{const _0x5e1563=_0x310e02[_0xb4b67(0x356)](':');[_0x36c7e5,_0xedfe92]=_0x5e1563['length']===0x2?[_0x5e1563[0x0],Number(_0x5e1563[0x1][_0xb4b67(0x101)](/[^\d]/g,''))]:[_0x310e02,0x50];}}if(isNaN(_0xedfe92))throw new Error(_0xb4b67(0x1c6));if(_0x36c7e5[_0xb4b67(0x328)](':')&&!/^\[.*\]$/['test'](_0x36c7e5))throw new Error(_0xb4b67(0x151));return{'username':_0x44647e,'password':_0x2e57ee,'hostname':_0x36c7e5,'port':_0xedfe92};}async function getCloudflareUsage(_0x43da41,_0x2a0916,_0x10b4fe,_0x1ac378){const _0x15e98e=_0x309bbe,_0x293725=_0x15e98e(0x104),_0x890df7=_0xa898e2=>_0xa898e2?.[_0x15e98e(0x16d)]((_0x2b6f6b,_0x523d3b)=>_0x2b6f6b+(_0x523d3b?.[_0x15e98e(0x339)]?.['requests']||0x0),0x0)||0x0,_0x53007a={'Content-Type':_0x15e98e(0x143)};try{if(!_0x10b4fe&&(!_0x43da41||!_0x2a0916))return{'success':![],'pages':0x0,'workers':0x0,'total':0x0};if(!_0x10b4fe){const _0x446160=await fetch(_0x293725+_0x15e98e(0x2e4),{'method':'GET','headers':{..._0x53007a,'X-AUTH-EMAIL':_0x43da41,'X-AUTH-KEY':_0x2a0916}});if(!_0x446160['ok'])throw new Error(_0x15e98e(0x2ac)+_0x446160[_0x15e98e(0x2f1)]);const _0x263810=await _0x446160[_0x15e98e(0x25b)]();if(!_0x263810?.['result']?.[_0x15e98e(0x34a)])throw new Error(_0x15e98e(0x1c3));const _0x249d47=_0x263810[_0x15e98e(0x240)]['findIndex'](_0x18bcd1=>_0x18bcd1['name']?.[_0x15e98e(0x19b)]()[_0x15e98e(0x255)](_0x43da41[_0x15e98e(0x19b)]()));_0x10b4fe=_0x263810[_0x15e98e(0x240)][_0x249d47>=0x0?_0x249d47:0x0]?.['id'];}const _0x131803=new Date();_0x131803[_0x15e98e(0x32e)](0x0,0x0,0x0,0x0);const _0x1e73ac=_0x1ac378?{..._0x53007a,'Authorization':_0x15e98e(0x28f)+_0x1ac378}:{..._0x53007a,'X-AUTH-EMAIL':_0x43da41,'X-AUTH-KEY':_0x2a0916},_0x3062a4=await fetch(_0x293725+_0x15e98e(0x319),{'method':'POST','headers':_0x1e73ac,'body':JSON[_0x15e98e(0x15d)]({'query':_0x15e98e(0x118),'variables':{'AccountID':_0x10b4fe,'filter':{'datetime_geq':_0x131803[_0x15e98e(0x224)](),'datetime_leq':new Date()[_0x15e98e(0x224)]()}}})});if(!_0x3062a4['ok'])throw new Error(_0x15e98e(0x2f5)+_0x3062a4[_0x15e98e(0x2f1)]);const _0x364145=await _0x3062a4['json']();if(_0x364145[_0x15e98e(0x262)]?.[_0x15e98e(0x34a)])throw new Error(_0x364145[_0x15e98e(0x262)][0x0][_0x15e98e(0x102)]);const _0x36a47b=_0x364145?.[_0x15e98e(0x12f)]?.['viewer']?.[_0x15e98e(0x24e)]?.[0x0];if(!_0x36a47b)throw new Error('未找到账户数据');const _0x10664d=_0x890df7(_0x36a47b[_0x15e98e(0x226)]),_0x1b3366=_0x890df7(_0x36a47b['workersInvocationsAdaptive']),_0x11eab0=_0x10664d+_0x1b3366;return console[_0x15e98e(0x230)]('统计结果\x20-\x20Pages:\x20'+_0x10664d+_0x15e98e(0xfc)+_0x1b3366+_0x15e98e(0x168)+_0x11eab0),{'success':!![],'pages':_0x10664d,'workers':_0x1b3366,'total':_0x11eab0};}catch(_0x48b410){return console[_0x15e98e(0x146)]('获取使用量错误:',_0x48b410[_0x15e98e(0x102)]),{'success':![],'pages':0x0,'workers':0x0,'total':0x0};}}function sha224(_0xa63b4e){const _0x5f0ff1=_0x309bbe,_0x2a5d38=[0x428a2f98,0x71374491,0xb5c0fbcf,0xe9b5dba5,0x3956c25b,0x59f111f1,0x923f82a4,0xab1c5ed5,0xd807aa98,0x12835b01,0x243185be,0x550c7dc3,0x72be5d74,0x80deb1fe,0x9bdc06a7,0xc19bf174,0xe49b69c1,0xefbe4786,0xfc19dc6,0x240ca1cc,0x2de92c6f,0x4a7484aa,0x5cb0a9dc,0x76f988da,0x983e5152,0xa831c66d,0xb00327c8,0xbf597fc7,0xc6e00bf3,0xd5a79147,0x6ca6351,0x14292967,0x27b70a85,0x2e1b2138,0x4d2c6dfc,0x53380d13,0x650a7354,0x766a0abb,0x81c2c92e,0x92722c85,0xa2bfe8a1,0xa81a664b,0xc24b8b70,0xc76c51a3,0xd192e819,0xd6990624,0xf40e3585,0x106aa070,0x19a4c116,0x1e376c08,0x2748774c,0x34b0bcb5,0x391c0cb3,0x4ed8aa4a,0x5b9cca4f,0x682e6ff3,0x748f82ee,0x78a5636f,0x84c87814,0x8cc70208,0x90befffa,0xa4506ceb,0xbef9a3f7,0xc67178f2],_0x14369e=(_0x1f4373,_0x334d7e)=>(_0x1f4373>>>_0x334d7e|_0x1f4373<<0x20-_0x334d7e)>>>0x0;_0xa63b4e=unescape(encodeURIComponent(_0xa63b4e));const _0x154aeb=_0xa63b4e[_0x5f0ff1(0x34a)]*0x8;_0xa63b4e+=String[_0x5f0ff1(0x158)](0x80);while(_0xa63b4e[_0x5f0ff1(0x34a)]*0x8%0x200!==0x1c0)_0xa63b4e+=String[_0x5f0ff1(0x158)](0x0);const _0x4b173d=[0xc1059ed8,0x367cd507,0x3070dd17,0xf70e5939,0xffc00b31,0x68581511,0x64f98fa7,0xbefa4fa4],_0x1701ca=Math[_0x5f0ff1(0x125)](_0x154aeb/0x100000000),_0x57b93e=_0x154aeb&0xffffffff;_0xa63b4e+=String[_0x5f0ff1(0x158)](_0x1701ca>>>0x18&0xff,_0x1701ca>>>0x10&0xff,_0x1701ca>>>0x8&0xff,_0x1701ca&0xff,_0x57b93e>>>0x18&0xff,_0x57b93e>>>0x10&0xff,_0x57b93e>>>0x8&0xff,_0x57b93e&0xff);const _0x197e99=[];for(let _0x389fcb=0x0;_0x389fcb<_0xa63b4e['length'];_0x389fcb+=0x4)_0x197e99[_0x5f0ff1(0x1e2)](_0xa63b4e[_0x5f0ff1(0x352)](_0x389fcb)<<0x18|_0xa63b4e['charCodeAt'](_0x389fcb+0x1)<<0x10|_0xa63b4e['charCodeAt'](_0x389fcb+0x2)<<0x8|_0xa63b4e[_0x5f0ff1(0x352)](_0x389fcb+0x3));for(let _0x25c07a=0x0;_0x25c07a<_0x197e99[_0x5f0ff1(0x34a)];_0x25c07a+=0x10){const _0x43c1cb=new Array(0x40)[_0x5f0ff1(0x213)](0x0);for(let _0x4700af=0x0;_0x4700af<0x10;_0x4700af++)_0x43c1cb[_0x4700af]=_0x197e99[_0x25c07a+_0x4700af];for(let _0x3f8d09=0x10;_0x3f8d09<0x40;_0x3f8d09++){const _0x402578=_0x14369e(_0x43c1cb[_0x3f8d09-0xf],0x7)^_0x14369e(_0x43c1cb[_0x3f8d09-0xf],0x12)^_0x43c1cb[_0x3f8d09-0xf]>>>0x3,_0x153317=_0x14369e(_0x43c1cb[_0x3f8d09-0x2],0x11)^_0x14369e(_0x43c1cb[_0x3f8d09-0x2],0x13)^_0x43c1cb[_0x3f8d09-0x2]>>>0xa;_0x43c1cb[_0x3f8d09]=_0x43c1cb[_0x3f8d09-0x10]+_0x402578+_0x43c1cb[_0x3f8d09-0x7]+_0x153317>>>0x0;}let [_0x2ae6f3,_0x406d6f,_0x219220,_0x3ac369,_0xf2d0e,_0x4cf568,_0x40579c,_0x3f2491]=_0x4b173d;for(let _0xa91d8e=0x0;_0xa91d8e<0x40;_0xa91d8e++){const _0x1f5246=_0x14369e(_0xf2d0e,0x6)^_0x14369e(_0xf2d0e,0xb)^_0x14369e(_0xf2d0e,0x19),_0x50b221=_0xf2d0e&_0x4cf568^~_0xf2d0e&_0x40579c,_0x2a046=_0x3f2491+_0x1f5246+_0x50b221+_0x2a5d38[_0xa91d8e]+_0x43c1cb[_0xa91d8e]>>>0x0,_0x3a32f3=_0x14369e(_0x2ae6f3,0x2)^_0x14369e(_0x2ae6f3,0xd)^_0x14369e(_0x2ae6f3,0x16),_0x50dff6=_0x2ae6f3&_0x406d6f^_0x2ae6f3&_0x219220^_0x406d6f&_0x219220,_0x3b6e79=_0x3a32f3+_0x50dff6>>>0x0;_0x3f2491=_0x40579c,_0x40579c=_0x4cf568,_0x4cf568=_0xf2d0e,_0xf2d0e=_0x3ac369+_0x2a046>>>0x0,_0x3ac369=_0x219220,_0x219220=_0x406d6f,_0x406d6f=_0x2ae6f3,_0x2ae6f3=_0x2a046+_0x3b6e79>>>0x0;}for(let _0x2f1dc7=0x0;_0x2f1dc7<0x8;_0x2f1dc7++)_0x4b173d[_0x2f1dc7]=_0x4b173d[_0x2f1dc7]+(_0x2f1dc7===0x0?_0x2ae6f3:_0x2f1dc7===0x1?_0x406d6f:_0x2f1dc7===0x2?_0x219220:_0x2f1dc7===0x3?_0x3ac369:_0x2f1dc7===0x4?_0xf2d0e:_0x2f1dc7===0x5?_0x4cf568:_0x2f1dc7===0x6?_0x40579c:_0x3f2491)>>>0x0;}let _0x182316='';for(let _0x200703=0x0;_0x200703<0x7;_0x200703++){for(let _0x6a0520=0x18;_0x6a0520>=0x0;_0x6a0520-=0x8)_0x182316+=(_0x4b173d[_0x200703]>>>_0x6a0520&0xff)[_0x5f0ff1(0x100)](0x10)['padStart'](0x2,'0');}return _0x182316;}async function 解析地址端口(_0xff7acd,_0x116bb1=_0x309bbe(0x2b0),_0x43f105=_0x309bbe(0x2d6)){const _0x1d09ee=_0x309bbe;if(!缓存反代IP||!缓存反代解析数组||缓存反代IP!==_0xff7acd){_0xff7acd=_0xff7acd[_0x1d09ee(0x19b)]();async function _0x33c0a8(_0x3ef9f6,_0xcd81fe){const _0x3e07d2=_0x1d09ee;try{const _0x2dd48a=await fetch(_0x3e07d2(0x219)+_0x3ef9f6+_0x3e07d2(0x35d)+_0xcd81fe,{'headers':{'Accept':_0x3e07d2(0x1cf)}});if(!_0x2dd48a['ok'])return[];const _0x15371b=await _0x2dd48a[_0x3e07d2(0x25b)]();return _0x15371b[_0x3e07d2(0x20f)]||[];}catch(_0x3c892a){return console['error'](_0x3e07d2(0x256)+_0xcd81fe+'):',_0x3c892a),[];}}function _0x5cc64b(_0x3c1b5f){const _0x3aa0de=_0x1d09ee;let _0x14d7ce=_0x3c1b5f,_0x57ff17=0x1bb;if(_0x3c1b5f['includes'](']:')){const _0x3b4d64=_0x3c1b5f[_0x3aa0de(0x356)](']:');_0x14d7ce=_0x3b4d64[0x0]+']',_0x57ff17=parseInt(_0x3b4d64[0x1],0xa)||_0x57ff17;}else{if(_0x3c1b5f['includes'](':')&&!_0x3c1b5f[_0x3aa0de(0x255)]('[')){const _0x3d79b3=_0x3c1b5f[_0x3aa0de(0x2ff)](':');_0x14d7ce=_0x3c1b5f['slice'](0x0,_0x3d79b3),_0x57ff17=parseInt(_0x3c1b5f[_0x3aa0de(0x1e8)](_0x3d79b3+0x1),0xa)||_0x57ff17;}}return[_0x14d7ce,_0x57ff17];}let _0x340023=[];if(_0xff7acd[_0x1d09ee(0x328)]('.william'))try{const _0x32b81a=await _0x33c0a8(_0xff7acd,_0x1d09ee(0x28b)),_0x1f5e31=_0x32b81a[_0x1d09ee(0x12c)](_0x38cb21=>_0x38cb21[_0x1d09ee(0x192)]===0x10)['map'](_0x4d0468=>_0x4d0468[_0x1d09ee(0x12f)]);if(_0x1f5e31['length']>0x0){let _0x4b3696=_0x1f5e31[0x0];if(_0x4b3696[_0x1d09ee(0x255)]('\x22')&&_0x4b3696[_0x1d09ee(0x2d0)]('\x22'))_0x4b3696=_0x4b3696[_0x1d09ee(0x1e8)](0x1,-0x1);const _0x447ae7=_0x4b3696['replace'](/\\010/g,',')[_0x1d09ee(0x101)](/\n/g,',')['split'](',')[_0x1d09ee(0x1a3)](_0x4295e4=>_0x4295e4['trim']())[_0x1d09ee(0x12c)](Boolean);_0x340023=_0x447ae7[_0x1d09ee(0x1a3)](_0x168175=>_0x5cc64b(_0x168175));}}catch(_0x407157){console[_0x1d09ee(0x146)]('解析William域名失败:',_0x407157);}else{let [_0x1dfc2b,_0x274c2d]=_0x5cc64b(_0xff7acd);if(_0xff7acd[_0x1d09ee(0x328)](_0x1d09ee(0x329))){const _0x3d0e9a=_0xff7acd[_0x1d09ee(0x272)](/\.tp(\d+)/);if(_0x3d0e9a)_0x274c2d=parseInt(_0x3d0e9a[0x1],0xa);}const _0xa87b1b=/^(25[0-5]|2[0-4]\d|[01]?\d\d?)\.(25[0-5]|2[0-4]\d|[01]?\d\d?)\.(25[0-5]|2[0-4]\d|[01]?\d\d?)\.(25[0-5]|2[0-4]\d|[01]?\d\d?)$/,_0x37dcf4=/^\[?([a-fA-F0-9:]+)\]?$/;if(!_0xa87b1b[_0x1d09ee(0x270)](_0x1dfc2b)&&!_0x37dcf4[_0x1d09ee(0x270)](_0x1dfc2b)){const [_0x167ebe,_0x192bae]=await Promise['all']([_0x33c0a8(_0x1dfc2b,'A'),_0x33c0a8(_0x1dfc2b,_0x1d09ee(0x312))]),_0x54c93c=_0x167ebe['filter'](_0x403a98=>_0x403a98['type']===0x1)[_0x1d09ee(0x1a3)](_0x57bbaf=>_0x57bbaf['data']),_0x5e57ea=_0x192bae['filter'](_0x3be8d2=>_0x3be8d2[_0x1d09ee(0x192)]===0x1c)[_0x1d09ee(0x1a3)](_0x1fa654=>'['+_0x1fa654[_0x1d09ee(0x12f)]+']'),_0x1343d4=[..._0x54c93c,..._0x5e57ea];_0x340023=_0x1343d4[_0x1d09ee(0x34a)]>0x0?_0x1343d4[_0x1d09ee(0x1a3)](_0x16f1ad=>[_0x16f1ad,_0x274c2d]):[[_0x1dfc2b,_0x274c2d]];}else _0x340023=[[_0x1dfc2b,_0x274c2d]];}const _0x2d8781=_0x340023[_0x1d09ee(0x265)]((_0x2ad058,_0x541920)=>_0x2ad058[0x0]['localeCompare'](_0x541920[0x0])),_0x3392d7=_0x116bb1[_0x1d09ee(0x328)]('.')?_0x116bb1['split']('.')[_0x1d09ee(0x1e8)](-0x2)['join']('.'):_0x116bb1;let _0x4061a2=[..._0x3392d7+_0x43f105][_0x1d09ee(0x16d)]((_0x1a5f6f,_0x33f982)=>_0x1a5f6f+_0x33f982[_0x1d09ee(0x352)](0x0),0x0);console['log'](_0x1d09ee(0x243)+_0x4061a2+'\x0a目标站点:\x20'+_0x3392d7);const _0xfcf69=[..._0x2d8781]['sort'](()=>(_0x4061a2=_0x4061a2*0x41c64e6d+0x3039&0x7fffffff)/0x7fffffff-0.5);缓存反代解析数组=_0xfcf69[_0x1d09ee(0x1e8)](0x0,0x8),console['log']('[反代解析]\x20解析完成\x20总数:\x20'+缓存反代解析数组[_0x1d09ee(0x34a)]+'个\x0a'+缓存反代解析数组['map'](([_0x4f628c,_0x398e2e],_0x4da1a2)=>_0x4da1a2+0x1+'.\x20'+_0x4f628c+':'+_0x398e2e)['join']('\x0a')),缓存反代IP=_0xff7acd;}else console['log'](_0x1d09ee(0x320)+缓存反代解析数组[_0x1d09ee(0x34a)]+'个\x0a'+缓存反代解析数组[_0x1d09ee(0x1a3)](([_0x33847f,_0x5e9e14],_0x57f582)=>_0x57f582+0x1+'.\x20'+_0x33847f+':'+_0x5e9e14)[_0x1d09ee(0x148)]('\x0a'));return 缓存反代解析数组;}async function SOCKS5可用性验证(_0x54bcce=_0x309bbe(0x160),_0x1ae6e4){const _0x417ed0=_0x309bbe,_0x2def54=Date[_0x417ed0(0x233)]();try{parsedSocks5Address=await 获取SOCKS5账号(_0x1ae6e4);}catch(_0x47e884){return{'success':![],'error':_0x47e884[_0x417ed0(0x102)],'proxy':_0x54bcce+_0x417ed0(0x1bc)+_0x1ae6e4,'responseTime':Date[_0x417ed0(0x233)]()-_0x2def54};}const {username:_0x1b6215,password:_0x59d604,hostname:_0xe8adfd,port:_0x14102d}=parsedSocks5Address,_0x907587=_0x1b6215&&_0x59d604?_0x1b6215+':'+_0x59d604+'@'+_0xe8adfd+':'+_0x14102d:_0xe8adfd+':'+_0x14102d;try{const _0xad5828=new Uint8Array(0x0),_0x417ed4=_0x54bcce==_0x417ed0(0x160)?await socks5Connect(_0x417ed0(0x332),0x50,_0xad5828):await httpConnect(_0x417ed0(0x332),0x50,_0xad5828);if(!_0x417ed4)return{'success':![],'error':'无法连接到代理服务器','proxy':_0x54bcce+_0x417ed0(0x1bc)+_0x907587,'responseTime':Date['now']()-_0x2def54};try{const _0x4de4fe=_0x417ed4[_0x417ed0(0x14d)][_0x417ed0(0x1ea)](),_0x2889f5=new TextEncoder();await _0x4de4fe['write'](_0x2889f5['encode'](_0x417ed0(0x181))),_0x4de4fe[_0x417ed0(0x214)]();const _0x242b3b=_0x417ed4[_0x417ed0(0x2f9)][_0x417ed0(0x21e)](),_0x34700f=new TextDecoder();let _0x17f469='';try{while(!![]){const {done:_0x468703,value:_0x5bea0c}=await _0x242b3b[_0x417ed0(0x2c4)]();if(_0x468703)break;_0x17f469+=_0x34700f[_0x417ed0(0x188)](_0x5bea0c,{'stream':!![]});}}finally{_0x242b3b[_0x417ed0(0x214)]();}return await _0x417ed4[_0x417ed0(0x1b1)](),{'success':!![],'proxy':_0x54bcce+_0x417ed0(0x1bc)+_0x907587,'ip':_0x17f469[_0x417ed0(0x272)](/ip=(.*)/)[0x1],'loc':_0x17f469[_0x417ed0(0x272)](/loc=(.*)/)[0x1],'responseTime':Date[_0x417ed0(0x233)]()-_0x2def54};}catch(_0x532d1d){try{await _0x417ed4['close']();}catch(_0xb3d853){console['log'](_0x417ed0(0x342),_0xb3d853);}return{'success':![],'error':_0x532d1d['message'],'proxy':_0x54bcce+_0x417ed0(0x1bc)+_0x907587,'responseTime':Date[_0x417ed0(0x233)]()-_0x2def54};}}catch(_0x3f1eba){return{'success':![],'error':_0x3f1eba['message'],'proxy':_0x54bcce+_0x417ed0(0x1bc)+_0x907587,'responseTime':Date[_0x417ed0(0x233)]()-_0x2def54};}}async function nginx(){return'\x0a\x09<!DOCTYPE\x20html>\x0a\x09<html>\x0a\x09<head>\x0a\x09<title>Welcome\x20to\x20nginx!</title>\x0a\x09<style>\x0a\x09\x09body\x20{\x0a\x09\x09\x09width:\x2035em;\x0a\x09\x09\x09margin:\x200\x20auto;\x0a\x09\x09\x09font-family:\x20Tahoma,\x20Verdana,\x20Arial,\x20sans-serif;\x0a\x09\x09}\x0a\x09</style>\x0a\x09</head>\x0a\x09<body>\x0a\x09<h1>Welcome\x20to\x20nginx!</h1>\x0a\x09<p>If\x20you\x20see\x20this\x20page,\x20the\x20nginx\x20web\x20server\x20is\x20successfully\x20installed\x20and\x0a\x09working.\x20Further\x20configuration\x20is\x20required.</p>\x0a\x09\x0a\x09<p>For\x20online\x20documentation\x20and\x20support\x20please\x20refer\x20to\x0a\x09<a\x20href=\x22http://nginx.org/\x22>nginx.org</a>.<br/>\x0a\x09Commercial\x20support\x20is\x20available\x20at\x0a\x09<a\x20href=\x22http://nginx.com/\x22>nginx.com</a>.</p>\x0a\x09\x0a\x09<p><em>Thank\x20you\x20for\x20using\x20nginx.</em></p>\x0a\x09</body>\x0a\x09</html>\x0a\x09';}async function html1101(_0x2b8288,_0x53158d){const _0x553dca=_0x309bbe,_0x402429=new Date(),_0x368f45=_0x402429['getFullYear']()+'-'+String(_0x402429[_0x553dca(0x13a)]()+0x1)[_0x553dca(0x26d)](0x2,'0')+'-'+String(_0x402429[_0x553dca(0x261)]())[_0x553dca(0x26d)](0x2,'0')+'\x20'+String(_0x402429[_0x553dca(0x2f2)]())[_0x553dca(0x26d)](0x2,'0')+':'+String(_0x402429[_0x553dca(0x321)]())['padStart'](0x2,'0')+':'+String(_0x402429[_0x553dca(0x20b)]())[_0x553dca(0x26d)](0x2,'0'),_0x203679=Array[_0x553dca(0x257)](crypto[_0x553dca(0x218)](new Uint8Array(0x8)))[_0x553dca(0x1a3)](_0x4e2320=>_0x4e2320[_0x553dca(0x100)](0x10)[_0x553dca(0x26d)](0x2,'0'))[_0x553dca(0x148)]('');return _0x553dca(0x362)+_0x2b8288+_0x553dca(0x1b0)+_0x203679+_0x553dca(0x1ec)+_0x368f45+_0x553dca(0x19f)+_0x2b8288+')\x20that\x20is\x20on\x20the\x20<a\x20href=\x22https://www.cloudflare.com/5xx-error-landing?utm_source=error_100x\x22\x20target=\x22_blank\x22>Cloudflare</a>\x20network.\x20An\x20unknown\x20error\x20occurred\x20while\x20rendering\x20the\x20page.</p>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22cf-column\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<h2\x20data-translate=\x22what_can_i_do\x22>What\x20can\x20I\x20do?</h2>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<p><strong>If\x20you\x20are\x20the\x20owner\x20of\x20this\x20website:</strong><br\x20/>refer\x20to\x20<a\x20href=\x22https://developers.cloudflare.com/workers/observability/errors/\x22\x20target=\x22_blank\x22>Workers\x20-\x20Errors\x20and\x20Exceptions</a>\x20and\x20check\x20Workers\x20Logs\x20for\x20'+_0x2b8288+_0x553dca(0x1f4)+_0x203679+'</strong></span>\x0a\x20\x20\x20\x20\x20\x20<span\x20class=\x22cf-footer-separator\x20sm:hidden\x22>&bull;</span>\x0a\x20\x20\x20\x20\x20\x20<span\x20id=\x22cf-footer-item-ip\x22\x20class=\x22cf-footer-item\x20hidden\x20sm:block\x20sm:mb-1\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20Your\x20IP:\x0a\x20\x20\x20\x20\x20\x20\x20\x20<button\x20type=\x22button\x22\x20id=\x22cf-footer-ip-reveal\x22\x20class=\x22cf-footer-ip-reveal-btn\x22>Click\x20to\x20reveal</button>\x0a\x20\x20\x20\x20\x20\x20\x20\x20<span\x20class=\x22hidden\x22\x20id=\x22cf-footer-ip\x22>'+_0x53158d+_0x553dca(0x313);}
+﻿import { connect } from "cloudflare:sockets";
+let config_JSON, 反代IP = '', 启用SOCKS5反代 = null, 启用SOCKS5全局反代 = false, 我的SOCKS5账号 = '', parsedSocks5Address = {};
+let 缓存反代IP, 缓存反代解析数组, 缓存反代数组索引 = 0, 启用反代兜底 = true;
+let SOCKS5白名单 = ['*tapecontent.net', '*cloudatacdn.com', '*loadshare.org', '*cdn-centaurus.com', 'scholar.google.com'];
+const Pages静态页面 = 'https://edt-pages.github.io';
+///////////////////////////////////////////////////////主程序入口///////////////////////////////////////////////
+export default {
+    async fetch(request, env, ctx) {
+        const url = new URL(request.url);
+        const UA = request.headers.get('User-Agent') || 'null';
+        const upgradeHeader = request.headers.get('Upgrade');
+        const 管理员密码 = env.ADMIN || env.admin || env.PASSWORD || env.password || env.pswd || env.TOKEN || env.KEY || env.UUID || env.uuid;
+        const 加密秘钥 = env.KEY || '勿动此默认密钥，有需求请自行通过添加变量KEY进行修改';
+        const userIDMD5 = await MD5MD5(管理员密码 + 加密秘钥);
+        const uuidRegex = /^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-4[0-9a-fA-F]{3}-[89abAB][0-9a-fA-F]{3}-[0-9a-fA-F]{12}$/;
+        const envUUID = env.UUID || env.uuid;
+        const userID = (envUUID && uuidRegex.test(envUUID)) ? envUUID.toLowerCase() : [userIDMD5.slice(0, 8), userIDMD5.slice(8, 12), '4' + userIDMD5.slice(13, 16), '8' + userIDMD5.slice(17, 20), userIDMD5.slice(20)].join('-');
+        const hosts = env.HOST ? (await 整理成数组(env.HOST)).map(h => h.toLowerCase().replace(/^https?:\/\//, '').split('/')[0].split(':')[0]) : [url.hostname];
+        const host = hosts[0];
+        if (env.PROXYIP) {
+            const proxyIPs = await 整理成数组(env.PROXYIP);
+            反代IP = proxyIPs[Math.floor(Math.random() * proxyIPs.length)];
+            启用反代兜底 = false;
+        } else 反代IP = (request.cf.colo + '.PrOxYIp.CmLiUsSsS.nEt').toLowerCase();
+        const 访问IP = request.headers.get('X-Real-IP') || request.headers.get('CF-Connecting-IP') || request.headers.get('X-Forwarded-For') || request.headers.get('True-Client-IP') || request.headers.get('Fly-Client-IP') || request.headers.get('X-Appengine-Remote-Addr') || request.headers.get('X-Forwarded-For') || request.headers.get('X-Real-IP') || request.headers.get('X-Cluster-Client-IP') || request.cf?.clientTcpRtt || '未知IP';
+        if (env.GO2SOCKS5) SOCKS5白名单 = await 整理成数组(env.GO2SOCKS5);
+        if (!upgradeHeader || upgradeHeader !== 'websocket') {
+            if (url.protocol === 'http:') return Response.redirect(url.href.replace(`http://${url.hostname}`, `https://${url.hostname}`), 301);
+            if (!管理员密码) return fetch(Pages静态页面 + '/noADMIN').then(r => { const headers = new Headers(r.headers); headers.set('Cache-Control', 'no-store, no-cache, must-revalidate, proxy-revalidate'); headers.set('Pragma', 'no-cache'); headers.set('Expires', '0'); return new Response(r.body, { status: 404, statusText: r.statusText, headers }); });
+            if (!env.KV) return fetch(Pages静态页面 + '/noKV').then(r => { const headers = new Headers(r.headers); headers.set('Cache-Control', 'no-store, no-cache, must-revalidate, proxy-revalidate'); headers.set('Pragma', 'no-cache'); headers.set('Expires', '0'); return new Response(r.body, { status: 404, statusText: r.statusText, headers }); });
+            const 访问路径 = url.pathname.slice(1).toLowerCase();
+            const 区分大小写访问路径 = url.pathname.slice(1);
+            if (访问路径 === 加密秘钥 && 加密秘钥 !== '勿动此默认密钥，有需求请自行通过添加变量KEY进行修改') {//快速订阅
+                const params = new URLSearchParams(url.search);
+                params.set('token', await MD5MD5(host + userID));
+                return new Response('重定向中...', { status: 302, headers: { 'Location': `/sub?${params.toString()}` } });
+            } else if (访问路径 === 'login') {//处理登录页面和登录请求
+                const cookies = request.headers.get('Cookie') || '';
+                const authCookie = cookies.split(';').find(c => c.trim().startsWith('auth='))?.split('=')[1];
+                if (authCookie == await MD5MD5(UA + 加密秘钥 + 管理员密码)) return new Response('重定向中...', { status: 302, headers: { 'Location': '/admin' } });
+                if (request.method === 'POST') {
+                    const formData = await request.text();
+                    const params = new URLSearchParams(formData);
+                    const 输入密码 = params.get('password');
+                    if (输入密码 === 管理员密码) {
+                        // 密码正确，设置cookie并返回成功标记
+                        const 响应 = new Response(JSON.stringify({ success: true }), { status: 200, headers: { 'Content-Type': 'application/json;charset=utf-8' } });
+                        响应.headers.set('Set-Cookie', `auth=${await MD5MD5(UA + 加密秘钥 + 管理员密码)}; Path=/; Max-Age=86400; HttpOnly`);
+                        return 响应;
+                    }
+                }
+                return fetch(Pages静态页面 + '/login');
+            } else if (访问路径 === 'admin' || 访问路径.startsWith('admin/')) {//验证cookie后响应管理页面
+                const cookies = request.headers.get('Cookie') || '';
+                const authCookie = cookies.split(';').find(c => c.trim().startsWith('auth='))?.split('=')[1];
+                // 没有cookie或cookie错误，跳转到/login页面
+                if (!authCookie || authCookie !== await MD5MD5(UA + 加密秘钥 + 管理员密码)) return new Response('重定向中...', { status: 302, headers: { 'Location': '/login' } });
+                if (访问路径 === 'admin/log.json') {// 读取日志内容
+                    const 读取日志内容 = await env.KV.get('log.json') || '[]';
+                    return new Response(读取日志内容, { status: 200, headers: { 'Content-Type': 'application/json;charset=utf-8' } });
+                } else if (区分大小写访问路径 === 'admin/getCloudflareUsage') {// 查询请求量
+                    try {
+                        const Usage_JSON = await getCloudflareUsage(url.searchParams.get('Email'), url.searchParams.get('GlobalAPIKey'), url.searchParams.get('AccountID'), url.searchParams.get('APIToken'));
+                        return new Response(JSON.stringify(Usage_JSON, null, 2), { status: 200, headers: { 'Content-Type': 'application/json' } });
+                    } catch (err) {
+                        const errorResponse = { msg: '查询请求量失败，失败原因：' + err.message, error: err.message };
+                        return new Response(JSON.stringify(errorResponse, null, 2), { status: 500, headers: { 'Content-Type': 'application/json;charset=utf-8' } });
+                    }
+                } else if (区分大小写访问路径 === 'admin/getADDAPI') {// 验证优选API
+                    if (url.searchParams.get('url')) {
+                        const 待验证优选URL = url.searchParams.get('url');
+                        try {
+                            new URL(待验证优选URL);
+                            const 请求优选API内容 = await 请求优选API([待验证优选URL], url.searchParams.get('port') || '443');
+                            const 优选API的IP = 请求优选API内容[0].length > 0 ? 请求优选API内容[0] : 请求优选API内容[1];
+                            return new Response(JSON.stringify({ success: true, data: 优选API的IP }, null, 2), { status: 200, headers: { 'Content-Type': 'application/json;charset=utf-8' } });
+                        } catch (err) {
+                            const errorResponse = { msg: '验证优选API失败，失败原因：' + err.message, error: err.message };
+                            return new Response(JSON.stringify(errorResponse, null, 2), { status: 500, headers: { 'Content-Type': 'application/json;charset=utf-8' } });
+                        }
+                    }
+                    return new Response(JSON.stringify({ success: false, data: [] }, null, 2), { status: 403, headers: { 'Content-Type': 'application/json;charset=utf-8' } });
+                } else if (访问路径 === 'admin/check') {// SOCKS5代理检查
+                    let 检测代理响应;
+                    if (url.searchParams.has('socks5')) {
+                        检测代理响应 = await SOCKS5可用性验证('socks5', url.searchParams.get('socks5'));
+                    } else if (url.searchParams.has('http')) {
+                        检测代理响应 = await SOCKS5可用性验证('http', url.searchParams.get('http'));
+                    } else {
+                        return new Response(JSON.stringify({ error: '缺少代理参数' }), { status: 400, headers: { 'Content-Type': 'application/json;charset=utf-8' } });
+                    }
+                    return new Response(JSON.stringify(检测代理响应, null, 2), { status: 200, headers: { 'Content-Type': 'application/json;charset=utf-8' } });
+                }
+
+                config_JSON = await 读取config_JSON(env, host, userID, env.PATH);
+
+                if (访问路径 === 'admin/init') {// 重置配置为默认值
+                    try {
+                        config_JSON = await 读取config_JSON(env, host, userID, env.PATH, true);
+                        ctx.waitUntil(请求日志记录(env, request, 访问IP, 'Init_Config', config_JSON));
+                        config_JSON.init = '配置已重置为默认值';
+                        return new Response(JSON.stringify(config_JSON, null, 2), { status: 200, headers: { 'Content-Type': 'application/json;charset=utf-8' } });
+                    } catch (err) {
+                        const errorResponse = { msg: '配置重置失败，失败原因：' + err.message, error: err.message };
+                        return new Response(JSON.stringify(errorResponse, null, 2), { status: 500, headers: { 'Content-Type': 'application/json;charset=utf-8' } });
+                    }
+                } else if (request.method === 'POST') {// 处理 KV 操作（POST 请求）
+                    if (访问路径 === 'admin/config.json') { // 保存config.json配置
+                        try {
+                            const newConfig = await request.json();
+                            // 验证配置完整性
+                            if (!newConfig.UUID || !newConfig.HOST) return new Response(JSON.stringify({ error: '配置不完整' }), { status: 400, headers: { 'Content-Type': 'application/json;charset=utf-8' } });
+
+                            // 保存到 KV
+                            await env.KV.put('config.json', JSON.stringify(newConfig, null, 2));
+                            ctx.waitUntil(请求日志记录(env, request, 访问IP, 'Save_Config', config_JSON));
+                            return new Response(JSON.stringify({ success: true, message: '配置已保存' }), { status: 200, headers: { 'Content-Type': 'application/json;charset=utf-8' } });
+                        } catch (error) {
+                            console.error('保存配置失败:', error);
+                            return new Response(JSON.stringify({ error: '保存配置失败: ' + error.message }), { status: 500, headers: { 'Content-Type': 'application/json;charset=utf-8' } });
+                        }
+                    } else if (访问路径 === 'admin/cf.json') { // 保存cf.json配置
+                        try {
+                            const newConfig = await request.json();
+                            const CF_JSON = { Email: null, GlobalAPIKey: null, AccountID: null, APIToken: null };
+                            if (!newConfig.init || newConfig.init !== true) {
+                                if (newConfig.Email && newConfig.GlobalAPIKey) {
+                                    CF_JSON.Email = newConfig.Email;
+                                    CF_JSON.GlobalAPIKey = newConfig.GlobalAPIKey;
+                                    CF_JSON.AccountID = null;
+                                    CF_JSON.APIToken = null;
+                                } else if (newConfig.AccountID && newConfig.APIToken) {
+                                    CF_JSON.Email = null;
+                                    CF_JSON.GlobalAPIKey = null;
+                                    CF_JSON.AccountID = newConfig.AccountID;
+                                    CF_JSON.APIToken = newConfig.APIToken;
+                                } else {
+                                    return new Response(JSON.stringify({ error: '配置不完整' }), { status: 400, headers: { 'Content-Type': 'application/json;charset=utf-8' } });
+                                }
+                            }
+
+                            // 保存到 KV
+                            await env.KV.put('cf.json', JSON.stringify(CF_JSON, null, 2));
+                            ctx.waitUntil(请求日志记录(env, request, 访问IP, 'Save_Config', config_JSON));
+                            return new Response(JSON.stringify({ success: true, message: '配置已保存' }), { status: 200, headers: { 'Content-Type': 'application/json;charset=utf-8' } });
+                        } catch (error) {
+                            console.error('保存配置失败:', error);
+                            return new Response(JSON.stringify({ error: '保存配置失败: ' + error.message }), { status: 500, headers: { 'Content-Type': 'application/json;charset=utf-8' } });
+                        }
+                    } else if (访问路径 === 'admin/tg.json') { // 保存tg.json配置
+                        try {
+                            const newConfig = await request.json();
+                            if (newConfig.init && newConfig.init === true) {
+                                const TG_JSON = { BotToken: null, ChatID: null };
+                                await env.KV.put('tg.json', JSON.stringify(TG_JSON, null, 2));
+                            } else {
+                                if (!newConfig.BotToken || !newConfig.ChatID) return new Response(JSON.stringify({ error: '配置不完整' }), { status: 400, headers: { 'Content-Type': 'application/json;charset=utf-8' } });
+                                await env.KV.put('tg.json', JSON.stringify(newConfig, null, 2));
+                            }
+                            ctx.waitUntil(请求日志记录(env, request, 访问IP, 'Save_Config', config_JSON));
+                            return new Response(JSON.stringify({ success: true, message: '配置已保存' }), { status: 200, headers: { 'Content-Type': 'application/json;charset=utf-8' } });
+                        } catch (error) {
+                            console.error('保存配置失败:', error);
+                            return new Response(JSON.stringify({ error: '保存配置失败: ' + error.message }), { status: 500, headers: { 'Content-Type': 'application/json;charset=utf-8' } });
+                        }
+                    } else if (区分大小写访问路径 === 'admin/ADD.txt') { // 保存自定义优选IP
+                        try {
+                            const customIPs = await request.text();
+                            await env.KV.put('ADD.txt', customIPs);// 保存到 KV
+                            ctx.waitUntil(请求日志记录(env, request, 访问IP, 'Save_Custom_IPs', config_JSON));
+                            return new Response(JSON.stringify({ success: true, message: '自定义IP已保存' }), { status: 200, headers: { 'Content-Type': 'application/json;charset=utf-8' } });
+                        } catch (error) {
+                            console.error('保存自定义IP失败:', error);
+                            return new Response(JSON.stringify({ error: '保存自定义IP失败: ' + error.message }), { status: 500, headers: { 'Content-Type': 'application/json;charset=utf-8' } });
+                        }
+                    } else return new Response(JSON.stringify({ error: '不支持的POST请求路径' }), { status: 404, headers: { 'Content-Type': 'application/json;charset=utf-8' } });
+                } else if (访问路径 === 'admin/config.json') {// 处理 admin/config.json 请求，返回JSON
+                    return new Response(JSON.stringify(config_JSON, null, 2), { status: 200, headers: { 'Content-Type': 'application/json' } });
+                } else if (区分大小写访问路径 === 'admin/ADD.txt') {// 处理 admin/ADD.txt 请求，返回本地优选IP
+                    let 本地优选IP = await env.KV.get('ADD.txt') || 'null';
+                    if (本地优选IP == 'null') 本地优选IP = (await 生成随机IP(request, config_JSON.优选订阅生成.本地IP库.随机数量, config_JSON.优选订阅生成.本地IP库.指定端口))[1];
+                    return new Response(本地优选IP, { status: 200, headers: { 'Content-Type': 'text/plain;charset=utf-8', 'asn': request.cf.asn } });
+                } else if (访问路径 === 'admin/cf.json') {// CF配置文件
+                    return new Response(JSON.stringify(request.cf, null, 2), { status: 200, headers: { 'Content-Type': 'application/json;charset=utf-8' } });
+                }
+
+                ctx.waitUntil(请求日志记录(env, request, 访问IP, 'Admin_Login', config_JSON));
+                return fetch(Pages静态页面 + '/admin');
+            } else if (访问路径 === 'logout') {//清除cookie并跳转到登录页面
+                const 响应 = new Response('重定向中...', { status: 302, headers: { 'Location': '/login' } });
+                响应.headers.set('Set-Cookie', 'auth=; Path=/; Max-Age=0; HttpOnly');
+                return 响应;
+            } else if (访问路径 === 'sub') {//处理订阅请求
+                const 订阅TOKEN = await MD5MD5(host + userID);
+                if (url.searchParams.get('token') === 订阅TOKEN) {
+                    config_JSON = await 读取config_JSON(env, host, userID, env.PATH);
+                    ctx.waitUntil(请求日志记录(env, request, 访问IP, 'Get_SUB', config_JSON));
+                    const ua = UA.toLowerCase();
+                    const expire = 4102329600;//2099-12-31 到期时间
+                    const now = Date.now();
+                    const today = new Date(now);
+                    today.setHours(0, 0, 0, 0);
+                    const UD = Math.floor(((now - today.getTime()) / 86400000) * 24 * 1099511627776 / 2);
+                    let pagesSum = UD, workersSum = UD, total = 24 * 1099511627776;
+                    if (config_JSON.CF.Usage.success) {
+                        pagesSum = config_JSON.CF.Usage.pages;
+                        workersSum = config_JSON.CF.Usage.workers;
+                        total = 1024 * 100;
+                    }
+                    const responseHeaders = {
+                        "content-type": "text/plain; charset=utf-8",
+                        "Profile-Update-Interval": config_JSON.优选订阅生成.SUBUpdateTime,
+                        "Profile-web-page-url": url.protocol + '//' + url.host + '/admin',
+                        "Subscription-Userinfo": `upload=${pagesSum}; download=${workersSum}; total=${total}; expire=${expire}`,
+                        "Cache-Control": "no-store",
+                    };
+                    const isSubConverterRequest = request.headers.has('b64') || request.headers.has('base64') || request.headers.get('subconverter-request') || request.headers.get('subconverter-version') || ua.includes('subconverter') || ua.includes(('CF-Workers-SUB').toLowerCase());
+                    const 订阅类型 = isSubConverterRequest
+                        ? 'mixed'
+                        : url.searchParams.has('target')
+                            ? url.searchParams.get('target')
+                            : url.searchParams.has('clash') || ua.includes('clash') || ua.includes('meta') || ua.includes('mihomo')
+                                ? 'clash'
+                                : url.searchParams.has('sb') || url.searchParams.has('singbox') || ua.includes('singbox') || ua.includes('sing-box')
+                                    ? 'singbox'
+                                    : url.searchParams.has('surge') || ua.includes('surge')
+                                        ? 'surge&ver=4'
+                                        : 'mixed';
+
+                    if (!ua.includes('mozilla')) responseHeaders["Content-Disposition"] = `attachment; filename*=utf-8''${encodeURIComponent(config_JSON.优选订阅生成.SUBNAME)}`;
+                    const 协议类型 = (url.searchParams.has('surge') || ua.includes('surge')) ? 'tro' + 'jan' : config_JSON.协议类型;
+                    let 订阅内容 = '';
+                    if (订阅类型 === 'mixed') {
+                        const 节点路径 = config_JSON.启用0RTT ? config_JSON.PATH + '?ed=2560' : config_JSON.PATH;
+                        const TLS分片参数 = config_JSON.TLS分片 == 'Shadowrocket' ? `&fragment=${encodeURIComponent('1,40-60,30-50,tlshello')}` : config_JSON.TLS分片 == 'Happ' ? `&fragment=${encodeURIComponent('3,1,tlshello')}` : '';
+                        let 完整优选IP = [], 其他节点LINK = '';
+
+                        if (!url.searchParams.has('sub') && config_JSON.优选订阅生成.local) { // 本地生成订阅
+                            const 完整优选列表 = config_JSON.优选订阅生成.本地IP库.随机IP ? (await 生成随机IP(request, config_JSON.优选订阅生成.本地IP库.随机数量, config_JSON.优选订阅生成.本地IP库.指定端口))[0] : await env.KV.get('ADD.txt') ? await 整理成数组(await env.KV.get('ADD.txt')) : (await 生成随机IP(request, config_JSON.优选订阅生成.本地IP库.随机数量, config_JSON.优选订阅生成.本地IP库.指定端口))[0];
+                            const 优选API = [], 优选IP = [], 其他节点 = [];
+                            for (const 元素 of 完整优选列表) {
+                                if (元素.toLowerCase().startsWith('https://')) 优选API.push(元素);
+                                else if (元素.toLowerCase().includes('://')) {
+                                    if (元素.includes('#')) {
+                                        const 地址备注分离 = 元素.split('#');
+                                        其他节点.push(地址备注分离[0] + '#' + encodeURIComponent(decodeURIComponent(地址备注分离[1])));
+                                    } else 其他节点.push(元素);
+                                } else 优选IP.push(元素);
+                            }
+                            const 请求优选API内容 = await 请求优选API(优选API);
+                            const 合并其他节点数组 = [...new Set(其他节点.concat(请求优选API内容[1]))];
+                            其他节点LINK = 合并其他节点数组.length > 0 ? 合并其他节点数组.join('\n') + '\n' : '';
+                            const 优选API的IP = 请求优选API内容[0];
+                            完整优选IP = [...new Set(优选IP.concat(优选API的IP))];
+                        } else { // 优选订阅生成器
+                            let 优选订阅生成器HOST = url.searchParams.get('sub') || config_JSON.优选订阅生成.SUB;
+                            优选订阅生成器HOST = 优选订阅生成器HOST && !/^https?:\/\//i.test(优选订阅生成器HOST) ? `https://${优选订阅生成器HOST}` : 优选订阅生成器HOST;
+                            const 优选订阅生成器URL = `${优选订阅生成器HOST}/sub?host=example.com&uuid=00000000-0000-4000-8000-000000000000`;
+                            try {
+                                const response = await fetch(优选订阅生成器URL, { headers: { 'User-Agent': 'v2rayN/edge' + 'tunnel (https://github.com/cmliu/edge' + 'tunnel)' } });
+                                if (!response.ok) return new Response('优选订阅生成器异常：' + response.statusText, { status: response.status });
+                                const 优选订阅生成器返回订阅内容 = atob(await response.text());
+                                const 订阅行列表 = 优选订阅生成器返回订阅内容.includes('\r\n') ? 优选订阅生成器返回订阅内容.split('\r\n') : 优选订阅生成器返回订阅内容.split('\n');
+                                for (const 行内容 of 订阅行列表) {
+                                    if (!行内容.trim()) continue; // 跳过空行
+                                    if (行内容.includes('00000000-0000-4000-8000-000000000000') && 行内容.includes('example.com')) { // 这是优选IP行，提取 域名:端口#备注
+                                        const 地址匹配 = 行内容.match(/:\/\/[^@]+@([^?]+)/);
+                                        if (地址匹配) {
+                                            let 地址端口 = 地址匹配[1], 备注 = ''; // 域名:端口 或 IP:端口
+                                            const 备注匹配 = 行内容.match(/#(.+)$/);
+                                            if (备注匹配) 备注 = '#' + decodeURIComponent(备注匹配[1]);
+                                            完整优选IP.push(地址端口 + 备注);
+                                        }
+                                    } else 其他节点LINK += 行内容 + '\n';
+                                }
+                            } catch (error) {
+                                return new Response('优选订阅生成器异常：' + error.message, { status: 403 });
+                            }
+                        }
+
+                        订阅内容 = 其他节点LINK + 完整优选IP.map(原始地址 => {
+                            // 统一正则: 匹配 域名/IPv4/IPv6地址 + 可选端口 + 可选备注
+                            // 示例: 
+                            //   - 域名: hj.xmm1993.top:2096#备注 或 example.com
+                            //   - IPv4: 166.0.188.128:443#Los Angeles 或 166.0.188.128
+                            //   - IPv6: [2606:4700::]:443#CMCC 或 [2606:4700::]
+                            const regex = /^(\[[\da-fA-F:]+\]|[\d.]+|[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?)*)(?::(\d+))?(?:#(.+))?$/;
+                            const match = 原始地址.match(regex);
+
+                            let 节点地址, 节点端口 = "443", 节点备注;
+
+                            if (match) {
+                                节点地址 = match[1];  // IP地址或域名(可能带方括号)
+                                节点端口 = match[2] || "443";  // 端口,默认443
+                                节点备注 = match[3] || 节点地址;  // 备注,默认为地址本身
+                            } else {
+                                // 不规范的格式，跳过处理返回null
+                                console.warn(`[订阅内容] 不规范的IP格式已忽略: ${原始地址}`);
+                                return null;
+                            }
+
+                            return `${协议类型}://00000000-0000-4000-8000-000000000000@${节点地址}:${节点端口}?security=tls&type=${config_JSON.传输协议}&host=example.com&sni=example.com&path=${encodeURIComponent(config_JSON.随机路径 ? 随机路径() + 节点路径 : 节点路径) + TLS分片参数}&encryption=none${config_JSON.跳过证书验证 ? '&allowInsecure=1' : ''}#${encodeURIComponent(节点备注)}`;
+                        }).filter(item => item !== null).join('\n');
+                    } else { // 订阅转换
+                        const 订阅转换URL = `${config_JSON.订阅转换配置.SUBAPI}/sub?target=${订阅类型}&url=${encodeURIComponent(url.protocol + '//' + url.host + '/sub?target=mixed&token=' + 订阅TOKEN + (url.searchParams.has('sub') && url.searchParams.get('sub') != '' ? `&sub=${url.searchParams.get('sub')}` : ''))}&config=${encodeURIComponent(config_JSON.订阅转换配置.SUBCONFIG)}&emoji=${config_JSON.订阅转换配置.SUBEMOJI}&scv=${config_JSON.跳过证书验证}`;
+                        try {
+                            const response = await fetch(订阅转换URL, { headers: { 'User-Agent': 'Subconverter for ' + 订阅类型 + ' edge' + 'tunnel(https://github.com/cmliu/edge' + 'tunnel)' } });
+                            if (response.ok) {
+                                订阅内容 = await response.text();
+                                if (url.searchParams.has('surge') || ua.includes('surge')) 订阅内容 = surge(订阅内容, url.protocol + '//' + url.host + '/sub?token=' + 订阅TOKEN + '&surge', config_JSON);
+                            } else return new Response('订阅转换后端异常：' + response.statusText, { status: response.status });
+                        } catch (error) {
+                            return new Response('订阅转换后端异常：' + error.message, { status: 403 });
+                        }
+                    }
+
+                    if (!ua.includes('subconverter')) 订阅内容 = 批量替换域名(订阅内容.replace(/00000000-0000-4000-8000-000000000000/g, config_JSON.UUID), config_JSON.HOSTS)
+
+                    if (!ua.includes('mozilla') && 订阅类型 === 'mixed') 订阅内容 = btoa(订阅内容);
+
+                    if (订阅类型 === 'singbox') {
+                        订阅内容 = JSON.stringify(JSON.parse(订阅内容), null, 2);
+                        responseHeaders["content-type"] = 'application/json; charset=utf-8';
+                    } else if (订阅类型 === 'clash') {
+                        responseHeaders["content-type"] = 'application/x-yaml; charset=utf-8';
+                    }
+                    return new Response(订阅内容, { status: 200, headers: responseHeaders });
+                }
+                return new Response('无效的订阅TOKEN', { status: 403 });
+            } else if (访问路径 === 'locations') {//反代locations列表
+                const cookies = request.headers.get('Cookie') || '';
+                const authCookie = cookies.split(';').find(c => c.trim().startsWith('auth='))?.split('=')[1];
+                if (authCookie && authCookie == await MD5MD5(UA + 加密秘钥 + 管理员密码)) return fetch(new Request('https://speed.cloudflare.com/locations', { headers: { 'Referer': 'https://speed.cloudflare.com/' } }));
+            }
+        } else if (管理员密码) {// ws代理
+            await 反代参数获取(request);
+            return await 处理WS请求(request, userID);
+        }
+
+        let 伪装页URL = env.URL || 'nginx';
+        if (伪装页URL && 伪装页URL !== 'nginx' && 伪装页URL !== '1101') {
+            伪装页URL = 伪装页URL.trim().replace(/\/$/, '');
+            if (!伪装页URL.match(/^https?:\/\//i)) 伪装页URL = 'https://' + 伪装页URL;
+            if (伪装页URL.toLowerCase().startsWith('http://')) 伪装页URL = 'https://' + 伪装页URL.substring(7);
+            try { const u = new URL(伪装页URL); 伪装页URL = u.protocol + '//' + u.host; } catch (e) { 伪装页URL = 'nginx'; }
+        }
+        if (伪装页URL === '1101') return new Response(await html1101(url.host, 访问IP), { status: 200, headers: { 'Content-Type': 'text/html; charset=UTF-8' } });
+        try {
+            const 反代URL = new URL(伪装页URL), 新请求头 = new Headers(request.headers);
+            新请求头.set('Host', 反代URL.host);
+            if (新请求头.has('Referer')) { const u = new URL(新请求头.get('Referer')); 新请求头.set('Referer', 反代URL.protocol + '//' + 反代URL.host + u.pathname + u.search); }
+            if (新请求头.has('Origin')) 新请求头.set('Origin', 反代URL.protocol + '//' + 反代URL.host);
+            if (!新请求头.has('User-Agent') && UA && UA !== 'null') 新请求头.set('User-Agent', UA);
+            return fetch(new Request(反代URL.protocol + 反代URL.host + url.pathname + url.search, { method: request.method, headers: 新请求头, body: request.body, cf: request.cf }));
+        } catch (error) { }
+        return new Response(await nginx(), { status: 200, headers: { 'Content-Type': 'text/html; charset=UTF-8' } });
+    }
+};
+///////////////////////////////////////////////////////////////////////WS传输数据///////////////////////////////////////////////
+async function 处理WS请求(request, yourUUID) {
+    const wssPair = new WebSocketPair();
+    const [clientSock, serverSock] = Object.values(wssPair);
+    serverSock.accept();
+    let remoteConnWrapper = { socket: null };
+    let isDnsQuery = false;
+    const earlyData = request.headers.get('sec-websocket-protocol') || '';
+    const readable = makeReadableStr(serverSock, earlyData);
+    let 判断是否是木马 = null;
+    readable.pipeTo(new WritableStream({
+        async write(chunk) {
+            if (isDnsQuery) return await forwardataudp(chunk, serverSock, null);
+            if (remoteConnWrapper.socket) {
+                const writer = remoteConnWrapper.socket.writable.getWriter();
+                await writer.write(chunk);
+                writer.releaseLock();
+                return;
+            }
+
+            if (判断是否是木马 === null) {
+                const bytes = new Uint8Array(chunk);
+                判断是否是木马 = bytes.byteLength >= 58 && bytes[56] === 0x0d && bytes[57] === 0x0a;
+            }
+
+            if (remoteConnWrapper.socket) {
+                const writer = remoteConnWrapper.socket.writable.getWriter();
+                await writer.write(chunk);
+                writer.releaseLock();
+                return;
+            }
+
+            if (判断是否是木马) {
+                const { port, hostname, rawClientData } = 解析木马请求(chunk, yourUUID);
+                if (isSpeedTestSite(hostname)) throw new Error('Speedtest site is blocked');
+                await forwardataTCP(hostname, port, rawClientData, serverSock, null, remoteConnWrapper, yourUUID);
+            } else {
+                const { port, hostname, rawIndex, version, isUDP } = 解析魏烈思请求(chunk, yourUUID);
+                if (isSpeedTestSite(hostname)) throw new Error('Speedtest site is blocked');
+                if (isUDP) {
+                    if (port === 53) isDnsQuery = true;
+                    else throw new Error('UDP is not supported');
+                }
+                const respHeader = new Uint8Array([version[0], 0]);
+                const rawData = chunk.slice(rawIndex);
+                if (isDnsQuery) return forwardataudp(rawData, serverSock, respHeader);
+                await forwardataTCP(hostname, port, rawData, serverSock, respHeader, remoteConnWrapper, yourUUID);
+            }
+        },
+    })).catch((err) => {
+        // console.error('Readable pipe error:', err);
+    });
+
+    return new Response(null, { status: 101, webSocket: clientSock });
+}
+
+function 解析木马请求(buffer, passwordPlainText) {
+    const sha224Password = sha224(passwordPlainText);
+    if (buffer.byteLength < 56) return { hasError: true, message: "invalid data" };
+    let crLfIndex = 56;
+    if (new Uint8Array(buffer.slice(56, 57))[0] !== 0x0d || new Uint8Array(buffer.slice(57, 58))[0] !== 0x0a) return { hasError: true, message: "invalid header format" };
+    const password = new TextDecoder().decode(buffer.slice(0, crLfIndex));
+    if (password !== sha224Password) return { hasError: true, message: "invalid password" };
+
+    const socks5DataBuffer = buffer.slice(crLfIndex + 2);
+    if (socks5DataBuffer.byteLength < 6) return { hasError: true, message: "invalid S5 request data" };
+
+    const view = new DataView(socks5DataBuffer);
+    const cmd = view.getUint8(0);
+    if (cmd !== 1) return { hasError: true, message: "unsupported command, only TCP is allowed" };
+
+    const atype = view.getUint8(1);
+    let addressLength = 0;
+    let addressIndex = 2;
+    let address = "";
+    switch (atype) {
+        case 1: // IPv4
+            addressLength = 4;
+            address = new Uint8Array(socks5DataBuffer.slice(addressIndex, addressIndex + addressLength)).join(".");
+            break;
+        case 3: // Domain
+            addressLength = new Uint8Array(socks5DataBuffer.slice(addressIndex, addressIndex + 1))[0];
+            addressIndex += 1;
+            address = new TextDecoder().decode(socks5DataBuffer.slice(addressIndex, addressIndex + addressLength));
+            break;
+        case 4: // IPv6
+            addressLength = 16;
+            const dataView = new DataView(socks5DataBuffer.slice(addressIndex, addressIndex + addressLength));
+            const ipv6 = [];
+            for (let i = 0; i < 8; i++) {
+                ipv6.push(dataView.getUint16(i * 2).toString(16));
+            }
+            address = ipv6.join(":");
+            break;
+        default:
+            return { hasError: true, message: `invalid addressType is ${atype}` };
+    }
+
+    if (!address) {
+        return { hasError: true, message: `address is empty, addressType is ${atype}` };
+    }
+
+    const portIndex = addressIndex + addressLength;
+    const portBuffer = socks5DataBuffer.slice(portIndex, portIndex + 2);
+    const portRemote = new DataView(portBuffer).getUint16(0);
+
+    return {
+        hasError: false,
+        addressType: atype,
+        port: portRemote,
+        hostname: address,
+        rawClientData: socks5DataBuffer.slice(portIndex + 4)
+    };
+}
+
+function 解析魏烈思请求(chunk, token) {
+    if (chunk.byteLength < 24) return { hasError: true, message: 'Invalid data' };
+    const version = new Uint8Array(chunk.slice(0, 1));
+    if (formatIdentifier(new Uint8Array(chunk.slice(1, 17))) !== token) return { hasError: true, message: 'Invalid uuid' };
+    const optLen = new Uint8Array(chunk.slice(17, 18))[0];
+    const cmd = new Uint8Array(chunk.slice(18 + optLen, 19 + optLen))[0];
+    let isUDP = false;
+    if (cmd === 1) { } else if (cmd === 2) { isUDP = true; } else { return { hasError: true, message: 'Invalid command' }; }
+    const portIdx = 19 + optLen;
+    const port = new DataView(chunk.slice(portIdx, portIdx + 2)).getUint16(0);
+    let addrIdx = portIdx + 2, addrLen = 0, addrValIdx = addrIdx + 1, hostname = '';
+    const addressType = new Uint8Array(chunk.slice(addrIdx, addrValIdx))[0];
+    switch (addressType) {
+        case 1:
+            addrLen = 4;
+            hostname = new Uint8Array(chunk.slice(addrValIdx, addrValIdx + addrLen)).join('.');
+            break;
+        case 2:
+            addrLen = new Uint8Array(chunk.slice(addrValIdx, addrValIdx + 1))[0];
+            addrValIdx += 1;
+            hostname = new TextDecoder().decode(chunk.slice(addrValIdx, addrValIdx + addrLen));
+            break;
+        case 3:
+            addrLen = 16;
+            const ipv6 = [];
+            const ipv6View = new DataView(chunk.slice(addrValIdx, addrValIdx + addrLen));
+            for (let i = 0; i < 8; i++) ipv6.push(ipv6View.getUint16(i * 2).toString(16));
+            hostname = ipv6.join(':');
+            break;
+        default:
+            return { hasError: true, message: `Invalid address type: ${addressType}` };
+    }
+    if (!hostname) return { hasError: true, message: `Invalid address: ${addressType}` };
+    return { hasError: false, addressType, port, hostname, isUDP, rawIndex: addrValIdx + addrLen, version };
+}
+async function forwardataTCP(host, portNum, rawData, ws, respHeader, remoteConnWrapper, yourUUID) {
+    console.log(`[TCP转发] 目标: ${host}:${portNum} | 反代IP: ${反代IP} | 反代兜底: ${启用反代兜底 ? '是' : '否'} | 反代类型: ${启用SOCKS5反代 || 'proxyip'} | 全局: ${启用SOCKS5全局反代 ? '是' : '否'}`);
+
+    async function connectDirect(address, port, data, 所有反代数组 = null, 反代兜底 = true) {
+        let remoteSock;
+        if (所有反代数组 && 所有反代数组.length > 0) {
+            for (let i = 0; i < 所有反代数组.length; i++) {
+                const 反代数组索引 = (缓存反代数组索引 + i) % 所有反代数组.length;
+                const [反代地址, 反代端口] = 所有反代数组[反代数组索引];
+                try {
+                    console.log(`[反代连接] 尝试连接到: ${反代地址}:${反代端口} (索引: ${反代数组索引})`);
+                    remoteSock = connect({ hostname: 反代地址, port: 反代端口 });
+                    // 等待TCP连接真正建立，设置1秒超时
+                    await Promise.race([
+                        remoteSock.opened,
+                        new Promise((_, reject) => setTimeout(() => reject(new Error('连接超时')), 1000))
+                    ]);
+                    const testWriter = remoteSock.writable.getWriter();
+                    await testWriter.write(data);
+                    testWriter.releaseLock();
+                    console.log(`[反代连接] 成功连接到: ${反代地址}:${反代端口}`);
+                    缓存反代数组索引 = 反代数组索引;
+                    return remoteSock;
+                } catch (err) {
+                    console.log(`[反代连接] 连接失败: ${反代地址}:${反代端口}, 错误: ${err.message}`);
+                    try { remoteSock?.close?.(); } catch (e) { }
+                    continue;
+                }
+            }
+        }
+
+        if (反代兜底) {
+            remoteSock = connect({ hostname: address, port: port });
+            const writer = remoteSock.writable.getWriter();
+            await writer.write(data);
+            writer.releaseLock();
+            return remoteSock;
+        } else {
+            closeSocketQuietly(ws);
+            throw new Error('[反代连接] 所有反代连接失败，且未启用反代兜底，连接终止。');
+        }
+    }
+
+    async function connecttoPry() {
+        let newSocket;
+        if (启用SOCKS5反代 === 'socks5') {
+            console.log(`[SOCKS5代理] 代理到: ${host}:${portNum}`);
+            newSocket = await socks5Connect(host, portNum, rawData);
+        } else if (启用SOCKS5反代 === 'http' || 启用SOCKS5反代 === 'https') {
+            console.log(`[HTTP代理] 代理到: ${host}:${portNum}`);
+            newSocket = await httpConnect(host, portNum, rawData);
+        } else {
+            console.log(`[反代连接] 代理到: ${host}:${portNum}`);
+            const 所有反代数组 = await 解析地址端口(反代IP, host, yourUUID);
+            newSocket = await connectDirect(atob('UFJPWFlJUC50cDEuMDkwMjI3Lnh5eg=='), 1, rawData, 所有反代数组, 启用反代兜底);
+        }
+        remoteConnWrapper.socket = newSocket;
+        newSocket.closed.catch(() => { }).finally(() => closeSocketQuietly(ws));
+        connectStreams(newSocket, ws, respHeader, null);
+    }
+
+    const 验证SOCKS5白名单 = (addr) => SOCKS5白名单.some(p => new RegExp(`^${p.replace(/\*/g, '.*')}$`, 'i').test(addr));
+    if (启用SOCKS5反代 && (启用SOCKS5全局反代 || 验证SOCKS5白名单(host))) {
+        console.log(`[TCP转发] 启用 SOCKS5/HTTP 全局代理`);
+        try {
+            await connecttoPry();
+        } catch (err) {
+            throw err;
+        }
+    } else {
+        try {
+            console.log(`[TCP转发] 尝试直连到: ${host}:${portNum}`);
+            const initialSocket = await connectDirect(host, portNum, rawData);
+            remoteConnWrapper.socket = initialSocket;
+            connectStreams(initialSocket, ws, respHeader, connecttoPry);
+        } catch (err) {
+            await connecttoPry();
+        }
+    }
+}
+
+async function forwardataudp(udpChunk, webSocket, respHeader) {
+    try {
+        const tcpSocket = connect({ hostname: '8.8.4.4', port: 53 });
+        let vlessHeader = respHeader;
+        const writer = tcpSocket.writable.getWriter();
+        await writer.write(udpChunk);
+        writer.releaseLock();
+        await tcpSocket.readable.pipeTo(new WritableStream({
+            async write(chunk) {
+                if (webSocket.readyState === WebSocket.OPEN) {
+                    if (vlessHeader) {
+                        const response = new Uint8Array(vlessHeader.length + chunk.byteLength);
+                        response.set(vlessHeader, 0);
+                        response.set(chunk, vlessHeader.length);
+                        webSocket.send(response.buffer);
+                        vlessHeader = null;
+                    } else {
+                        webSocket.send(chunk);
+                    }
+                }
+            },
+        }));
+    } catch (error) {
+        // console.error('UDP forward error:', error);
+    }
+}
+
+function closeSocketQuietly(socket) {
+    try {
+        if (socket.readyState === WebSocket.OPEN || socket.readyState === WebSocket.CLOSING) {
+            socket.close();
+        }
+    } catch (error) { }
+}
+
+function formatIdentifier(arr, offset = 0) {
+    const hex = [...arr.slice(offset, offset + 16)].map(b => b.toString(16).padStart(2, '0')).join('');
+    return `${hex.substring(0, 8)}-${hex.substring(8, 12)}-${hex.substring(12, 16)}-${hex.substring(16, 20)}-${hex.substring(20)}`;
+}
+async function connectStreams(remoteSocket, webSocket, headerData, retryFunc) {
+    let header = headerData, hasData = false;
+    await remoteSocket.readable.pipeTo(
+        new WritableStream({
+            async write(chunk, controller) {
+                hasData = true;
+                if (webSocket.readyState !== WebSocket.OPEN) controller.error('ws.readyState is not open');
+                if (header) {
+                    const response = new Uint8Array(header.length + chunk.byteLength);
+                    response.set(header, 0);
+                    response.set(chunk, header.length);
+                    webSocket.send(response.buffer);
+                    header = null;
+                } else {
+                    webSocket.send(chunk);
+                }
+            },
+            abort() { },
+        })
+    ).catch((err) => {
+        closeSocketQuietly(webSocket);
+    });
+    if (!hasData && retryFunc) {
+        await retryFunc();
+    }
+}
+
+function makeReadableStr(socket, earlyDataHeader) {
+    let cancelled = false;
+    return new ReadableStream({
+        start(controller) {
+            socket.addEventListener('message', (event) => {
+                if (!cancelled) controller.enqueue(event.data);
+            });
+            socket.addEventListener('close', () => {
+                if (!cancelled) {
+                    closeSocketQuietly(socket);
+                    controller.close();
+                }
+            });
+            socket.addEventListener('error', (err) => controller.error(err));
+            const { earlyData, error } = base64ToArray(earlyDataHeader);
+            if (error) controller.error(error);
+            else if (earlyData) controller.enqueue(earlyData);
+        },
+        cancel() {
+            cancelled = true;
+            closeSocketQuietly(socket);
+        }
+    });
+}
+
+function isSpeedTestSite(hostname) {
+    const speedTestDomains = [atob('c3BlZWQuY2xvdWRmbGFyZS5jb20=')];
+    if (speedTestDomains.includes(hostname)) {
+        return true;
+    }
+
+    for (const domain of speedTestDomains) {
+        if (hostname.endsWith('.' + domain) || hostname === domain) {
+            return true;
+        }
+    }
+    return false;
+}
+
+function base64ToArray(b64Str) {
+    if (!b64Str) return { error: null };
+    try {
+        const binaryString = atob(b64Str.replace(/-/g, '+').replace(/_/g, '/'));
+        const bytes = new Uint8Array(binaryString.length);
+        for (let i = 0; i < binaryString.length; i++) {
+            bytes[i] = binaryString.charCodeAt(i);
+        }
+        return { earlyData: bytes.buffer, error: null };
+    } catch (error) {
+        return { error };
+    }
+}
+////////////////////////////////SOCKS5/HTTP函数///////////////////////////////////////////////
+async function socks5Connect(targetHost, targetPort, initialData) {
+    const { username, password, hostname, port } = parsedSocks5Address;
+    const socket = connect({ hostname, port }), writer = socket.writable.getWriter(), reader = socket.readable.getReader();
+    try {
+        const authMethods = username && password ? new Uint8Array([0x05, 0x02, 0x00, 0x02]) : new Uint8Array([0x05, 0x01, 0x00]);
+        await writer.write(authMethods);
+        let response = await reader.read();
+        if (response.done || response.value.byteLength < 2) throw new Error('S5 method selection failed');
+
+        const selectedMethod = new Uint8Array(response.value)[1];
+        if (selectedMethod === 0x02) {
+            if (!username || !password) throw new Error('S5 requires authentication');
+            const userBytes = new TextEncoder().encode(username), passBytes = new TextEncoder().encode(password);
+            const authPacket = new Uint8Array([0x01, userBytes.length, ...userBytes, passBytes.length, ...passBytes]);
+            await writer.write(authPacket);
+            response = await reader.read();
+            if (response.done || new Uint8Array(response.value)[1] !== 0x00) throw new Error('S5 authentication failed');
+        } else if (selectedMethod !== 0x00) throw new Error(`S5 unsupported auth method: ${selectedMethod}`);
+
+        const hostBytes = new TextEncoder().encode(targetHost);
+        const connectPacket = new Uint8Array([0x05, 0x01, 0x00, 0x03, hostBytes.length, ...hostBytes, targetPort >> 8, targetPort & 0xff]);
+        await writer.write(connectPacket);
+        response = await reader.read();
+        if (response.done || new Uint8Array(response.value)[1] !== 0x00) throw new Error('S5 connection failed');
+
+        await writer.write(initialData);
+        writer.releaseLock(); reader.releaseLock();
+        return socket;
+    } catch (error) {
+        try { writer.releaseLock(); } catch (e) { }
+        try { reader.releaseLock(); } catch (e) { }
+        try { socket.close(); } catch (e) { }
+        throw error;
+    }
+}
+
+async function httpConnect(targetHost, targetPort, initialData) {
+    const { username, password, hostname, port } = parsedSocks5Address;
+    const socket = connect({ hostname, port }), writer = socket.writable.getWriter(), reader = socket.readable.getReader();
+    try {
+        const auth = username && password ? `Proxy-Authorization: Basic ${btoa(`${username}:${password}`)}\r\n` : '';
+        const request = `CONNECT ${targetHost}:${targetPort} HTTP/1.1\r\nHost: ${targetHost}:${targetPort}\r\n${auth}User-Agent: Mozilla/5.0\r\nConnection: keep-alive\r\n\r\n`;
+        await writer.write(new TextEncoder().encode(request));
+
+        let responseBuffer = new Uint8Array(0), headerEndIndex = -1, bytesRead = 0;
+        while (headerEndIndex === -1 && bytesRead < 8192) {
+            const { done, value } = await reader.read();
+            if (done) throw new Error('Connection closed before receiving HTTP response');
+            responseBuffer = new Uint8Array([...responseBuffer, ...value]);
+            bytesRead = responseBuffer.length;
+            const crlfcrlf = responseBuffer.findIndex((_, i) => i < responseBuffer.length - 3 && responseBuffer[i] === 0x0d && responseBuffer[i + 1] === 0x0a && responseBuffer[i + 2] === 0x0d && responseBuffer[i + 3] === 0x0a);
+            if (crlfcrlf !== -1) headerEndIndex = crlfcrlf + 4;
+        }
+
+        if (headerEndIndex === -1) throw new Error('Invalid HTTP response');
+        const statusCode = parseInt(new TextDecoder().decode(responseBuffer.slice(0, headerEndIndex)).split('\r\n')[0].match(/HTTP\/\d\.\d\s+(\d+)/)[1]);
+        if (statusCode < 200 || statusCode >= 300) throw new Error(`Connection failed: HTTP ${statusCode}`);
+
+        await writer.write(initialData);
+        writer.releaseLock(); reader.releaseLock();
+        return socket;
+    } catch (error) {
+        try { writer.releaseLock(); } catch (e) { }
+        try { reader.releaseLock(); } catch (e) { }
+        try { socket.close(); } catch (e) { }
+        throw error;
+    }
+}
+//////////////////////////////////////////////////功能性函数///////////////////////////////////////////////
+function surge(content, url, config_JSON) {
+    const 每行内容 = content.includes('\r\n') ? content.split('\r\n') : content.split('\n');
+
+    let 输出内容 = "";
+	let realSurgePath = config_JSON.启用0RTT ? config_JSON.PATH + '?ed=2560' : config_JSON.PATH;
+    for (let x of 每行内容) {
+        if (x.includes('= tro' + 'jan,')) {
+            const host = x.split("sni=")[1].split(",")[0];
+            const 备改内容 = `sni=${host}, skip-cert-verify=${config_JSON.跳过证书验证}`;
+            const 正确内容 = `sni=${host}, skip-cert-verify=${config_JSON.跳过证书验证}, ws=true, ws-path=${realSurgePath}, ws-headers=Host:"${host}"`;
+            输出内容 += x.replace(new RegExp(备改内容, 'g'), 正确内容).replace("[", "").replace("]", "") + '\n';
+        } else {
+            输出内容 += x + '\n';
+        }
+    }
+
+    输出内容 = `#!MANAGED-CONFIG ${url} interval=${config_JSON.优选订阅生成.SUBUpdateTime * 60 * 60} strict=false` + 输出内容.substring(输出内容.indexOf('\n'));
+    return 输出内容;
+}
+
+async function 请求日志记录(env, request, 访问IP, 请求类型 = "Get_SUB", config_JSON) {
+    const KV容量限制 = 4;//MB
+    try {
+        const 当前时间 = new Date();
+        const 日志内容 = { TYPE: 请求类型, IP: 访问IP, ASN: `AS${request.cf.asn || '0'} ${request.cf.asOrganization || 'Unknown'}`, CC: `${request.cf.country || 'N/A'} ${request.cf.city || 'N/A'}`, URL: request.url, UA: request.headers.get('User-Agent') || 'Unknown', TIME: 当前时间.getTime() };
+        let 日志数组 = [];
+        const 现有日志 = await env.KV.get('log.json');
+        if (现有日志) {
+            try {
+                日志数组 = JSON.parse(现有日志);
+                if (!Array.isArray(日志数组)) { 日志数组 = [日志内容]; }
+                else if (请求类型 !== "Get_SUB") {
+                    const 三十分钟前时间戳 = 当前时间.getTime() - 30 * 60 * 1000;
+                    if (日志数组.some(log => log.TYPE !== "Get_SUB" && log.IP === 访问IP && log.URL === request.url && log.UA === (request.headers.get('User-Agent') || 'Unknown') && log.TIME >= 三十分钟前时间戳)) return;
+                    日志数组.push(日志内容);
+                    while (JSON.stringify(日志数组, null, 2).length > KV容量限制 * 1024 * 1024 && 日志数组.length > 0) 日志数组.shift();
+                } else {
+                    日志数组.push(日志内容);
+                    while (JSON.stringify(日志数组, null, 2).length > KV容量限制 * 1024 * 1024 && 日志数组.length > 0) 日志数组.shift();
+                }
+                if (config_JSON.TG.启用) {
+                    try {
+                        const TG_TXT = await env.KV.get('tg.json');
+                        const TG_JSON = JSON.parse(TG_TXT);
+                        await sendMessage(TG_JSON.BotToken, TG_JSON.ChatID, 日志内容, config_JSON);
+                    } catch (error) { console.error(`读取tg.json出错: ${error.message}`) }
+                }
+            } catch (e) { 日志数组 = [日志内容]; }
+        } else { 日志数组 = [日志内容]; }
+        await env.KV.put('log.json', JSON.stringify(日志数组, null, 2));
+    } catch (error) { console.error(`日志记录失败: ${error.message}`); }
+}
+
+async function sendMessage(BotToken, ChatID, 日志内容, config_JSON) {
+    if (!BotToken || !ChatID) return;
+
+    try {
+        const 请求时间 = new Date(日志内容.TIME).toLocaleString('zh-CN', { timeZone: 'Asia/Shanghai' });
+        const 请求URL = new URL(日志内容.URL);
+        const msg = `<b>#${config_JSON.优选订阅生成.SUBNAME} 日志通知</b>\n\n` +
+            `📌 <b>类型：</b>#${日志内容.TYPE}\n` +
+            `🌐 <b>IP：</b><code>${日志内容.IP}</code>\n` +
+            `📍 <b>位置：</b>${日志内容.CC}\n` +
+            `🏢 <b>ASN：</b>${日志内容.ASN}\n` +
+            `🔗 <b>域名：</b><code>${请求URL.host}</code>\n` +
+            `🔍 <b>路径：</b><code>${请求URL.pathname + 请求URL.search}</code>\n` +
+            `🤖 <b>UA：</b><code>${日志内容.UA}</code>\n` +
+            `📅 <b>时间：</b>${请求时间}\n` +
+            `${config_JSON.CF.Usage.success ? `📊 <b>请求用量：</b>${config_JSON.CF.Usage.total}/100000 <b>${((config_JSON.CF.Usage.total / 100000) * 100).toFixed(2)}%</b>\n` : ''}`;
+
+        const url = `https://api.telegram.org/bot${BotToken}/sendMessage?chat_id=${ChatID}&parse_mode=HTML&text=${encodeURIComponent(msg)}`;
+        return fetch(url, {
+            method: 'GET',
+            headers: {
+                'Accept': 'text/html,application/xhtml+xml,application/xml;',
+                'Accept-Encoding': 'gzip, deflate, br',
+                'User-Agent': 日志内容.UA || 'Unknown',
+            }
+        });
+    } catch (error) { console.error('Error sending message:', error) }
+}
+
+function 掩码敏感信息(文本, 前缀长度 = 3, 后缀长度 = 2) {
+    if (!文本 || typeof 文本 !== 'string') return 文本;
+    if (文本.length <= 前缀长度 + 后缀长度) return 文本; // 如果长度太短，直接返回
+
+    const 前缀 = 文本.slice(0, 前缀长度);
+    const 后缀 = 文本.slice(-后缀长度);
+    const 星号数量 = 文本.length - 前缀长度 - 后缀长度;
+
+    return `${前缀}${'*'.repeat(星号数量)}${后缀}`;
+}
+
+async function MD5MD5(文本) {
+    const 编码器 = new TextEncoder();
+
+    const 第一次哈希 = await crypto.subtle.digest('MD5', 编码器.encode(文本));
+    const 第一次哈希数组 = Array.from(new Uint8Array(第一次哈希));
+    const 第一次十六进制 = 第一次哈希数组.map(字节 => 字节.toString(16).padStart(2, '0')).join('');
+
+    const 第二次哈希 = await crypto.subtle.digest('MD5', 编码器.encode(第一次十六进制.slice(7, 27)));
+    const 第二次哈希数组 = Array.from(new Uint8Array(第二次哈希));
+    const 第二次十六进制 = 第二次哈希数组.map(字节 => 字节.toString(16).padStart(2, '0')).join('');
+
+    return 第二次十六进制.toLowerCase();
+}
+
+function 随机路径() {
+    const 常用路径目录 = ["about", "account", "acg", "act", "activity", "ad", "ads", "ajax", "album", "albums", "anime", "api", "app", "apps", "archive", "archives", "article", "articles", "ask", "auth", "avatar", "bbs", "bd", "blog", "blogs", "book", "books", "bt", "buy", "cart", "category", "categories", "cb", "channel", "channels", "chat", "china", "city", "class", "classify", "clip", "clips", "club", "cn", "code", "collect", "collection", "comic", "comics", "community", "company", "config", "contact", "content", "course", "courses", "cp", "data", "detail", "details", "dh", "directory", "discount", "discuss", "dl", "dload", "doc", "docs", "document", "documents", "doujin", "download", "downloads", "drama", "edu", "en", "ep", "episode", "episodes", "event", "events", "f", "faq", "favorite", "favourites", "favs", "feedback", "file", "files", "film", "films", "forum", "forums", "friend", "friends", "game", "games", "gif", "go", "go.html", "go.php", "group", "groups", "help", "home", "hot", "htm", "html", "image", "images", "img", "index", "info", "intro", "item", "items", "ja", "jp", "jump", "jump.html", "jump.php", "jumping", "knowledge", "lang", "lesson", "lessons", "lib", "library", "link", "links", "list", "live", "lives", "m", "mag", "magnet", "mall", "manhua", "map", "member", "members", "message", "messages", "mobile", "movie", "movies", "music", "my", "new", "news", "note", "novel", "novels", "online", "order", "out", "out.html", "out.php", "outbound", "p", "page", "pages", "pay", "payment", "pdf", "photo", "photos", "pic", "pics", "picture", "pictures", "play", "player", "playlist", "post", "posts", "product", "products", "program", "programs", "project", "qa", "question", "rank", "ranking", "read", "readme", "redirect", "redirect.html", "redirect.php", "reg", "register", "res", "resource", "retrieve", "sale", "search", "season", "seasons", "section", "seller", "series", "service", "services", "setting", "settings", "share", "shop", "show", "shows", "site", "soft", "sort", "source", "special", "star", "stars", "static", "stock", "store", "stream", "streaming", "streams", "student", "study", "tag", "tags", "task", "teacher", "team", "tech", "temp", "test", "thread", "tool", "tools", "topic", "topics", "torrent", "trade", "travel", "tv", "txt", "type", "u", "upload", "uploads", "url", "urls", "user", "users", "v", "version", "video", "videos", "view", "vip", "vod", "watch", "web", "wenku", "wiki", "work", "www", "zh", "zh-cn", "zh-tw", "zip"];
+    const 随机数 = Math.floor(Math.random() * 3 + 1);
+    const 随机路径 = 常用路径目录.sort(() => 0.5 - Math.random()).slice(0, 随机数).join('/');
+    return `/${随机路径}`;
+}
+
+function 随机替换通配符(h) {
+    if (!h?.includes('*')) return h;
+    const 字符集 = 'abcdefghijklmnopqrstuvwxyz0123456789';
+    return h.replace(/\*/g, () => {
+        let s = '';
+        for (let i = 0; i < Math.floor(Math.random() * 14) + 3; i++)
+            s += 字符集[Math.floor(Math.random() * 36)];
+        return s;
+    });
+}
+
+function 批量替换域名(内容, hosts, 每组数量 = 2) {
+    const 打乱后数组 = [...hosts].sort(() => Math.random() - 0.5);
+    let count = 0, currentRandomHost = null;
+    return 内容.replace(/example\.com/g, () => {
+        if (count % 每组数量 === 0) currentRandomHost = 随机替换通配符(打乱后数组[Math.floor(count / 每组数量) % 打乱后数组.length]);
+        count++;
+        return currentRandomHost;
+    });
+}
+
+async function 读取config_JSON(env, hostname, userID, path, 重置配置 = false) {
+    //const host = 随机替换通配符(hostname);
+    const host = hostname;
+    const 初始化开始时间 = performance.now();
+    const 默认配置JSON = {
+        TIME: new Date().toISOString(),
+        HOST: host,
+        HOSTS: [hostname],
+        UUID: userID,
+        协议类型: "v" + "le" + "ss",
+        传输协议: "ws",
+        跳过证书验证: true,
+        启用0RTT: false,
+        TLS分片: null,
+        随机路径: false,
+        优选订阅生成: {
+            local: true, // true: 基于本地的优选地址  false: 优选订阅生成器
+            本地IP库: {
+                随机IP: true, // 当 随机IP 为true时生效，启用随机IP的数量，否则使用KV内的ADD.txt
+                随机数量: 16,
+                指定端口: -1,
+            },
+            SUB: null,
+            SUBNAME: "edge" + "tunnel",
+            SUBUpdateTime: 6, // 订阅更新时间（小时）
+            TOKEN: await MD5MD5(hostname + userID),
+        },
+        订阅转换配置: {
+            SUBAPI: "https://SUBAPI.cmliussss.net",
+            SUBCONFIG: "https://raw.githubusercontent.com/cmliu/ACL4SSR/refs/heads/main/Clash/config/ACL4SSR_Online_Mini_MultiMode_CF.ini",
+            SUBEMOJI: false,
+        },
+        反代: {
+            PROXYIP: "auto",
+            SOCKS5: {
+                启用: 启用SOCKS5反代,
+                全局: 启用SOCKS5全局反代,
+                账号: 我的SOCKS5账号,
+                白名单: SOCKS5白名单,
+            },
+        },
+        TG: {
+            启用: false,
+            BotToken: null,
+            ChatID: null,
+        },
+        CF: {
+            Email: null,
+            GlobalAPIKey: null,
+            AccountID: null,
+            APIToken: null,
+            Usage: {
+                success: false,
+                pages: 0,
+                workers: 0,
+                total: 0,
+            },
+        }
+    };
+
+    try {
+        let configJSON = await env.KV.get('config.json');
+        if (!configJSON || 重置配置 == true) {
+            await env.KV.put('config.json', JSON.stringify(默认配置JSON, null, 2));
+            config_JSON = 默认配置JSON;
+        } else {
+            config_JSON = JSON.parse(configJSON);
+        }
+    } catch (error) {
+        console.error(`读取config_JSON出错: ${error.message}`);
+        config_JSON = 默认配置JSON;
+    }
+
+    config_JSON.HOST = host;
+    if (!config_JSON.HOSTS) config_JSON.HOSTS = [hostname];
+    if (env.HOST) config_JSON.HOSTS = (await 整理成数组(env.HOST)).map(h => h.toLowerCase().replace(/^https?:\/\//, '').split('/')[0].split(':')[0]);
+    config_JSON.UUID = userID;
+    config_JSON.PATH = path ? (path.startsWith('/') ? path : '/' + path) : (config_JSON.反代.SOCKS5.启用 ? ('/' + config_JSON.反代.SOCKS5.启用 + (config_JSON.反代.SOCKS5.全局 ? '://' : '=') + config_JSON.反代.SOCKS5.账号) : (config_JSON.反代.PROXYIP === 'auto' ? '/' : `/proxyip=${config_JSON.反代.PROXYIP}`));
+    const TLS分片参数 = config_JSON.TLS分片 == 'Shadowrocket' ? `&fragment=${encodeURIComponent('1,40-60,30-50,tlshello')}` : config_JSON.TLS分片 == 'Happ' ? `&fragment=${encodeURIComponent('3,1,tlshello')}` : '';
+    config_JSON.LINK = `${config_JSON.协议类型}://${userID}@${host}:443?security=tls&type=${config_JSON.传输协议}&host=${host}&sni=${host}&path=${encodeURIComponent(config_JSON.启用0RTT ? config_JSON.PATH + '?ed=2560' : config_JSON.PATH) + TLS分片参数}&encryption=none${config_JSON.跳过证书验证 ? '&allowInsecure=1' : ''}#${encodeURIComponent(config_JSON.优选订阅生成.SUBNAME)}`;
+    config_JSON.优选订阅生成.TOKEN = await MD5MD5(hostname + userID);
+
+    const 初始化TG_JSON = { BotToken: null, ChatID: null };
+    config_JSON.TG = { 启用: config_JSON.TG.启用 ? config_JSON.TG.启用 : false, ...初始化TG_JSON };
+    try {
+        const TG_TXT = await env.KV.get('tg.json');
+        if (!TG_TXT) {
+            await env.KV.put('tg.json', JSON.stringify(初始化TG_JSON, null, 2));
+        } else {
+            const TG_JSON = JSON.parse(TG_TXT);
+            config_JSON.TG.ChatID = TG_JSON.ChatID ? TG_JSON.ChatID : null;
+            config_JSON.TG.BotToken = TG_JSON.BotToken ? 掩码敏感信息(TG_JSON.BotToken) : null;
+        }
+    } catch (error) {
+        console.error(`读取tg.json出错: ${error.message}`);
+    }
+
+    const 初始化CF_JSON = { Email: null, GlobalAPIKey: null, AccountID: null, APIToken: null };
+    config_JSON.CF = { ...初始化CF_JSON, Usage: { success: false, pages: 0, workers: 0, total: 0 } };
+    try {
+        const CF_TXT = await env.KV.get('cf.json');
+        if (!CF_TXT) {
+            await env.KV.put('cf.json', JSON.stringify(初始化CF_JSON, null, 2));
+        } else {
+            const CF_JSON = JSON.parse(CF_TXT);
+            config_JSON.CF.Email = CF_JSON.Email ? CF_JSON.Email : null;
+            config_JSON.CF.GlobalAPIKey = CF_JSON.GlobalAPIKey ? 掩码敏感信息(CF_JSON.GlobalAPIKey) : null;
+            config_JSON.CF.AccountID = CF_JSON.AccountID ? 掩码敏感信息(CF_JSON.AccountID) : null;
+            config_JSON.CF.APIToken = CF_JSON.APIToken ? 掩码敏感信息(CF_JSON.APIToken) : null;
+            const Usage = await getCloudflareUsage(CF_JSON.Email, CF_JSON.GlobalAPIKey, CF_JSON.AccountID, CF_JSON.APIToken);
+            config_JSON.CF.Usage = Usage;
+        }
+    } catch (error) {
+        console.error(`读取cf.json出错: ${error.message}`);
+    }
+
+    config_JSON.加载时间 = (performance.now() - 初始化开始时间).toFixed(2) + 'ms';
+    return config_JSON;
+}
+
+async function 生成随机IP(request, count = 16, 指定端口 = -1) {
+    const asnMap = { '9808': 'cmcc', '4837': 'cu', '4134': 'ct' }, asn = request.cf.asn;
+    const cidr_url = asnMap[asn] ? `https://raw.githubusercontent.com/cmliu/cmliu/main/CF-CIDR/${asnMap[asn]}.txt` : 'https://raw.githubusercontent.com/cmliu/cmliu/main/CF-CIDR.txt';
+    const cfname = { '9808': 'CF移动优选', '4837': 'CF联通优选', '4134': 'CF电信优选' }[asn] || 'CF官方优选';
+    const cfport = [443, 2053, 2083, 2087, 2096, 8443];
+    let cidrList = [];
+    try { const res = await fetch(cidr_url); cidrList = res.ok ? await 整理成数组(await res.text()) : ['104.16.0.0/13']; } catch { cidrList = ['104.16.0.0/13']; }
+
+    const generateRandomIPFromCIDR = (cidr) => {
+        const [baseIP, prefixLength] = cidr.split('/'), prefix = parseInt(prefixLength), hostBits = 32 - prefix;
+        const ipInt = baseIP.split('.').reduce((a, p, i) => a | (parseInt(p) << (24 - i * 8)), 0);
+        const randomOffset = Math.floor(Math.random() * Math.pow(2, hostBits));
+        const mask = (0xFFFFFFFF << hostBits) >>> 0, randomIP = (((ipInt & mask) >>> 0) + randomOffset) >>> 0;
+        return [(randomIP >>> 24) & 0xFF, (randomIP >>> 16) & 0xFF, (randomIP >>> 8) & 0xFF, randomIP & 0xFF].join('.');
+    };
+
+    const randomIPs = Array.from({ length: count }, () => {
+        const ip = generateRandomIPFromCIDR(cidrList[Math.floor(Math.random() * cidrList.length)]);
+        return `${ip}:${指定端口 === -1 ? cfport[Math.floor(Math.random() * cfport.length)] : 指定端口}#${cfname}`;
+    });
+    return [randomIPs, randomIPs.join('\n')];
+}
+
+async function 整理成数组(内容) {
+    var 替换后的内容 = 内容.replace(/[	"'\r\n]+/g, ',').replace(/,+/g, ',');
+    if (替换后的内容.charAt(0) == ',') 替换后的内容 = 替换后的内容.slice(1);
+    if (替换后的内容.charAt(替换后的内容.length - 1) == ',') 替换后的内容 = 替换后的内容.slice(0, 替换后的内容.length - 1);
+    const 地址数组 = 替换后的内容.split(',');
+    return 地址数组;
+}
+
+function isValidBase64(str) {
+    if (typeof str !== 'string') return false;
+    const cleanStr = str.replace(/\s/g, '');
+    if (cleanStr.length === 0 || cleanStr.length % 4 !== 0) return false;
+    const base64Regex = /^[A-Za-z0-9+/]+={0,2}$/;
+    if (!base64Regex.test(cleanStr)) return false;
+    try {
+        atob(cleanStr);
+        return true;
+    } catch {
+        return false;
+    }
+}
+
+function base64Decode(str) {
+    const bytes = new Uint8Array(atob(str).split('').map(c => c.charCodeAt(0)));
+    const decoder = new TextDecoder('utf-8');
+    return decoder.decode(bytes);
+}
+
+async function 请求优选API(urls, 默认端口 = '443', 超时时间 = 3000) {
+    if (!urls?.length) return [[], [], []];
+    const results = new Set();
+    let 订阅链接响应的明文LINK内容 = '', 需要订阅转换订阅URLs = [];
+    await Promise.allSettled(urls.map(async (url) => {
+        try {
+            const controller = new AbortController();
+            const timeoutId = setTimeout(() => controller.abort(), 超时时间);
+            const response = await fetch(url, { signal: controller.signal });
+            clearTimeout(timeoutId);
+            let text = '';
+            try {
+                const buffer = await response.arrayBuffer();
+                const contentType = (response.headers.get('content-type') || '').toLowerCase();
+                const charset = contentType.match(/charset=([^\s;]+)/i)?.[1]?.toLowerCase() || '';
+
+                // 根据 Content-Type 响应头判断编码优先级
+                let decoders = ['utf-8', 'gb2312']; // 默认优先 UTF-8
+                if (charset.includes('gb') || charset.includes('gbk') || charset.includes('gb2312')) {
+                    decoders = ['gb2312', 'utf-8']; // 如果明确指定 GB 系编码，优先尝试 GB2312
+                }
+
+                // 尝试多种编码解码
+                let decodeSuccess = false;
+                for (const decoder of decoders) {
+                    try {
+                        const decoded = new TextDecoder(decoder).decode(buffer);
+                        // 验证解码结果的有效性
+                        if (decoded && decoded.length > 0 && !decoded.includes('\ufffd')) {
+                            text = decoded;
+                            decodeSuccess = true;
+                            break;
+                        } else if (decoded && decoded.length > 0) {
+                            // 如果有替换字符 (U+FFFD)，说明编码不匹配，继续尝试下一个编码
+                            continue;
+                        }
+                    } catch (e) {
+                        // 该编码解码失败，尝试下一个
+                        continue;
+                    }
+                }
+
+                // 如果所有编码都失败或无效，尝试 response.text()
+                if (!decodeSuccess) {
+                    text = await response.text();
+                }
+
+                // 如果返回的是空或无效数据，返回
+                if (!text || text.trim().length === 0) {
+                    return;
+                }
+            } catch (e) {
+                console.error('Failed to decode response:', e);
+                return;
+            }
+
+            // 预处理订阅内容
+            /*
+            if (text.includes('proxies:') || (text.includes('outbounds"') && text.includes('inbounds"'))) {// Clash Singbox 配置
+                需要订阅转换订阅URLs.add(url);
+                return;
+            }
+            */
+
+            const 预处理订阅明文内容 = isValidBase64(text) ? base64Decode(text) : text;
+            if (预处理订阅明文内容.split('#')[0].includes('://')) {
+                订阅链接响应的明文LINK内容 += 预处理订阅明文内容 + '\n'; // 追加LINK明文内容
+                return;
+            }
+
+            const lines = text.trim().split('\n').map(l => l.trim()).filter(l => l);
+            const isCSV = lines.length > 1 && lines[0].includes(',');
+            const IPV6_PATTERN = /^[^\[\]]*:[^\[\]]*:[^\[\]]/;
+            if (!isCSV) {
+                lines.forEach(line => {
+                    const hashIndex = line.indexOf('#');
+                    const [hostPart, remark] = hashIndex > -1 ? [line.substring(0, hashIndex), line.substring(hashIndex)] : [line, ''];
+                    let hasPort = false;
+                    if (hostPart.startsWith('[')) {
+                        hasPort = /\]:(\d+)$/.test(hostPart);
+                    } else {
+                        const colonIndex = hostPart.lastIndexOf(':');
+                        hasPort = colonIndex > -1 && /^\d+$/.test(hostPart.substring(colonIndex + 1));
+                    }
+                    const port = new URL(url).searchParams.get('port') || 默认端口;
+                    results.add(hasPort ? line : `${hostPart}:${port}${remark}`);
+                });
+            } else {
+                const headers = lines[0].split(',').map(h => h.trim());
+                const dataLines = lines.slice(1);
+                if (headers.includes('IP地址') && headers.includes('端口') && headers.includes('数据中心')) {
+                    const ipIdx = headers.indexOf('IP地址'), portIdx = headers.indexOf('端口');
+                    const remarkIdx = headers.indexOf('国家') > -1 ? headers.indexOf('国家') :
+                        headers.indexOf('城市') > -1 ? headers.indexOf('城市') : headers.indexOf('数据中心');
+                    const tlsIdx = headers.indexOf('TLS');
+                    dataLines.forEach(line => {
+                        const cols = line.split(',').map(c => c.trim());
+                        if (tlsIdx !== -1 && cols[tlsIdx]?.toLowerCase() !== 'true') return;
+                        const wrappedIP = IPV6_PATTERN.test(cols[ipIdx]) ? `[${cols[ipIdx]}]` : cols[ipIdx];
+                        results.add(`${wrappedIP}:${cols[portIdx]}#${cols[remarkIdx]}`);
+                    });
+                } else if (headers.some(h => h.includes('IP')) && headers.some(h => h.includes('延迟')) && headers.some(h => h.includes('下载速度'))) {
+                    const ipIdx = headers.findIndex(h => h.includes('IP'));
+                    const delayIdx = headers.findIndex(h => h.includes('延迟'));
+                    const speedIdx = headers.findIndex(h => h.includes('下载速度'));
+                    const port = new URL(url).searchParams.get('port') || 默认端口;
+                    dataLines.forEach(line => {
+                        const cols = line.split(',').map(c => c.trim());
+                        const wrappedIP = IPV6_PATTERN.test(cols[ipIdx]) ? `[${cols[ipIdx]}]` : cols[ipIdx];
+                        results.add(`${wrappedIP}:${port}#CF优选 ${cols[delayIdx]}ms ${cols[speedIdx]}MB/s`);
+                    });
+                }
+            }
+        } catch (e) { }
+    }));
+    // 将LINK内容转换为数组并去重
+    const LINK数组 = 订阅链接响应的明文LINK内容.trim() ? [...new Set(订阅链接响应的明文LINK内容.split(/\r?\n/).filter(line => line.trim() !== ''))] : [];
+    return [Array.from(results), LINK数组, 需要订阅转换订阅URLs];
+}
+
+async function 反代参数获取(request) {
+    const url = new URL(request.url);
+    const { pathname, searchParams } = url;
+    const pathLower = pathname.toLowerCase();
+
+    // 初始化
+    我的SOCKS5账号 = searchParams.get('socks5') || searchParams.get('http') || null;
+    启用SOCKS5全局反代 = searchParams.has('globalproxy') || false;
+
+    // 统一处理反代IP参数 (优先级最高,使用正则一次匹配)
+    const proxyMatch = pathLower.match(/\/(proxyip[.=]|pyip=|ip=)(.+)/);
+    if (searchParams.has('proxyip')) {
+        const 路参IP = searchParams.get('proxyip');
+        反代IP = 路参IP.includes(',') ? 路参IP.split(',')[Math.floor(Math.random() * 路参IP.split(',').length)] : 路参IP;
+        启用反代兜底 = false;
+        return;
+    } else if (proxyMatch) {
+        const 路参IP = proxyMatch[1] === 'proxyip.' ? `proxyip.${proxyMatch[2]}` : proxyMatch[2];
+        反代IP = 路参IP.includes(',') ? 路参IP.split(',')[Math.floor(Math.random() * 路参IP.split(',').length)] : 路参IP;
+        启用反代兜底 = false;
+        return;
+    }
+
+    // 处理SOCKS5/HTTP代理参数
+    let socksMatch;
+    if ((socksMatch = pathname.match(/\/(socks5?|http):\/?\/?(.+)/i))) {
+        // 格式: /socks5://... 或 /http://...
+        启用SOCKS5反代 = socksMatch[1].toLowerCase() === 'http' ? 'http' : 'socks5';
+        我的SOCKS5账号 = socksMatch[2].split('#')[0];
+        启用SOCKS5全局反代 = true;
+
+        // 处理Base64编码的用户名密码
+        if (我的SOCKS5账号.includes('@')) {
+            const atIndex = 我的SOCKS5账号.lastIndexOf('@');
+            let userPassword = 我的SOCKS5账号.substring(0, atIndex).replaceAll('%3D', '=');
+            if (/^(?:[A-Z0-9+/]{4})*(?:[A-Z0-9+/]{2}==|[A-Z0-9+/]{3}=)?$/i.test(userPassword) && !userPassword.includes(':')) {
+                userPassword = atob(userPassword);
+            }
+            我的SOCKS5账号 = `${userPassword}@${我的SOCKS5账号.substring(atIndex + 1)}`;
+        }
+    } else if ((socksMatch = pathname.match(/\/(g?s5|socks5|g?http)=(.+)/i))) {
+        // 格式: /socks5=... 或 /s5=... 或 /gs5=... 或 /http=... 或 /ghttp=...
+        const type = socksMatch[1].toLowerCase();
+        我的SOCKS5账号 = socksMatch[2];
+        启用SOCKS5反代 = type.includes('http') ? 'http' : 'socks5';
+        启用SOCKS5全局反代 = type.startsWith('g') || 启用SOCKS5全局反代; // gs5 或 ghttp 开头启用全局
+    }
+
+    // 解析SOCKS5地址
+    if (我的SOCKS5账号) {
+        try {
+            parsedSocks5Address = await 获取SOCKS5账号(我的SOCKS5账号);
+            启用SOCKS5反代 = searchParams.get('http') ? 'http' : 启用SOCKS5反代;
+        } catch (err) {
+            console.error('解析SOCKS5地址失败:', err.message);
+            启用SOCKS5反代 = null;
+        }
+    } else 启用SOCKS5反代 = null;
+}
+
+async function 获取SOCKS5账号(address) {
+    if (address.includes('@')) {
+        const lastAtIndex = address.lastIndexOf('@');
+        let userPassword = address.substring(0, lastAtIndex).replaceAll('%3D', '=');
+        const base64Regex = /^(?:[A-Z0-9+/]{4})*(?:[A-Z0-9+/]{2}==|[A-Z0-9+/]{3}=)?$/i;
+        if (base64Regex.test(userPassword) && !userPassword.includes(':')) userPassword = atob(userPassword);
+        address = `${userPassword}@${address.substring(lastAtIndex + 1)}`;
+    }
+    const atIndex = address.lastIndexOf("@");
+    const [hostPart, authPart] = atIndex === -1 ? [address, undefined] : [address.substring(atIndex + 1), address.substring(0, atIndex)];
+
+    // 解析认证
+    let username, password;
+    if (authPart) {
+        [username, password] = authPart.split(":");
+        if (!password) throw new Error('无效的 SOCKS 地址格式：认证部分必须是 "username:password" 的形式');
+    }
+
+    // 解析主机端口
+    let hostname, port;
+    if (hostPart.includes("]:")) { // IPv6带端口
+        [hostname, port] = [hostPart.split("]:")[0] + "]", Number(hostPart.split("]:")[1].replace(/[^\d]/g, ''))];
+    } else if (hostPart.startsWith("[")) { // IPv6无端口
+        [hostname, port] = [hostPart, 80];
+    } else { // IPv4/域名
+        const parts = hostPart.split(":");
+        [hostname, port] = parts.length === 2 ? [parts[0], Number(parts[1].replace(/[^\d]/g, ''))] : [hostPart, 80];
+    }
+
+    if (isNaN(port)) throw new Error('无效的 SOCKS 地址格式：端口号必须是数字');
+    if (hostname.includes(":") && !/^\[.*\]$/.test(hostname)) throw new Error('无效的 SOCKS 地址格式：IPv6 地址必须用方括号括起来，如 [2001:db8::1]');
+
+    return { username, password, hostname, port };
+}
+
+async function getCloudflareUsage(Email, GlobalAPIKey, AccountID, APIToken) {
+    const API = "https://api.cloudflare.com/client/v4";
+    const sum = (a) => a?.reduce((t, i) => t + (i?.sum?.requests || 0), 0) || 0;
+    const cfg = { "Content-Type": "application/json" };
+
+    try {
+        if (!AccountID && (!Email || !GlobalAPIKey)) return { success: false, pages: 0, workers: 0, total: 0 };
+
+        if (!AccountID) {
+            const r = await fetch(`${API}/accounts`, {
+                method: "GET",
+                headers: { ...cfg, "X-AUTH-EMAIL": Email, "X-AUTH-KEY": GlobalAPIKey }
+            });
+            if (!r.ok) throw new Error(`账户获取失败: ${r.status}`);
+            const d = await r.json();
+            if (!d?.result?.length) throw new Error("未找到账户");
+            const idx = d.result.findIndex(a => a.name?.toLowerCase().startsWith(Email.toLowerCase()));
+            AccountID = d.result[idx >= 0 ? idx : 0]?.id;
+        }
+
+        const now = new Date();
+        now.setUTCHours(0, 0, 0, 0);
+        const hdr = APIToken ? { ...cfg, "Authorization": `Bearer ${APIToken}` } : { ...cfg, "X-AUTH-EMAIL": Email, "X-AUTH-KEY": GlobalAPIKey };
+
+        const res = await fetch(`${API}/graphql`, {
+            method: "POST",
+            headers: hdr,
+            body: JSON.stringify({
+                query: `query getBillingMetrics($AccountID: String!, $filter: AccountWorkersInvocationsAdaptiveFilter_InputObject) {
+                    viewer { accounts(filter: {accountTag: $AccountID}) {
+                        pagesFunctionsInvocationsAdaptiveGroups(limit: 1000, filter: $filter) { sum { requests } }
+                        workersInvocationsAdaptive(limit: 10000, filter: $filter) { sum { requests } }
+                    } }
+                }`,
+                variables: { AccountID, filter: { datetime_geq: now.toISOString(), datetime_leq: new Date().toISOString() } }
+            })
+        });
+
+        if (!res.ok) throw new Error(`查询失败: ${res.status}`);
+        const result = await res.json();
+        if (result.errors?.length) throw new Error(result.errors[0].message);
+
+        const acc = result?.data?.viewer?.accounts?.[0];
+        if (!acc) throw new Error("未找到账户数据");
+
+        const pages = sum(acc.pagesFunctionsInvocationsAdaptiveGroups);
+        const workers = sum(acc.workersInvocationsAdaptive);
+        const total = pages + workers;
+        console.log(`统计结果 - Pages: ${pages}, Workers: ${workers}, 总计: ${total}`);
+        return { success: true, pages, workers, total };
+
+    } catch (error) {
+        console.error('获取使用量错误:', error.message);
+        return { success: false, pages: 0, workers: 0, total: 0 };
+    }
+}
+
+function sha224(s) {
+    const K = [0x428a2f98, 0x71374491, 0xb5c0fbcf, 0xe9b5dba5, 0x3956c25b, 0x59f111f1, 0x923f82a4, 0xab1c5ed5, 0xd807aa98, 0x12835b01, 0x243185be, 0x550c7dc3, 0x72be5d74, 0x80deb1fe, 0x9bdc06a7, 0xc19bf174, 0xe49b69c1, 0xefbe4786, 0x0fc19dc6, 0x240ca1cc, 0x2de92c6f, 0x4a7484aa, 0x5cb0a9dc, 0x76f988da, 0x983e5152, 0xa831c66d, 0xb00327c8, 0xbf597fc7, 0xc6e00bf3, 0xd5a79147, 0x06ca6351, 0x14292967, 0x27b70a85, 0x2e1b2138, 0x4d2c6dfc, 0x53380d13, 0x650a7354, 0x766a0abb, 0x81c2c92e, 0x92722c85, 0xa2bfe8a1, 0xa81a664b, 0xc24b8b70, 0xc76c51a3, 0xd192e819, 0xd6990624, 0xf40e3585, 0x106aa070, 0x19a4c116, 0x1e376c08, 0x2748774c, 0x34b0bcb5, 0x391c0cb3, 0x4ed8aa4a, 0x5b9cca4f, 0x682e6ff3, 0x748f82ee, 0x78a5636f, 0x84c87814, 0x8cc70208, 0x90befffa, 0xa4506ceb, 0xbef9a3f7, 0xc67178f2];
+    const r = (n, b) => ((n >>> b) | (n << (32 - b))) >>> 0;
+    s = unescape(encodeURIComponent(s));
+    const l = s.length * 8; s += String.fromCharCode(0x80);
+    while ((s.length * 8) % 512 !== 448) s += String.fromCharCode(0);
+    const h = [0xc1059ed8, 0x367cd507, 0x3070dd17, 0xf70e5939, 0xffc00b31, 0x68581511, 0x64f98fa7, 0xbefa4fa4];
+    const hi = Math.floor(l / 0x100000000), lo = l & 0xFFFFFFFF;
+    s += String.fromCharCode((hi >>> 24) & 0xFF, (hi >>> 16) & 0xFF, (hi >>> 8) & 0xFF, hi & 0xFF, (lo >>> 24) & 0xFF, (lo >>> 16) & 0xFF, (lo >>> 8) & 0xFF, lo & 0xFF);
+    const w = []; for (let i = 0; i < s.length; i += 4)w.push((s.charCodeAt(i) << 24) | (s.charCodeAt(i + 1) << 16) | (s.charCodeAt(i + 2) << 8) | s.charCodeAt(i + 3));
+    for (let i = 0; i < w.length; i += 16) {
+        const x = new Array(64).fill(0);
+        for (let j = 0; j < 16; j++)x[j] = w[i + j];
+        for (let j = 16; j < 64; j++) {
+            const s0 = r(x[j - 15], 7) ^ r(x[j - 15], 18) ^ (x[j - 15] >>> 3);
+            const s1 = r(x[j - 2], 17) ^ r(x[j - 2], 19) ^ (x[j - 2] >>> 10);
+            x[j] = (x[j - 16] + s0 + x[j - 7] + s1) >>> 0;
+        }
+        let [a, b, c, d, e, f, g, h0] = h;
+        for (let j = 0; j < 64; j++) {
+            const S1 = r(e, 6) ^ r(e, 11) ^ r(e, 25), ch = (e & f) ^ (~e & g), t1 = (h0 + S1 + ch + K[j] + x[j]) >>> 0;
+            const S0 = r(a, 2) ^ r(a, 13) ^ r(a, 22), maj = (a & b) ^ (a & c) ^ (b & c), t2 = (S0 + maj) >>> 0;
+            h0 = g; g = f; f = e; e = (d + t1) >>> 0; d = c; c = b; b = a; a = (t1 + t2) >>> 0;
+        }
+        for (let j = 0; j < 8; j++)h[j] = (h[j] + (j === 0 ? a : j === 1 ? b : j === 2 ? c : j === 3 ? d : j === 4 ? e : j === 5 ? f : j === 6 ? g : h0)) >>> 0;
+    }
+    let hex = '';
+    for (let i = 0; i < 7; i++) {
+        for (let j = 24; j >= 0; j -= 8)hex += ((h[i] >>> j) & 0xFF).toString(16).padStart(2, '0');
+    }
+    return hex;
+}
+
+async function 解析地址端口(proxyIP, 目标域名 = 'dash.cloudflare.com', UUID = '00000000-0000-4000-8000-000000000000') {
+    if (!缓存反代IP || !缓存反代解析数组 || 缓存反代IP !== proxyIP) {
+        proxyIP = proxyIP.toLowerCase();
+        async function DoH查询(域名, 记录类型) {
+            try {
+                const response = await fetch(`https://1.1.1.1/dns-query?name=${域名}&type=${记录类型}`, {
+                    headers: { 'Accept': 'application/dns-json' }
+                });
+                if (!response.ok) return [];
+                const data = await response.json();
+                return data.Answer || [];
+            } catch (error) {
+                console.error(`DoH查询失败 (${记录类型}):`, error);
+                return [];
+            }
+        }
+
+        function 解析地址端口字符串(str) {
+            let 地址 = str, 端口 = 443;
+            if (str.includes(']:')) {
+                const parts = str.split(']:');
+                地址 = parts[0] + ']';
+                端口 = parseInt(parts[1], 10) || 端口;
+            } else if (str.includes(':') && !str.startsWith('[')) {
+                const colonIndex = str.lastIndexOf(':');
+                地址 = str.slice(0, colonIndex);
+                端口 = parseInt(str.slice(colonIndex + 1), 10) || 端口;
+            }
+            return [地址, 端口];
+        }
+
+        let 所有反代数组 = [];
+
+        if (proxyIP.includes('.william')) {
+            try {
+                const txtRecords = await DoH查询(proxyIP, 'TXT');
+                const txtData = txtRecords.filter(r => r.type === 16).map(r => r.data);
+                if (txtData.length > 0) {
+                    let data = txtData[0];
+                    if (data.startsWith('"') && data.endsWith('"')) data = data.slice(1, -1);
+                    const prefixes = data.replace(/\\010/g, ',').replace(/\n/g, ',').split(',').map(s => s.trim()).filter(Boolean);
+                    所有反代数组 = prefixes.map(prefix => 解析地址端口字符串(prefix));
+                }
+            } catch (error) {
+                console.error('解析William域名失败:', error);
+            }
+        } else {
+            let [地址, 端口] = 解析地址端口字符串(proxyIP);
+
+            if (proxyIP.includes('.tp')) {
+                const tpMatch = proxyIP.match(/\.tp(\d+)/);
+                if (tpMatch) 端口 = parseInt(tpMatch[1], 10);
+            }
+
+            // 判断是否是域名（非IP地址）
+            const ipv4Regex = /^(25[0-5]|2[0-4]\d|[01]?\d\d?)\.(25[0-5]|2[0-4]\d|[01]?\d\d?)\.(25[0-5]|2[0-4]\d|[01]?\d\d?)\.(25[0-5]|2[0-4]\d|[01]?\d\d?)$/;
+            const ipv6Regex = /^\[?([a-fA-F0-9:]+)\]?$/;
+
+            if (!ipv4Regex.test(地址) && !ipv6Regex.test(地址)) {
+                // 并行查询 A 和 AAAA 记录
+                const [aRecords, aaaaRecords] = await Promise.all([
+                    DoH查询(地址, 'A'),
+                    DoH查询(地址, 'AAAA')
+                ]);
+
+                const ipv4List = aRecords.filter(r => r.type === 1).map(r => r.data);
+                const ipv6List = aaaaRecords.filter(r => r.type === 28).map(r => `[${r.data}]`);
+                const ipAddresses = [...ipv4List, ...ipv6List];
+
+                所有反代数组 = ipAddresses.length > 0
+                    ? ipAddresses.map(ip => [ip, 端口])
+                    : [[地址, 端口]];
+            } else {
+                所有反代数组 = [[地址, 端口]];
+            }
+        }
+        const 排序后数组 = 所有反代数组.sort((a, b) => a[0].localeCompare(b[0]));
+        const 目标根域名 = 目标域名.includes('.') ? 目标域名.split('.').slice(-2).join('.') : 目标域名;
+        let 随机种子 = [...(目标根域名 + UUID)].reduce((a, c) => a + c.charCodeAt(0), 0);
+        console.log(`[反代解析] 随机种子: ${随机种子}\n目标站点: ${目标根域名}`)
+        const 洗牌后 = [...排序后数组].sort(() => (随机种子 = (随机种子 * 1103515245 + 12345) & 0x7fffffff) / 0x7fffffff - 0.5);
+        缓存反代解析数组 = 洗牌后.slice(0, 8);
+        console.log(`[反代解析] 解析完成 总数: ${缓存反代解析数组.length}个\n${缓存反代解析数组.map(([ip, port], index) => `${index + 1}. ${ip}:${port}`).join('\n')}`);
+        缓存反代IP = proxyIP;
+    } else console.log(`[反代解析] 读取缓存 总数: ${缓存反代解析数组.length}个\n${缓存反代解析数组.map(([ip, port], index) => `${index + 1}. ${ip}:${port}`).join('\n')}`);
+    return 缓存反代解析数组;
+}
+
+async function SOCKS5可用性验证(代理协议 = 'socks5', 代理参数) {
+    const startTime = Date.now();
+    try { parsedSocks5Address = await 获取SOCKS5账号(代理参数); } catch (err) { return { success: false, error: err.message, proxy: 代理协议 + "://" + 代理参数, responseTime: Date.now() - startTime }; }
+    const { username, password, hostname, port } = parsedSocks5Address;
+    const 完整代理参数 = username && password ? `${username}:${password}@${hostname}:${port}` : `${hostname}:${port}`;
+    try {
+        const initialData = new Uint8Array(0);
+        const tcpSocket = 代理协议 == 'socks5' ? await socks5Connect('check.socks5.090227.xyz', 80, initialData) : await httpConnect('check.socks5.090227.xyz', 80, initialData);
+        if (!tcpSocket) return { success: false, error: '无法连接到代理服务器', proxy: 代理协议 + "://" + 完整代理参数, responseTime: Date.now() - startTime };
+        try {
+            const writer = tcpSocket.writable.getWriter(), encoder = new TextEncoder();
+            await writer.write(encoder.encode(`GET /cdn-cgi/trace HTTP/1.1\r\nHost: check.socks5.090227.xyz\r\nConnection: close\r\n\r\n`));
+            writer.releaseLock();
+            const reader = tcpSocket.readable.getReader(), decoder = new TextDecoder();
+            let response = '';
+            try { while (true) { const { done, value } = await reader.read(); if (done) break; response += decoder.decode(value, { stream: true }); } } finally { reader.releaseLock(); }
+            await tcpSocket.close();
+            return { success: true, proxy: 代理协议 + "://" + 完整代理参数, ip: response.match(/ip=(.*)/)[1], loc: response.match(/loc=(.*)/)[1], responseTime: Date.now() - startTime };
+        } catch (error) {
+            try { await tcpSocket.close(); } catch (e) { console.log('关闭连接时出错:', e); }
+            return { success: false, error: error.message, proxy: 代理协议 + "://" + 完整代理参数, responseTime: Date.now() - startTime };
+        }
+    } catch (error) { return { success: false, error: error.message, proxy: 代理协议 + "://" + 完整代理参数, responseTime: Date.now() - startTime }; }
+}
+//////////////////////////////////////////////////////HTML伪装页面///////////////////////////////////////////////
+async function nginx() {
+    return `
+	<!DOCTYPE html>
+	<html>
+	<head>
+	<title>Welcome to nginx!</title>
+	<style>
+		body {
+			width: 35em;
+			margin: 0 auto;
+			font-family: Tahoma, Verdana, Arial, sans-serif;
+		}
+	</style>
+	</head>
+	<body>
+	<h1>Welcome to nginx!</h1>
+	<p>If you see this page, the nginx web server is successfully installed and
+	working. Further configuration is required.</p>
+	
+	<p>For online documentation and support please refer to
+	<a href="http://nginx.org/">nginx.org</a>.<br/>
+	Commercial support is available at
+	<a href="http://nginx.com/">nginx.com</a>.</p>
+	
+	<p><em>Thank you for using nginx.</em></p>
+	</body>
+	</html>
+	`
+}
+
+async function html1101(host, 访问IP) {
+    const now = new Date();
+    const 格式化时间戳 = now.getFullYear() + '-' + String(now.getMonth() + 1).padStart(2, '0') + '-' + String(now.getDate()).padStart(2, '0') + ' ' + String(now.getHours()).padStart(2, '0') + ':' + String(now.getMinutes()).padStart(2, '0') + ':' + String(now.getSeconds()).padStart(2, '0');
+    const 随机字符串 = Array.from(crypto.getRandomValues(new Uint8Array(8))).map(b => b.toString(16).padStart(2, '0')).join('');
+
+    return `<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en-US"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en-US"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en-US"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en-US"> <!--<![endif]-->
+<head>
+<title>Worker threw exception | ${host} | Cloudflare</title>
+<meta charset="UTF-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta name="robots" content="noindex, nofollow" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<link rel="stylesheet" id="cf_styles-css" href="/cdn-cgi/styles/cf.errors.css" />
+<!--[if lt IE 9]><link rel="stylesheet" id='cf_styles-ie-css' href="/cdn-cgi/styles/cf.errors.ie.css" /><![endif]-->
+<style>body{margin:0;padding:0}</style>
+
+
+<!--[if gte IE 10]><!-->
+<script>
+  if (!navigator.cookieEnabled) {
+    window.addEventListener('DOMContentLoaded', function () {
+      var cookieEl = document.getElementById('cookie-alert');
+      cookieEl.style.display = 'block';
+    })
+  }
+</script>
+<!--<![endif]-->
+
+</head>
+<body>
+    <div id="cf-wrapper">
+        <div class="cf-alert cf-alert-error cf-cookie-error" id="cookie-alert" data-translate="enable_cookies">Please enable cookies.</div>
+        <div id="cf-error-details" class="cf-error-details-wrapper">
+            <div class="cf-wrapper cf-header cf-error-overview">
+                <h1>
+                    <span class="cf-error-type" data-translate="error">Error</span>
+                    <span class="cf-error-code">1101</span>
+                    <small class="heading-ray-id">Ray ID: ${随机字符串} &bull; ${格式化时间戳} UTC</small>
+                </h1>
+                <h2 class="cf-subheadline" data-translate="error_desc">Worker threw exception</h2>
+            </div><!-- /.header -->
+    
+            <section></section><!-- spacer -->
+    
+            <div class="cf-section cf-wrapper">
+                <div class="cf-columns two">
+                    <div class="cf-column">
+                        <h2 data-translate="what_happened">What happened?</h2>
+                            <p>You've requested a page on a website (${host}) that is on the <a href="https://www.cloudflare.com/5xx-error-landing?utm_source=error_100x" target="_blank">Cloudflare</a> network. An unknown error occurred while rendering the page.</p>
+                    </div>
+                    
+                    <div class="cf-column">
+                        <h2 data-translate="what_can_i_do">What can I do?</h2>
+                            <p><strong>If you are the owner of this website:</strong><br />refer to <a href="https://developers.cloudflare.com/workers/observability/errors/" target="_blank">Workers - Errors and Exceptions</a> and check Workers Logs for ${host}.</p>
+                    </div>
+                    
+                </div>
+            </div><!-- /.section -->
+    
+            <div class="cf-error-footer cf-wrapper w-240 lg:w-full py-10 sm:py-4 sm:px-8 mx-auto text-center sm:text-left border-solid border-0 border-t border-gray-300">
+    <p class="text-13">
+      <span class="cf-footer-item sm:block sm:mb-1">Cloudflare Ray ID: <strong class="font-semibold"> ${随机字符串}</strong></span>
+      <span class="cf-footer-separator sm:hidden">&bull;</span>
+      <span id="cf-footer-item-ip" class="cf-footer-item hidden sm:block sm:mb-1">
+        Your IP:
+        <button type="button" id="cf-footer-ip-reveal" class="cf-footer-ip-reveal-btn">Click to reveal</button>
+        <span class="hidden" id="cf-footer-ip">${访问IP}</span>
+        <span class="cf-footer-separator sm:hidden">&bull;</span>
+      </span>
+      <span class="cf-footer-item sm:block sm:mb-1"><span>Performance &amp; security by</span> <a rel="noopener noreferrer" href="https://www.cloudflare.com/5xx-error-landing" id="brand_link" target="_blank">Cloudflare</a></span>
+      
+    </p>
+    <script>(function(){function d(){var b=a.getElementById("cf-footer-item-ip"),c=a.getElementById("cf-footer-ip-reveal");b&&"classList"in b&&(b.classList.remove("hidden"),c.addEventListener("click",function(){c.classList.add("hidden");a.getElementById("cf-footer-ip").classList.remove("hidden")}))}var a=document;document.addEventListener&&a.addEventListener("DOMContentLoaded",d)})();</script>
+  </div><!-- /.error-footer -->
+
+        </div><!-- /#cf-error-details -->
+    </div><!-- /#cf-wrapper -->
+
+     <script>
+    window._cf_translation = {};
+    
+    
+  </script> 
+</body>
+</html>`;
+}
